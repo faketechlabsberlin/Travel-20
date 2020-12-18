@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Travel-20</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class='container' id='navBar'>
+            <nav class='flex-container'>
+                <div class='flex-item'>LOGO</div>
+                <div class='flex-item'>Nav</div>
+            </nav>
+        </header>
+
+        <div class='container mainField' id='explore'>
+            <h1 id='mainTitle'>Explore a destination</h1>
+            <form>
+                
+                <div class="input">
+                    <select id='currentDestination'>
+                      <option selected>Where are you?</option>
+                      <option value="1">Germany</option>
+                      <option value="2">France</option>
+                      <option value="3">Argentina</option>
+                    </select>
+                </div>
+
+                  <div class="input">
+                    <select id='plannedDestination'>
+                      <option selected>Where do you want to go?</option>
+                      <option value="1">Iran</option>
+                      <option value="2">Turkey</option>
+                      <option value="3">India</option>
+                    </select>
+                </div>
+                <button type='submit' class='submitButton'>Go</button>
+            </form>
+        </div>
+
+        <div class='container mainField' id='trending'>
+            <h2 id='trendingTitle'> Trending destinations:</h2>
+        </div>
+
+        <footer>
+           <a href='/'>Privacy</a>/ <a href='/'>Imprint</a>/<a href='/'>Terms&Conditions</a>
+        </footer>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
