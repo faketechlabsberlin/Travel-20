@@ -17,10 +17,9 @@
             </nav>
         </header>
 
-        <div class='container mainField' id='explore'>
+      <div class='container mainField' id='explore'>
             <h1 id='mainTitle'>Explore a destination</h1>
             <form>
-                
                 <div class="input">
                     <select id='currentDestination'>
                       <option selected>Where are you?</option>
@@ -38,12 +37,115 @@
                       <option value="3">India</option>
                     </select>
                 </div>
-                <button type='submit' class='submitButton'>Go</button>
+                <button type='button' class='submitButton' onclick="onGoButtonClicked()">Go</button>
             </form>
         </div>
+        
+        <div class='container hidden' id='result'>
+          <h1>From:</h1> <!-- dynamic, entered origin and destination to be updated here -->
+          <p>August 12th to August 22nd 2021</p>
+          <section>
+            <h2><i class="arrow right"></i> Germany</h2> <!-- dynamic, should display entered origin -->
+            <div class="row">
+              <div class="col">
+                <p>1.6k cases per 100k</p>
+              </div>
+              <div class="col greyRight">
+                <p>Latest update:</p>
+              </div>
+            </div>
 
-        <div class='container mainField' id='trending'>
-            <h2 id='trendingTitle'> Trending destinations:</h2>
+            <hr class="white">
+
+            <div class="row">
+              <div class="col">
+                <h3 class="marginTop"><u>Do I need a test upon return?</u></p>
+              </div>
+              <div class="col">
+                <h3 class="marginTop"><u>Do I need to quarantine upon return?</u></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>Yes</p>
+              </div>
+              <div class="col">
+                <p>A 7-day quarantine is mandatory</p>
+              </div>
+            </div>
+
+            <h2 class="marginTop"><i class="arrow right"></i> Croatia</h2> <!--dynamic, should display previously entered destination -->
+            <div class="row">
+              <div class="col">
+                <p>4.4k cases per 100k</p>
+              </div>
+              <div class="col greyRight">
+                <p>Latest update:</p>
+              </div>
+            </div>
+
+            <hr class="white">
+
+            <div class="row">
+              <div class="col">
+                <h3 class="marginTop"><u>Is the border open?</u></p>
+              </div>
+              <div class="col">
+                <h3 class="marginTop"><u>Are accommodations open to travelers?</u></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>Yes</p>
+              </div>
+              <div class="col">
+                <p>Yes</p>
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="col">
+                <h3 class="marginTop"><u>Do I need a test prior to entry?</u></p>
+              </div>
+              <div class="col">
+                <h3 class="marginTop"><u>Is there a curfew?</u></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>Yes, with a maximum of 3 days before entry.</p>
+              </div>
+              <div class="col">
+                <p>No</p>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="col">
+                <h3 class="marginTop"><u>Do I need to quarantine upon arrival?</u></p>
+              </div>
+              <div class="col">
+                <h3 class="marginTop"><u>Are restaurants and bars open?</u></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>Yes, for a period of 5 days.</p>
+              </div>
+              <div class="col">
+                <p>Yes, take-out only.</p>
+              </div>
+            </div>
+          </section>
+          <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Return</button>
+        </div>
+
+        <div class='container mainField' id='safestLocations'>
+          <h2>Safest locations</h2>
+        </div>
+
+        <div class='container mainField' id='faqs'>
+          <h2>FAQs</h2>
         </div>
 
         <footer>
@@ -52,4 +154,17 @@
         
         <script src="" async defer></script>
     </body>
+
+    <script>
+      function onGoButtonClicked() {
+        document.getElementById("explore").setAttribute("class", "hidden");
+        document.getElementById("result").setAttribute("class", "container resultField");
+      }
+
+      function onReturnButtonClicked() {
+        document.getElementById("explore").setAttribute("class", "container mainField");
+        document.getElementById("result").setAttribute("class", "hidden");
+      }
+    </script>
+
 </html>
