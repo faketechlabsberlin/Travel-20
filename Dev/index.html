@@ -22,19 +22,15 @@
             <form>
                 <div class="input">
                     <select id='currentDestination'>
-                      <option selected>Where are you?</option>
-                      <option value="1">Germany</option>
-                      <option value="2">France</option>
-                      <option value="3">Argentina</option>
+                      <option selected hidden>Where are you?</option>
+                      <!-- Options filled dynamically from country list -->
                     </select>
                 </div>
 
                   <div class="input">
                     <select id='plannedDestination'>
                       <option selected>Where do you want to go?</option>
-                      <option value="1">Iran</option>
-                      <option value="2">Turkey</option>
-                      <option value="3">India</option>
+                      <!-- Options filled dynamically from country list -->
                     </select>
                 </div>
                 <button type='button' class='submitButton' onclick="onGoButtonClicked()">Go</button>
@@ -45,7 +41,7 @@
           <h1>From:</h1> <!-- dynamic, entered origin and destination to be updated here -->
           <p>August 12th to August 22nd 2021</p>
           <section>
-            <h2><i class="arrow right"></i> Germany</h2> <!-- dynamic, should display entered origin -->
+            <h2 id='resultDeparture'><i class="arrow right"></i><!-- dynamic, will display entered origin --> </h2> 
             <div class="row">
               <div class="col">
                 <p>1.6k cases per 100k</p>
@@ -74,7 +70,7 @@
               </div>
             </div>
 
-            <h2 class="marginTop"><i class="arrow right"></i> Croatia</h2> <!--dynamic, should display previously entered destination -->
+            <h2 id="resultDestination" class="marginTop"><i class="arrow right" ></i> </h2> <!--dynamic, should display previously entered destination -->
             <div class="row">
               <div class="col">
                 <p>4.4k cases per 100k</p>
@@ -152,14 +148,11 @@
            <a href='/'>Privacy</a>/ <a href='/'>Imprint</a>/<a href='/'>Terms&Conditions</a>
         </footer>
         
-        <script src="" async defer></script>
+        <script type='text/javascript' src="app.js" async defer></script>
+
     </body>
 
     <script>
-      function onGoButtonClicked() {
-        document.getElementById("explore").setAttribute("class", "hidden");
-        document.getElementById("result").setAttribute("class", "container resultField");
-      }
 
       function onReturnButtonClicked() {
         document.getElementById("explore").setAttribute("class", "container mainField");
