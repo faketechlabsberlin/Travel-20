@@ -1,18 +1,26 @@
-
-const request = new XMLHttpRequest();
 const requestURL = 'https://api.jsonbin.io/b/5fff60faf98f6e35d5fc2daa'; // This is on some json hosting site
 
-request.open('GET', requestURL, true);
-request.setRequestHeader("secret-key", "$2b$10$2jEprRIUBcKggPU2j56mR.zxLQo8ryjDQA6iNxSwYnS5jqwyanYbq"); // API key to get access to the json file
-request.responseType = 'text'; // Text formnat because we are getting a json file
-request.send();
+request('GET', requestURL, true) // this is calling the request function which returns a promise of XMLHttpRequest. We use GET because we are retreiving a JSON (REST API)
+    .then(function (e) { // .then is done on resolve (successful connection)
+        const countriesText = e.target.response; // get the string from the response
+        const countries = JSON.parse(countriesText).countries; // convert it to an object
+        populateCountriesList(countries);
+    }, function (e) { // this is called on reject when an error happens on the connection
+        console.log("Failed to retreive countries.json"); // TODO: add error message in the website itself
+    });
 
-request.onload = function() {
-  const countriesText = request.response; // get the string from the response
-  const countries = JSON.parse(countriesText).countries; // convert it to an object
-  populateCountriesList(countries);
+function request(method, url) { // this function wraps a XMLHttpRequest into a promise
+  return new Promise(function (resolve, reject) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.responseType = 'text'; 
+      xhr.setRequestHeader("secret-key", "$2b$10$2jEprRIUBcKggPU2j56mR.zxLQo8ryjDQA6iNxSwYnS5jqwyanYbq"); // API key to get access to the json file
+      xhr.onload = resolve;
+      xhr.onerror = reject;
+      xhr.send();
+  });
 }
-
+    
 function populateCountriesList(countries){
   //populate drop down - current location with a country list
   countries.map((country)=>{
