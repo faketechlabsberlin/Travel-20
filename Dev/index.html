@@ -28,7 +28,7 @@
                 </div>
 
                   <div class="input">
-                    <select id='plannedDestination'>
+                    <select id='plannedDestination' disabled>
                       <option selected>Where do you want to go?</option>
                       <!-- Options filled dynamically from country list -->
                     </select>
@@ -36,7 +36,15 @@
                 <button type='button' class='submitButton' onclick="onGoButtonClicked()">Go</button>
             </form>
         </div>
-        
+      
+        <!-- a 404 page - when promise rejected -->
+        <div class='container hidden' id='page404'>
+          <h2>An error has occured while loading the data</h2>
+            <p id="error"><!-- a dynamically generated error --></p>
+            <h2>Please refresh the page!</h2>
+            <button class="submitButton" id="refresh" onclick="onRefreshClicked()">Refresh</button>
+        </div>
+
         <div class='container hidden' id='result'>
           <h1>From:</h1> <!-- dynamic, entered origin and destination to be updated here -->
           <p>August 12th to August 22nd 2021</p>

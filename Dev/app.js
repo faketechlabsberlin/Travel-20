@@ -5,8 +5,12 @@ request('GET', requestURL, true) // this is calling the request function which r
         const countriesText = e.target.response; // get the string from the response
         const countries = JSON.parse(countriesText).countries; // convert it to an object
         populateCountriesList(countries);
-    }, function (e) { // this is called on reject when an error happens on the connection
-        console.log("Failed to retreive countries.json"); // TODO: add error message in the website itself
+    })
+    .catch( function (e) { // this is called on reject when an error happens on the connection
+      console.log("Failed to retreive countries.json", e); 
+      document.querySelector('#error').innerHTML= e;
+      document.getElementById("explore").setAttribute("class", "hidden");
+      document.getElementById("page404").setAttribute("class", "container resultField");
     });
 
 function request(method, url) { // this function wraps a XMLHttpRequest into a promise
@@ -47,7 +51,10 @@ function populateCountriesList(countries){
 //Germany selected automatically when drop-down clicked (temporary)
 const currentDest = document.querySelector('#currentDestination');
 currentDest.addEventListener('click', ()=>{
-    currentDest.value="Germany"
+    currentDest.value="Germany";
+
+    //enable destination dropdown only once current destination selected
+    document.querySelector('#plannedDestination').toggleAttribute('disabled');
 })
 
 //Go button functionality
@@ -64,3 +71,7 @@ function onGoButtonClicked() {
     document.getElementById("result").setAttribute("class", "container resultField");
   }
 
+// refresh button
+function onRefreshClicked (){
+  window.location.reload();
+}

@@ -126,3 +126,14 @@ hr.white {
   -webkit-transform: rotate(-45deg);
 }
 
+#page404{
+  font-style:italic;
+  background-color:rgb(241 198 198);
+}
+
+#page404 h2{
+  text-align: center;
+}
+#page404 button{
+  background-color: #e48787;
+}
