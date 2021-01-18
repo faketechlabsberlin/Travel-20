@@ -12,7 +12,7 @@
     <body>
         <header class='container' id='navBar'>
             <nav class='flex-container'>
-                <div class='flex-item'>LOGO</div>
+                <div class='flex-item'><img src="./ressources/Travel21 Logo.png" id='logo'></div>
                 <div class='flex-item'>Nav</div>
             </nav>
         </header>
@@ -29,11 +29,11 @@
 
                   <div class="input">
                     <select id='plannedDestination' disabled>
-                      <option selected>Where do you want to go?</option>
+                      <option selected hidden>Where do you want to go?</option>
                       <!-- Options filled dynamically from country list -->
                     </select>
                 </div>
-                <button type='button' class='submitButton' onclick="onGoButtonClicked()">Go</button>
+                <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>Go</button>
             </form>
         </div>
       
@@ -92,18 +92,18 @@
 
             <div class="row">
               <div class="col">
-                <h3 class="marginTop"><u>Is the border open?</u></p>
+                <h3 class="marginTop"><u>Is the border closed?</u></p>
               </div>
               <div class="col">
-                <h3 class="marginTop"><u>Are accommodations open to travelers?</u></p>
+                <h3 class="marginTop"><u>Is mask required?</u></p>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <p>Yes</p>
+                <p id='entryBan'><!-- dynamic --></p>
               </div>
               <div class="col">
-                <p>Yes</p>
+                <p id='needMask'><!-- dynamic --></p>
               </div>
             </div>
     
@@ -117,10 +117,10 @@
             </div>
             <div class="row">
               <div class="col">
-                <p>Yes, with a maximum of 3 days before entry.</p>
+                <p id='before_test'></p>
               </div>
               <div class="col">
-                <p>No</p>
+                <p id='curfew'></p>
               </div>
             </div>
           
@@ -134,10 +134,10 @@
             </div>
             <div class="row">
               <div class="col">
-                <p>Yes, for a period of 5 days.</p>
+                <p id='quarantine_arr'></p>
               </div>
               <div class="col">
-                <p>Yes, take-out only.</p>
+                <p id='restu_bar_open'></p>
               </div>
             </div>
           </section>

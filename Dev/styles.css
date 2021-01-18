@@ -137,3 +137,13 @@ hr.white {
 #page404 button{
   background-color: #e48787;
 }
+
+.noData{
+  font-style: italic;
+  opacity: 0.5;
+}
+
+#logo{
+  width: 25%;
+  height: auto;
+}
