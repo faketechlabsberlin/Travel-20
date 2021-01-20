@@ -1,5 +1,4 @@
-{
-  "countriesData":
-  [ { "name": "Denmark", "curfew": false, "needMask": true, "entryBan": false, "quarantine_arr": false, "before_test": true, "restu_bar_open": false},
-   { "name": "Germany", "curfew": false, "needMask": true, "entryBan": false, "quarantine_arr": false, "before_test": true, "restu_bar_open": false} ]
-}
+[
+  { "name": "Denmark", "curfew": false, "needMask": true, "entryBan": false, "quarantine_arr": false, "before_test": true, "restu_bar_open": false},
+  { "name": "Germany", "curfew": false, "needMask": true, "entryBan": false, "quarantine_arr": false, "before_test": true, "restu_bar_open": false}
+]

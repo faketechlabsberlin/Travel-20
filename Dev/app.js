@@ -1,21 +1,43 @@
+const countriesDataURL = 'https://api.jsonbin.io/b/6002f41bf98f6e35d5fd39af/1';
 const covidDataURL = 'https://api.jsonbin.io/b/60072108eb2fee239b5ee9ab'; // This is on some json hosting site
 
 let countriesData = {}; 
+let countriesCovidData = {}; 
 
 // Get countries data
+request('GET', countriesDataURL, true) // this is calling the request function which returns a promise of XMLHttpRequest. We use GET because we are retreiving a JSON (REST API)
+  .then(function (e) { // .then is done on resolve (successful connection)
+    const json = e.target.response; // get the string from the response
+    const data = JSON.parse(json); // convert it to an object
+
+    for (var i = 0, countryData; i < data.length; i++) {
+      countryData = data[i];
+      
+      countriesData[ countryData.name ] = countryData;
+    }
+    
+    populateCountriesList(countriesData);
+  })
+  .catch( function (e) { // this is called on reject when an error happens on the connection
+    console.log("Failed to retreive countriesData.json", e); 
+    document.querySelector('#error').innerHTML= e;
+    document.getElementById("explore").setAttribute("class", "hidden");
+    document.getElementById("page404").setAttribute("class", "container resultField");
+  });
+
+// Get covid data
 request('GET', covidDataURL, true) // this is calling the request function which returns a promise of XMLHttpRequest. We use GET because we are retreiving a JSON (REST API)
   .then(function (e) { // .then is done on resolve (successful connection)
       const json = e.target.response; // get the string from the response
       const data = JSON.parse(json); // convert it to an object
    
-      for (var i = 0, countryData; i < data.length; i++) {
-        countryData = data[i];
-        countriesData[ countryData.name ] = countryData;
+      for (var i = 0, covidData; i < data.length; i++) {
+        covidData = data[i];
+        countriesCovidData[ covidData.name ] = covidData;
      }
-     populateCountriesList(countriesData);
   })
   .catch( function (e) { // this is called on reject when an error happens on the connection
-    console.log("Failed to retreive countriesData.json", e); 
+    console.log("Failed to retreive countriesCovidData.json", e); 
     document.querySelector('#error').innerHTML= e;
     document.getElementById("explore").setAttribute("class", "hidden");
     document.getElementById("page404").setAttribute("class", "container resultField");
@@ -33,24 +55,24 @@ function request(method, url) { // this function wraps a XMLHttpRequest into a p
   });
 }
   
-function populateCountriesList(countriesData){
-
-  setCountryDropdownElement("#currentDestination", "Germany");
-
-  //populate drop down - current location with countriesData object
+function populateCountriesList(countriesData) {
   for (let country in countriesData){
-
+    //populate drop down - current location with countriesData object
+    setCountryDropdownElement("#currentDestination", country, true);
     //populate drop down - destination with countriesData object
-    setCountryDropdownElement("#plannedDestination", country);
+    setCountryDropdownElement("#plannedDestination", country, false);
   }
 }
 
-function setCountryDropdownElement(dropdownTag, countryName)
-{
+function setCountryDropdownElement(dropdownTag, countryName, isCurrent) {
   const dropdownElement = document.querySelector(dropdownTag);
   let countryElement = document.createElement('option');
   countryElement.innerHTML = countryName;
   dropdownElement.appendChild(countryElement);
+
+  if (isCurrent && countryName !== 'Germany') {
+    countryElement.setAttribute('disabled', true);
+  }
 }
 
 //Germany selected automatically when drop-down clicked (temporary)
@@ -129,9 +151,8 @@ function UpdatePlannedDestinationElements(countryName, countryData)
       return;
   }
 
-  //plannedDestData();
+  plannedDestData();
 
-  /*
   // Hook up rest of elements using data from countryData
   function plannedDestData(){
     const properties = Object.keys(countryData);
@@ -154,7 +175,7 @@ function UpdatePlannedDestinationElements(countryName, countryData)
         }
       }
     }
-  }*/
+  }
 }
   
 
