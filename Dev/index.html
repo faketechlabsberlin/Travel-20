@@ -9,33 +9,50 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
+
     <body>
-        <header class='container' id='navBar'>
-            <nav class='flex-container'>
-                <div class='flex-item'><img src="./ressources/Travel21 Logo.png" id='logo'></div>
-                <div class='flex-item'>Nav</div>
-            </nav>
+        <header class='container'>
+            <nav>
+                <link>About Travel 21</link>
+                <link>Get Involved</link>
+                <link>Contact Us</link>
+            </nav> 
+            <div class='container'>   
+                <div ><img src="./assets/logoText.png"  class='logo'id='logoText'></div>
+                <div ><img src="./assets/logoEarth.png" class='logo' id='logoGlobe' ></div>  
+              </div> 
         </header>
-
-      <div class='container mainField' id='explore'>
-            <h1 id='mainTitle'>Explore a destination</h1>
+        <div id="background">
+        <div class="mainField" id='explore'>
+          <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
+      <div class='container' >
+            <h2 class='mainTitle'>Explore <br> a destination</h2>
             <form>
+              <section>
                 <div class="input">
-                    <select id='currentDestination'>
-                      <option selected hidden>Where are you?</option>
+                    <label for='currentDestination'>Where are you?</label>
+                    <select id='currentDestination' name='currentDestination'>
                       <!-- Options filled dynamically from country list -->
                     </select>
                 </div>
-
-                  <div class="input">
+              </section>
+              <img src='./assets/arrow.png' alt="arrowRight" id='arrowIcon'/>
+              <section>
+                  <div class="input">                     
+                    <label>Where do you want to go?</label>
                     <select id='plannedDestination' disabled>
-                      <option selected hidden>Where do you want to go?</option>
+ 
                       <!-- Options filled dynamically from country list -->
                     </select>
                 </div>
-                <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>Go</button>
+              </section>
+              <p>Stay safe & updated...</p>
+                <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>
+                  Read our Travel Information
+                </button>
             </form>
         </div>
+      </div>
       
         <!-- a 404 page - when promise rejected -->
         <div class='container hidden' id='page404'>
@@ -45,6 +62,7 @@
             <button class="submitButton" id="refresh" onclick="onRefreshClicked()">Refresh</button>
         </div>
 
+        <!-- result section -->
         <div class='container hidden' id='result'>
           <h1 id='fromTitle'>From:</h1> <!-- dynamic, entered origin and destination to be updated here -->
           <section>
@@ -139,22 +157,41 @@
                 <p id='restu_bar_open'></p>
               </div>
             </div>
+            
           </section>
           <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Return</button>
         </div>
 
-        <div class='container mainField' id='safestLocations'>
-          <h2>Safest locations</h2>
+<!-- Safest location section -->
+        <div id='safestLocations'>
+          <image class='icon' src="./assets/shield.png" alt='icon'/>
+          <div class='container sec'>
+            <h2>Safest <br> locations </h2>
+           <!-- <image class='waterMark' src='./assets/compassPassport.png' alt='compassImage'/> -->
+          </div>
         </div>
+<!-- FAQs section -->
+        <div   id='faqs'>
+          <image class='icon' src="./assets/questionbubbles.png" alt='icon'/>
+          <div class='container sec' >
+            <h2>FAQs</h2>
+            <!-- <image class='waterMark' src='./assets/headThink.png' alt='thinkingImage'/> -->
+          </div>
+      </div>
+    </div>
 
-        <div class='container mainField' id='faqs'>
-          <h2>FAQs</h2>
-        </div>
-
+      <div class="bottomSection">
+        <section class='container' id='getInvolved'>
+          <h3>Want to get involved?</h3>
+          <p>We are currently searching for super users to crowdsource our data in the most reliable way possible.
+            Contact us at superusers@travel21.com to get involved.
+          </p>
+        </section>
         <footer>
            <a href='/'>Privacy</a>/ <a href='/'>Imprint</a>/<a href='/'>Terms&Conditions</a>
+           <p>2021 @ Travel 21</p>
         </footer>
-        
+        </div>
         <script type='text/javascript' src="app.js" async defer></script>
     </body>
 
