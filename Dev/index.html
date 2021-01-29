@@ -11,6 +11,7 @@
     </head>
 
     <body>
+        <div class="page">
         <header class='container'>
             <nav>
                 <link>About Travel 21</link>
@@ -28,29 +29,30 @@
       <div class='container' >
             <h2 class='mainTitle'>Explore <br> a destination</h2>
             <form>
-              <section>
+              <div class="fields">
                 <div class="input">
-                    <label for='currentDestination'>Where are you?</label>
-                    <select id='currentDestination' name='currentDestination'>
-                      <!-- Options filled dynamically from country list -->
-                    </select>
+                      <label for='currentDestination'>Where are you?</label>
+                      <select id='currentDestination' name='currentDestination'>
+                        <!-- Options filled dynamically from country list -->
+                      </select>
                 </div>
-              </section>
-              <img src='./assets/arrow.png' alt="arrowRight" id='arrowIcon'/>
-              <section>
-                  <div class="input">                     
+                <div>
+                  <img src='./assets/arrow.png' alt="arrowRight" id='arrowIcon'/>
+                </div>
+                <div class="input">                     
                     <label>Where do you want to go?</label>
                     <select id='plannedDestination' disabled>
  
                       <!-- Options filled dynamically from country list -->
                     </select>
                 </div>
-              </section>
+              </div>
               <p>Stay safe & updated...</p>
                 <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>
                   Read our Travel Information
                 </button>
             </form>
+          </div>
         </div>
       </div>
       
@@ -166,6 +168,7 @@
         <div id='safestLocations'>
           <image class='icon' src="./assets/shield.png" alt='icon'/>
           <div class='container sec'>
+            <div class="bgIcon"></div>
             <h2>Safest <br> locations </h2>
            <!-- <image class='waterMark' src='./assets/compassPassport.png' alt='compassImage'/> -->
           </div>
@@ -191,6 +194,7 @@
            <a href='/'>Privacy</a>/ <a href='/'>Imprint</a>/<a href='/'>Terms&Conditions</a>
            <p>2021 @ Travel 21</p>
         </footer>
+        </div>
         </div>
         <script type='text/javascript' src="app.js" async defer></script>
     </body>
