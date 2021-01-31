@@ -1,4 +1,4 @@
-const countriesDataURL = 'https://api.jsonbin.io/b/6002f41bf98f6e35d5fd39af/1';
+const countriesDataURL = 'https://adac-scraper-dev-scraperfeedbucket-16nuzvfai8pr8.s3.eu-central-1.amazonaws.com/adac/adac.json';
 const covidDataURL = 'https://api.jsonbin.io/b/60072108eb2fee239b5ee9ab'; // This is on some json hosting site
 
 let countriesData = {}; 
@@ -13,10 +13,30 @@ request('GET', countriesDataURL, true) // this is calling the request function w
     for (var i = 0, countryData; i < data.length; i++) {
       countryData = data[i];
       
-      countriesData[ countryData.name ] = countryData;
+      if ((countryData.Land === undefined) || (countryData.Land === null)) 
+        continue;
+
+      let engCountryName = getEnglishName(countryData.Land);
+
+      if (engCountryName === "ERROR") 
+        continue;
+
+      countriesData[ engCountryName ] = countryData;
+      countriesData[ engCountryName ].Name = engCountryName;
     }
+
+    // HACK TO ADD GERMAN DATA
+    countriesData[ "Germany" ] = {
+      "Entry_form": 0,
+      "Land": "deutschland",
+      "Name": "Germany",
+      "Quarantine": 1,
+      "Reisewarnung": 1,
+      "Riskzone": 1,
+      "Test_entry": 0
+    };
     
-    populateCountriesList(countriesData);
+    populateCountriesList();
   })
   .catch( function (e) { // this is called on reject when an error happens on the connection
     console.log("Failed to retreive countriesData.json", e); 
@@ -55,7 +75,7 @@ function request(method, url) { // this function wraps a XMLHttpRequest into a p
   });
 }
   
-function populateCountriesList(countriesData) {
+function populateCountriesList() {
   for (let country in countriesData){
     //populate drop down - current location with countriesData object
     setCountryDropdownElement("#currentDestination", country, true);
@@ -133,10 +153,6 @@ function UpdateCurrentDestinationElements(countryName, countryData)
       console.log("No data for " + countryName);
       return;
   }
-
-  console.log(countryData);
-
-  // Hook up rest of elements using data from countryData - currently not available
 }
 
 function UpdatePlannedDestinationElements(countryName, countryData)
@@ -151,18 +167,19 @@ function UpdatePlannedDestinationElements(countryName, countryData)
       return;
   }
 
-  plannedDestData();
+  //plannedDestData();
 
   // Hook up rest of elements using data from countryData
   function plannedDestData(){
     const properties = Object.keys(countryData);
     for (let property of properties){ //accessing each property for selected country seperately
-      if (property !== 'name'){ //exclude first property - name
+      if (property !== 'Name'){ //exclude first property - name
         console.log(property)
         console.log(countryData[property])
 
         
         if(countryData[property]!==undefined && countryData[property]!==null ){ //if property has a value
+            console.log(`#${property}`);
             const x = document.querySelector(`#${property}`); //select it in the DOM
             if(countryData[property]){ //translate bool to 'yes' or 'no'
               x.innerHTML='Yes'
