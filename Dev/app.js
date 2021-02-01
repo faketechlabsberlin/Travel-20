@@ -35,7 +35,7 @@ request('GET', countriesDataURL, true) // this is calling the request function w
       "Riskzone": 1,
       "Test_entry": 0
     };
-    
+
     populateCountriesList();
   })
   .catch( function (e) { // this is called on reject when an error happens on the connection
@@ -151,12 +151,15 @@ function UpdateCurrentDestinationElements(countryName, countryData)
   const resultDeparture = document.querySelector('#resultDeparture');
   resultDeparture.innerHTML = countryName;
 
+  // countryData not used in this function
   if ((countryData === undefined) || (countryData === null)) 
   {
       // TODO. Need to show no data for this country
       console.log("No data for " + countryName);
       return;
   }
+
+  updateCases(countryName, "casePer100KDeparture");
 }
 
 function UpdatePlannedDestinationElements(countryName, countryData)
@@ -171,9 +174,17 @@ function UpdatePlannedDestinationElements(countryName, countryData)
       return;
   }
 
+  updateElement("riskZone", countryData["Riskzone"], true);
+  updateElement("travelWarning", countryData["Reisewarnung"], true);
+  updateElement("entryTest", countryData["Test_entry"], true);
+  updateElement("entryForm", countryData["Entry_form"], true);
+  updateElement("quarantineReturn", countryData["Quarantine"], true);
+
+  updateCases(countryName, "casePer100KDestination");
+
   //plannedDestData();
 
-  // Hook up rest of elements using data from countryData
+  // NOT USED - Hook up rest of elements using data from countryData
   function plannedDestData(){
     const properties = Object.keys(countryData);
     for (let property of properties){ //accessing each property for selected country seperately
@@ -185,6 +196,10 @@ function UpdatePlannedDestinationElements(countryName, countryData)
         if(countryData[property]!==undefined && countryData[property]!==null ){ //if property has a value
             console.log(`#${property}`);
             const x = document.querySelector(`#${property}`); //select it in the DOM
+
+            if (x === undefined || x === null)
+              continue;
+
             if(countryData[property]){ //translate bool to 'yes' or 'no'
               x.innerHTML='Yes'
             }else{
@@ -198,7 +213,36 @@ function UpdatePlannedDestinationElements(countryName, countryData)
     }
   }
 }
+
+function updateElement(elementName, elementValue, isBool) {
+  const element = document.querySelector(`#${elementName}`);
+
+  if (element === undefined || element === null)
+  {
+    console.log("Element not found: ", elementName);
+    return;
+  }
+
+  let value = elementValue;
+
+  if (isBool) {
+    if(value){ //translate bool to 'yes' or 'no'
+      value = 'Yes';
+    }else{
+      value = 'No';
+    }
+  }
+
+  element.innerHTML = value;
+}
   
+function updateCases(countryName, elementName) {
+  let cases = Math.round(countriesCovidData[countryName].cumulativeTotalPer1Million / 1000);
+
+  let casePer100K = `${cases}k cases per 100k`;
+
+  updateElement(elementName, casePer100K, false);
+}
 
 
 //   const isBorderOpen = document.querySelector('#isBorderOpen');

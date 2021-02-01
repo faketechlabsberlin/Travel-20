@@ -12,21 +12,21 @@
 
     <body>
         <div class="page">
-        <header class='container'>
+        <header>
             <nav>
-                <link>About Travel 21</link>
-                <link>Get Involved</link>
-                <link>Contact Us</link>
+              <a href="/about/">About Travel 21</a> 
+              <a href="/involved/">Get Involved</a> 
+              <a href="/contact/">Contact Us</a> 
             </nav> 
             <div class='container'>   
                 <div ><img src="./assets/logoText.png"  class='logo'id='logoText'></div>
                 <div ><img src="./assets/logoEarth.png" class='logo' id='logoGlobe' ></div>  
-              </div> 
+            </div> 
         </header>
         <div id="background">
         <div class="mainField" id='explore'>
           <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
-      <div class='container' >
+          <div class='container'>
             <h2 class='mainTitle'>Explore <br> a destination</h2>
             <form>
               <div class="fields">
@@ -71,10 +71,10 @@
             <h2 id='resultDeparture'><i class="arrow right"></i><!-- dynamic, will display entered origin --> </h2> 
             <div class="row">
               <div class="col">
-                <p>1.6k cases per 100k</p>
+                <p id='casePer100KDeparture'>1.6k cases per 100k</p>
               </div>
               <div class="col greyRight">
-                <p>Latest update:</p>
+                <p id='latestUpdateDeparture'>Latest update:</p>
               </div>
             </div>
 
@@ -100,10 +100,10 @@
             <h2 id="resultDestination" class="marginTop"><i class="arrow right" ></i> </h2> <!--dynamic, should display previously entered destination -->
             <div class="row">
               <div class="col">
-                <p>4.4k cases per 100k</p>
+                <p id='casePer100KDestination'>4.4k cases per 100k</p>
               </div>
               <div class="col greyRight">
-                <p>Latest update:</p>
+                <p id='latestUpdateDestination'>Latest update:</p>
               </div>
             </div>
 
@@ -111,52 +111,46 @@
 
             <div class="row">
               <div class="col">
-                <h3 class="marginTop"><u>Is the border closed?</u></p>
+                <h3 class="marginTop"><u>Is it a risk zone?</u></p>
               </div>
               <div class="col">
-                <h3 class="marginTop"><u>Is mask required?</u></p>
+                <h3 class="marginTop"><u>Is there a travel warning?</u></p>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <p id='entryBan'><!-- dynamic --></p>
+                <p id='riskZone'><!-- dynamic --></p>
               </div>
               <div class="col">
-                <p id='needMask'><!-- dynamic --></p>
+                <p id='travelWarning'><!-- dynamic --></p>
               </div>
             </div>
     
             <div class="row">
               <div class="col">
-                <h3 class="marginTop"><u>Do I need a test prior to entry?</u></p>
+                <h3 class="marginTop"><u>Do I need a test upon entry?</u></p>
               </div>
               <div class="col">
-                <h3 class="marginTop"><u>Is there a curfew?</u></p>
+                <h3 class="marginTop"><u>Do I need an entry form?</u></p>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <p id='before_test'></p>
+                <p id='entryTest'></p>
               </div>
               <div class="col">
-                <p id='curfew'></p>
+                <p id='entryForm'></p>
               </div>
             </div>
           
             <div class="row">
               <div class="col">
-                <h3 class="marginTop"><u>Do I need to quarantine upon arrival?</u></p>
-              </div>
-              <div class="col">
-                <h3 class="marginTop"><u>Are restaurants and bars open?</u></p>
+                <h3 class="marginTop"><u>Do I need to quarantine when I return?</u></p>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <p id='quarantine_arr'></p>
-              </div>
-              <div class="col">
-                <p id='restu_bar_open'></p>
+                <p id='quarantineReturn'></p>
               </div>
             </div>
             
