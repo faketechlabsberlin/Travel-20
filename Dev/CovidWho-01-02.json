@@ -1,0 +1,1556 @@
+[
+ {
+   "Country": "Afghanistan",
+   "Total Cases": 55059,
+   "Cases per 100K": 141,
+   "Total Deaths": 2404,
+   "Deaths per 100K": 6
+ },
+ {
+   "Country": "Albania",
+   "Total Cases": 77251,
+   "Cases per 100K": 268,
+   "Total Deaths": 1369,
+   "Deaths per 100K": 47
+ },
+ {
+   "Country": "Algeria",
+   "Total Cases": 107122,
+   "Cases per 100K": 244,
+   "Total Deaths": 2888,
+   "Deaths per 100K": 6
+ },
+ {
+   "Country": "Andorra",
+   "Total Cases": 9885,
+   "Cases per 100K": 12793,
+   "Total Deaths": 101,
+   "Deaths per 100K": 130
+ },
+ {
+   "Country": "Angola",
+   "Total Cases": 19782,
+   "Cases per 100K": 60,
+   "Total Deaths": 464,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Anguilla",
+   "Total Cases": 17,
+   "Cases per 100K": 113,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Antigua and Barbuda",
+   "Total Cases": 220,
+   "Cases per 100K": 224,
+   "Total Deaths": 7,
+   "Deaths per 100K": 7
+ },
+ {
+   "Country": "Argentina",
+   "Total Cases": 1922264,
+   "Cases per 100K": 4253,
+   "Total Deaths": 47931,
+   "Deaths per 100K": 106
+ },
+ {
+   "Country": "Armenia",
+   "Total Cases": 167026,
+   "Cases per 100K": 5636,
+   "Total Deaths": 3080,
+   "Deaths per 100K": 10
+ },
+ {
+   "Country": "Aruba",
+   "Total Cases": 6858,
+   "Cases per 100K": 6423,
+   "Total Deaths": 58,
+   "Deaths per 100K": 54
+ },
+ {
+   "Country": "Australia",
+   "Total Cases": 28811,
+   "Cases per 100K": 112,
+   "Total Deaths": 909,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Austria",
+   "Total Cases": 409892,
+   "Cases per 100K": 455,
+   "Total Deaths": 7636,
+   "Deaths per 100K": 84
+ },
+ {
+   "Country": "Azerbaijan",
+   "Total Cases": 230066,
+   "Cases per 100K": 226,
+   "Total Deaths": 3126,
+   "Deaths per 100K": 30
+ },
+ {
+   "Country": "Bahamas",
+   "Total Cases": 8174,
+   "Cases per 100K": 2078,
+   "Total Deaths": 176,
+   "Deaths per 100K": 44
+ },
+ {
+   "Country": "Bahrain",
+   "Total Cases": 103057,
+   "Cases per 100K": 6056,
+   "Total Deaths": 375,
+   "Deaths per 100K": 22
+ },
+ {
+   "Country": "Bangladesh",
+   "Total Cases": 535139,
+   "Cases per 100K": 324,
+   "Total Deaths": 8127,
+   "Deaths per 100K": 4
+ },
+ {
+   "Country": "Barbados",
+   "Total Cases": 1545,
+   "Cases per 100K": 537,
+   "Total Deaths": 12,
+   "Deaths per 100K": 4
+ },
+ {
+   "Country": "Belarus",
+   "Total Cases": 246570,
+   "Cases per 100K": 2609,
+   "Total Deaths": 1708,
+   "Deaths per 100K": 18
+ },
+ {
+   "Country": "Belgium",
+   "Total Cases": 707837,
+   "Cases per 100K": 6107,
+   "Total Deaths": 21066,
+   "Deaths per 100K": 181
+ },
+ {
+   "Country": "Belize",
+   "Total Cases": 11908,
+   "Cases per 100K": 2994,
+   "Total Deaths": 301,
+   "Deaths per 100K": 75
+ },
+ {
+   "Country": "Benin",
+   "Total Cases": 3786,
+   "Cases per 100K": 31,
+   "Total Deaths": 48,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Bermuda",
+   "Total Cases": 691,
+   "Cases per 100K": 110,
+   "Total Deaths": 12,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Bhutan",
+   "Total Cases": 859,
+   "Cases per 100K": 111,
+   "Total Deaths": 1,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Bolivia (Plurinational State of)",
+   "Total Cases": 215397,
+   "Cases per 100K": 1845,
+   "Total Deaths": 10330,
+   "Deaths per 100K": 88
+ },
+ {
+   "Country": "Bonaire",
+   "Total Cases": 362,
+   "Cases per 100K": 1730,
+   "Total Deaths": 3,
+   "Deaths per 100K": 14
+ },
+ {
+   "Country": "Bosnia and Herzegovina",
+   "Total Cases": 121891,
+   "Cases per 100K": 3715,
+   "Total Deaths": 4696,
+   "Deaths per 100K": 143
+ },
+ {
+   "Country": "Botswana",
+   "Total Cases": 21293,
+   "Cases per 100K": 905,
+   "Total Deaths": 134,
+   "Deaths per 100K": 5
+ },
+ {
+   "Country": "Brazil",
+   "Total Cases": 9176975,
+   "Cases per 100K": 4317,
+   "Total Deaths": 223945,
+   "Deaths per 100K": 105
+ },
+ {
+   "Country": "British Virgin Islands",
+   "Total Cases": 141,
+   "Cases per 100K": 466,
+   "Total Deaths": 1,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Brunei Darussalam",
+   "Total Cases": 180,
+   "Cases per 100K": 41,
+   "Total Deaths": 3,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Bulgaria",
+   "Total Cases": 218618,
+   "Cases per 100K": 3146,
+   "Total Deaths": 9028,
+   "Deaths per 100K": 129
+ },
+ {
+   "Country": "Burkina Faso",
+   "Total Cases": 10580,
+   "Cases per 100K": 50,
+   "Total Deaths": 120,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Burundi",
+   "Total Cases": 1632,
+   "Cases per 100K": 13,
+   "Total Deaths": 2,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Cabo Verde",
+   "Total Cases": 13981,
+   "Cases per 100K": 2514,
+   "Total Deaths": 133,
+   "Deaths per 100K": 23
+ },
+ {
+   "Country": "Cambodia",
+   "Total Cases": 466,
+   "Cases per 100K": 2,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Cameroon",
+   "Total Cases": 29617,
+   "Cases per 100K": 111,
+   "Total Deaths": 462,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Canada",
+   "Total Cases": 775048,
+   "Cases per 100K": 2053,
+   "Total Deaths": 19942,
+   "Deaths per 100K": 52
+ },
+ {
+   "Country": "Cayman Islands",
+   "Total Cases": 390,
+   "Cases per 100K": 593,
+   "Total Deaths": 2,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Central African Republic",
+   "Total Cases": 4981,
+   "Cases per 100K": 103,
+   "Total Deaths": 63,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Chad",
+   "Total Cases": 3347,
+   "Cases per 100K": 20,
+   "Total Deaths": 118,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Chile",
+   "Total Cases": 727109,
+   "Cases per 100K": 3803,
+   "Total Deaths": 18452,
+   "Deaths per 100K": 96
+ },
+ {
+   "Country": "China",
+   "Total Cases": 100974,
+   "Cases per 100K": 6,
+   "Total Deaths": 4825,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Colombia",
+   "Total Cases": 2086806,
+   "Cases per 100K": 4101,
+   "Total Deaths": 53650,
+   "Deaths per 100K": 105
+ },
+ {
+   "Country": "Comoros",
+   "Total Cases": 2718,
+   "Cases per 100K": 312,
+   "Total Deaths": 90,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Congo",
+   "Total Cases": 7887,
+   "Cases per 100K": 14,
+   "Total Deaths": 117,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Costa Rica",
+   "Total Cases": 193276,
+   "Cases per 100K": 3794,
+   "Total Deaths": 2604,
+   "Deaths per 100K": 51
+ },
+ {
+   "Country": "Côte d’Ivoire",
+   "Total Cases": 28178,
+   "Cases per 100K": 106,
+   "Total Deaths": 152,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Croatia",
+   "Total Cases": 232426,
+   "Cases per 100K": 5661,
+   "Total Deaths": 5027,
+   "Deaths per 100K": 122
+ },
+ {
+   "Country": "Cuba",
+   "Total Cases": 26686,
+   "Cases per 100K": 235,
+   "Total Deaths": 214,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Curaçao",
+   "Total Cases": 4574,
+   "Cases per 100K": 2787,
+   "Total Deaths": 20,
+   "Deaths per 100K": 12
+ },
+ {
+   "Country": "Cyprus",
+   "Total Cases": 30770,
+   "Cases per 100K": 2548,
+   "Total Deaths": 197,
+   "Deaths per 100K": 16
+ },
+ {
+   "Country": "Czechia",
+   "Total Cases": 984774,
+   "Cases per 100K": 9195,
+   "Total Deaths": 16308,
+   "Deaths per 100K": 152
+ },
+ {
+   "Country": "Democratic Republic of the Congo",
+   "Total Cases": 22603,
+   "Cases per 100K": 25,
+   "Total Deaths": 671,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Denmark",
+   "Total Cases": 198095,
+   "Cases per 100K": 3420,
+   "Total Deaths": 2106,
+   "Deaths per 100K": 36
+ },
+ {
+   "Country": "Djibouti",
+   "Total Cases": 5932,
+   "Cases per 100K": 600,
+   "Total Deaths": 63,
+   "Deaths per 100K": 6
+ },
+ {
+   "Country": "Dominica",
+   "Total Cases": 117,
+   "Cases per 100K": 16,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Dominican Republic",
+   "Total Cases": 214060,
+   "Cases per 100K": 1973,
+   "Total Deaths": 2666,
+   "Deaths per 100K": 24
+ },
+ {
+   "Country": "Ecuador",
+   "Total Cases": 250828,
+   "Cases per 100K": 1421,
+   "Total Deaths": 14859,
+   "Deaths per 100K": 8
+ },
+ {
+   "Country": "Egypt",
+   "Total Cases": 165951,
+   "Cases per 100K": 162,
+   "Total Deaths": 9316,
+   "Deaths per 100K": 9
+ },
+ {
+   "Country": "El Salvador",
+   "Total Cases": 54966,
+   "Cases per 100K": 847,
+   "Total Deaths": 1623,
+   "Deaths per 100K": 25
+ },
+ {
+   "Country": "Equatorial Guinea",
+   "Total Cases": 5516,
+   "Cases per 100K": 393,
+   "Total Deaths": 86,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Eritrea",
+   "Total Cases": 2135,
+   "Cases per 100K": 60,
+   "Total Deaths": 7,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Estonia",
+   "Total Cases": 44208,
+   "Cases per 100K": 3332,
+   "Total Deaths": 419,
+   "Deaths per 100K": 31
+ },
+ {
+   "Country": "Eswatini",
+   "Total Cases": 15666,
+   "Cases per 100K": 1350,
+   "Total Deaths": 562,
+   "Deaths per 100K": 48
+ },
+ {
+   "Country": "Ethiopia",
+   "Total Cases": 137021,
+   "Cases per 100K": 119,
+   "Total Deaths": 2091,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Falkland Islands (Malvinas)",
+   "Total Cases": 40,
+   "Cases per 100K": 1148,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Faroe Islands",
+   "Total Cases": 654,
+   "Cases per 100K": 1338,
+   "Total Deaths": 1,
+   "Deaths per 100K": 2
+ },
+ {
+   "Country": "Fiji",
+   "Total Cases": 55,
+   "Cases per 100K": 6,
+   "Total Deaths": 2,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Finland",
+   "Total Cases": 44402,
+   "Cases per 100K": 801,
+   "Total Deaths": 671,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "France",
+   "Total Cases": 3126351,
+   "Cases per 100K": 4789,
+   "Total Deaths": 75466,
+   "Deaths per 100K": 115
+ },
+ {
+   "Country": "French Guiana",
+   "Total Cases": 16083,
+   "Cases per 100K": 5384,
+   "Total Deaths": 76,
+   "Deaths per 100K": 25
+ },
+ {
+   "Country": "French Polynesia",
+   "Total Cases": 18060,
+   "Cases per 100K": 6429,
+   "Total Deaths": 131,
+   "Deaths per 100K": 46
+ },
+ {
+   "Country": "Gabon",
+   "Total Cases": 10748,
+   "Cases per 100K": 482,
+   "Total Deaths": 68,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Gambia",
+   "Total Cases": 4090,
+   "Cases per 100K": 169,
+   "Total Deaths": 128,
+   "Deaths per 100K": 5
+ },
+ {
+   "Country": "Georgia",
+   "Total Cases": 258111,
+   "Cases per 100K": 6470,
+   "Total Deaths": 3178,
+   "Deaths per 100K": 79
+ },
+ {
+   "Country": "Germany",
+   "Total Cases": 2216363,
+   "Cases per 100K": 2645,
+   "Total Deaths": 56945,
+   "Deaths per 100K": 67
+ },
+ {
+   "Country": "Ghana",
+   "Total Cases": 65427,
+   "Cases per 100K": 210,
+   "Total Deaths": 405,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Gibraltar",
+   "Total Cases": 4096,
+   "Cases per 100K": 12157,
+   "Total Deaths": 73,
+   "Deaths per 100K": 216
+ },
+ {
+   "Country": "Greece",
+   "Total Cases": 156473,
+   "Cases per 100K": 150,
+   "Total Deaths": 5779,
+   "Deaths per 100K": 55
+ },
+ {
+   "Country": "Greenland",
+   "Total Cases": 30,
+   "Cases per 100K": 52,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Grenada",
+   "Total Cases": 148,
+   "Cases per 100K": 131,
+   "Total Deaths": 1,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Guadeloupe",
+   "Total Cases": 9156,
+   "Cases per 100K": 2288,
+   "Total Deaths": 157,
+   "Deaths per 100K": 39
+ },
+ {
+   "Country": "Guam",
+   "Total Cases": 7380,
+   "Cases per 100K": 4372,
+   "Total Deaths": 129,
+   "Deaths per 100K": 76
+ },
+ {
+   "Country": "Guatemala",
+   "Total Cases": 159504,
+   "Cases per 100K": 890,
+   "Total Deaths": 5643,
+   "Deaths per 100K": 31
+ },
+ {
+   "Country": "Guernsey",
+   "Total Cases": 449,
+   "Cases per 100K": 710,
+   "Total Deaths": 13,
+   "Deaths per 100K": 20
+ },
+ {
+   "Country": "Guinea",
+   "Total Cases": 14475,
+   "Cases per 100K": 11,
+   "Total Deaths": 82,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Guinea-Bissau",
+   "Total Cases": 2623,
+   "Cases per 100K": 133,
+   "Total Deaths": 45,
+   "Deaths per 100K": 2
+ },
+ {
+   "Country": "Guyana",
+   "Total Cases": 7581,
+   "Cases per 100K": 963,
+   "Total Deaths": 176,
+   "Deaths per 100K": 22
+ },
+ {
+   "Country": "Haiti",
+   "Total Cases": 11533,
+   "Cases per 100K": 101,
+   "Total Deaths": 245,
+   "Deaths per 100K": 2
+ },
+ {
+   "Country": "Holy See",
+   "Total Cases": 26,
+   "Cases per 100K": 3213,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Honduras",
+   "Total Cases": 147100,
+   "Cases per 100K": 1485,
+   "Total Deaths": 3592,
+   "Deaths per 100K": 36
+ },
+ {
+   "Country": "Hungary",
+   "Total Cases": 367586,
+   "Cases per 100K": 38,
+   "Total Deaths": 12524,
+   "Deaths per 100K": 129
+ },
+ {
+   "Country": "Iceland",
+   "Total Cases": 6002,
+   "Cases per 100K": 1758,
+   "Total Deaths": 29,
+   "Deaths per 100K": 8
+ },
+ {
+   "Country": "India",
+   "Total Cases": 10757610,
+   "Cases per 100K": 779,
+   "Total Deaths": 154392,
+   "Deaths per 100K": 11
+ },
+ {
+   "Country": "Indonesia",
+   "Total Cases": 1078314,
+   "Cases per 100K": 394,
+   "Total Deaths": 29998,
+   "Deaths per 100K": 10
+ },
+ {
+   "Country": "Iran (Islamic Republic of)",
+   "Total Cases": 1417999,
+   "Cases per 100K": 1688,
+   "Total Deaths": 57959,
+   "Deaths per 100K": 69
+ },
+ {
+   "Country": "Iraq",
+   "Total Cases": 619636,
+   "Cases per 100K": 1540,
+   "Total Deaths": 13047,
+   "Deaths per 100K": 32
+ },
+ {
+   "Country": "Ireland",
+   "Total Cases": 195303,
+   "Cases per 100K": 3955,
+   "Total Deaths": 3292,
+   "Deaths per 100K": 6
+ },
+ {
+   "Country": "Isle of Man",
+   "Total Cases": 434,
+   "Cases per 100K": 510,
+   "Total Deaths": 25,
+   "Deaths per 100K": 29
+ },
+ {
+   "Country": "Israel",
+   "Total Cases": 637242,
+   "Cases per 100K": 7362,
+   "Total Deaths": 4722,
+   "Deaths per 100K": 54
+ },
+ {
+   "Country": "Italy",
+   "Total Cases": 2541783,
+   "Cases per 100K": 4203,
+   "Total Deaths": 88279,
+   "Deaths per 100K": 146
+ },
+ {
+   "Country": "Jamaica",
+   "Total Cases": 15653,
+   "Cases per 100K": 528,
+   "Total Deaths": 350,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Japan",
+   "Total Cases": 389518,
+   "Cases per 100K": 307,
+   "Total Deaths": 5722,
+   "Deaths per 100K": 4
+ },
+ {
+   "Country": "Jersey",
+   "Total Cases": 3143,
+   "Cases per 100K": 2888,
+   "Total Deaths": 66,
+   "Deaths per 100K": 60
+ },
+ {
+   "Country": "Jordan",
+   "Total Cases": 326855,
+   "Cases per 100K": 3203,
+   "Total Deaths": 4316,
+   "Deaths per 100K": 42
+ },
+ {
+   "Country": "Kazakhstan",
+   "Total Cases": 234569,
+   "Cases per 100K": 1249,
+   "Total Deaths": 3035,
+   "Deaths per 100K": 16
+ },
+ {
+   "Country": "Kenya",
+   "Total Cases": 100675,
+   "Cases per 100K": 187,
+   "Total Deaths": 1755,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Kosovo[1]",
+   "Total Cases": 59891,
+   "Cases per 100K": 3219,
+   "Total Deaths": 1482,
+   "Deaths per 100K": 79
+ },
+ {
+   "Country": "Kuwait",
+   "Total Cases": 165257,
+   "Cases per 100K": 386,
+   "Total Deaths": 959,
+   "Deaths per 100K": 22
+ },
+ {
+   "Country": "Kyrgyzstan",
+   "Total Cases": 84529,
+   "Cases per 100K": 1295,
+   "Total Deaths": 1412,
+   "Deaths per 100K": 21
+ },
+ {
+   "Country": "Lao People's Democratic Republic",
+   "Total Cases": 44,
+   "Cases per 100K": 0,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Latvia",
+   "Total Cases": 65708,
+   "Cases per 100K": 3483,
+   "Total Deaths": 1180,
+   "Deaths per 100K": 6
+ },
+ {
+   "Country": "Lebanon",
+   "Total Cases": 301052,
+   "Cases per 100K": 4410,
+   "Total Deaths": 3082,
+   "Deaths per 100K": 45
+ },
+ {
+   "Country": "Lesotho",
+   "Total Cases": 8278,
+   "Cases per 100K": 386,
+   "Total Deaths": 160,
+   "Deaths per 100K": 7
+ },
+ {
+   "Country": "Liberia",
+   "Total Cases": 1939,
+   "Cases per 100K": 38,
+   "Total Deaths": 84,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Libya",
+   "Total Cases": 118631,
+   "Cases per 100K": 1726,
+   "Total Deaths": 1877,
+   "Deaths per 100K": 27
+ },
+ {
+   "Country": "Liechtenstein",
+   "Total Cases": 2561,
+   "Cases per 100K": 6715,
+   "Total Deaths": 46,
+   "Deaths per 100K": 120
+ },
+ {
+   "Country": "Lithuania",
+   "Total Cases": 182539,
+   "Cases per 100K": 670,
+   "Total Deaths": 2803,
+   "Deaths per 100K": 102
+ },
+ {
+   "Country": "Luxembourg",
+   "Total Cases": 50547,
+   "Cases per 100K": 8074,
+   "Total Deaths": 579,
+   "Deaths per 100K": 92
+ },
+ {
+   "Country": "Madagascar",
+   "Total Cases": 18743,
+   "Cases per 100K": 67,
+   "Total Deaths": 279,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Malawi",
+   "Total Cases": 23497,
+   "Cases per 100K": 122,
+   "Total Deaths": 687,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Malaysia",
+   "Total Cases": 214959,
+   "Cases per 100K": 664,
+   "Total Deaths": 760,
+   "Deaths per 100K": 2
+ },
+ {
+   "Country": "Maldives",
+   "Total Cases": 15841,
+   "Cases per 100K": 2930,
+   "Total Deaths": 52,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Mali",
+   "Total Cases": 8069,
+   "Cases per 100K": 39,
+   "Total Deaths": 330,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Malta",
+   "Total Cases": 17903,
+   "Cases per 100K": 4054,
+   "Total Deaths": 267,
+   "Deaths per 100K": 6
+ },
+ {
+   "Country": "Marshall Islands",
+   "Total Cases": 4,
+   "Cases per 100K": 6,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Martinique",
+   "Total Cases": 6370,
+   "Cases per 100K": 1697,
+   "Total Deaths": 44,
+   "Deaths per 100K": 11
+ },
+ {
+   "Country": "Mauritania",
+   "Total Cases": 16460,
+   "Cases per 100K": 354,
+   "Total Deaths": 418,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Mauritius",
+   "Total Cases": 568,
+   "Cases per 100K": 44,
+   "Total Deaths": 10,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Mayotte",
+   "Total Cases": 8231,
+   "Cases per 100K": 3017,
+   "Total Deaths": 61,
+   "Deaths per 100K": 22
+ },
+ {
+   "Country": "Mexico",
+   "Total Cases": 1857230,
+   "Cases per 100K": 1440,
+   "Total Deaths": 158074,
+   "Deaths per 100K": 122
+ },
+ {
+   "Country": "Monaco",
+   "Total Cases": 1475,
+   "Cases per 100K": 3758,
+   "Total Deaths": 12,
+   "Deaths per 100K": 30
+ },
+ {
+   "Country": "Mongolia",
+   "Total Cases": 1779,
+   "Cases per 100K": 54,
+   "Total Deaths": 2,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Montenegro",
+   "Total Cases": 61289,
+   "Cases per 100K": 9758,
+   "Total Deaths": 802,
+   "Deaths per 100K": 127
+ },
+ {
+   "Country": "Montserrat",
+   "Total Cases": 13,
+   "Cases per 100K": 260,
+   "Total Deaths": 1,
+   "Deaths per 100K": 20
+ },
+ {
+   "Country": "Morocco",
+   "Total Cases": 471157,
+   "Cases per 100K": 1276,
+   "Total Deaths": 8275,
+   "Deaths per 100K": 22
+ },
+ {
+   "Country": "Mozambique",
+   "Total Cases": 37705,
+   "Cases per 100K": 120,
+   "Total Deaths": 363,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Myanmar",
+   "Total Cases": 140145,
+   "Cases per 100K": 257,
+   "Total Deaths": 3131,
+   "Deaths per 100K": 5
+ },
+ {
+   "Country": "Namibia",
+   "Total Cases": 33828,
+   "Cases per 100K": 1331,
+   "Total Deaths": 350,
+   "Deaths per 100K": 13
+ },
+ {
+   "Country": "Nepal",
+   "Total Cases": 270959,
+   "Cases per 100K": 929,
+   "Total Deaths": 2029,
+   "Deaths per 100K": 6
+ },
+ {
+   "Country": "Netherlands",
+   "Total Cases": 974775,
+   "Cases per 100K": 5688,
+   "Total Deaths": 13959,
+   "Deaths per 100K": 81
+ },
+ {
+   "Country": "New Caledonia",
+   "Total Cases": 47,
+   "Cases per 100K": 16,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "New Zealand",
+   "Total Cases": 1947,
+   "Cases per 100K": 40,
+   "Total Deaths": 25,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Nicaragua",
+   "Total Cases": 4992,
+   "Cases per 100K": 75,
+   "Total Deaths": 169,
+   "Deaths per 100K": 2
+ },
+ {
+   "Country": "Niger",
+   "Total Cases": 4516,
+   "Cases per 100K": 18,
+   "Total Deaths": 159,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Nigeria",
+   "Total Cases": 130557,
+   "Cases per 100K": 63,
+   "Total Deaths": 1578,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "North Macedonia",
+   "Total Cases": 92518,
+   "Cases per 100K": 4440,
+   "Total Deaths": 2848,
+   "Deaths per 100K": 136
+ },
+ {
+   "Country": "Northern Mariana Islands (Commonwealth of the)",
+   "Total Cases": 132,
+   "Cases per 100K": 229,
+   "Total Deaths": 2,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Norway",
+   "Total Cases": 62575,
+   "Cases per 100K": 1154,
+   "Total Deaths": 563,
+   "Deaths per 100K": 10
+ },
+ {
+   "Country": "occupied Palestinian territory including east Jerusalem",
+   "Total Cases": 178919,
+   "Cases per 100K": 3507,
+   "Total Deaths": 2012,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Oman",
+   "Total Cases": 134326,
+   "Cases per 100K": 2630,
+   "Total Deaths": 1529,
+   "Deaths per 100K": 29
+ },
+ {
+   "Country": "Pakistan",
+   "Total Cases": 544813,
+   "Cases per 100K": 246,
+   "Total Deaths": 11657,
+   "Deaths per 100K": 5
+ },
+ {
+   "Country": "Panama",
+   "Total Cases": 319453,
+   "Cases per 100K": 7403,
+   "Total Deaths": 5244,
+   "Deaths per 100K": 121
+ },
+ {
+   "Country": "Papua New Guinea",
+   "Total Cases": 867,
+   "Cases per 100K": 0,
+   "Total Deaths": 9,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Paraguay",
+   "Total Cases": 132548,
+   "Cases per 100K": 1858,
+   "Total Deaths": 2704,
+   "Deaths per 100K": 37
+ },
+ {
+   "Country": "Peru",
+   "Total Cases": 1133022,
+   "Cases per 100K": 3436,
+   "Total Deaths": 40857,
+   "Deaths per 100K": 123
+ },
+ {
+   "Country": "Philippines",
+   "Total Cases": 525618,
+   "Cases per 100K": 479,
+   "Total Deaths": 10749,
+   "Deaths per 100K": 9
+ },
+ {
+   "Country": "Poland",
+   "Total Cases": 1513385,
+   "Cases per 100K": 3998,
+   "Total Deaths": 37180,
+   "Deaths per 100K": 98
+ },
+ {
+   "Country": "Portugal",
+   "Total Cases": 711018,
+   "Cases per 100K": 6973,
+   "Total Deaths": 12179,
+   "Deaths per 100K": 11
+ },
+ {
+   "Country": "Puerto Rico",
+   "Total Cases": 93624,
+   "Cases per 100K": 327,
+   "Total Deaths": 1829,
+   "Deaths per 100K": 63
+ },
+ {
+   "Country": "Qatar",
+   "Total Cases": 151335,
+   "Cases per 100K": 5252,
+   "Total Deaths": 248,
+   "Deaths per 100K": 8
+ },
+ {
+   "Country": "Republic of Korea",
+   "Total Cases": 78508,
+   "Cases per 100K": 153,
+   "Total Deaths": 1425,
+   "Deaths per 100K": 2
+ },
+ {
+   "Country": "Republic of Moldova",
+   "Total Cases": 159513,
+   "Cases per 100K": 395,
+   "Total Deaths": 3434,
+   "Deaths per 100K": 85
+ },
+ {
+   "Country": "Réunion",
+   "Total Cases": 9996,
+   "Cases per 100K": 1116,
+   "Total Deaths": 46,
+   "Deaths per 100K": 5
+ },
+ {
+   "Country": "Romania",
+   "Total Cases": 726918,
+   "Cases per 100K": 3778,
+   "Total Deaths": 18264,
+   "Deaths per 100K": 94
+ },
+ {
+   "Country": "Russian Federation",
+   "Total Cases": 3850439,
+   "Cases per 100K": 2638,
+   "Total Deaths": 73182,
+   "Deaths per 100K": 50
+ },
+ {
+   "Country": "Rwanda",
+   "Total Cases": 15118,
+   "Cases per 100K": 116,
+   "Total Deaths": 193,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Saba",
+   "Total Cases": 6,
+   "Cases per 100K": 310,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Saint Barthélemy",
+   "Total Cases": 379,
+   "Cases per 100K": 3834,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Saint Kitts and Nevis",
+   "Total Cases": 37,
+   "Cases per 100K": 69,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Saint Lucia",
+   "Total Cases": 1195,
+   "Cases per 100K": 650,
+   "Total Deaths": 13,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Saint Martin",
+   "Total Cases": 1289,
+   "Cases per 100K": 3334,
+   "Total Deaths": 12,
+   "Deaths per 100K": 31
+ },
+ {
+   "Country": "Saint Pierre and Miquelon",
+   "Total Cases": 24,
+   "Cases per 100K": 41,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Saint Vincent and the Grenadines",
+   "Total Cases": 901,
+   "Cases per 100K": 812,
+   "Total Deaths": 2,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Samoa",
+   "Total Cases": 2,
+   "Cases per 100K": 1,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "San Marino",
+   "Total Cases": 3025,
+   "Cases per 100K": 8913,
+   "Total Deaths": 67,
+   "Deaths per 100K": 197
+ },
+ {
+   "Country": "Sao Tome and Principe",
+   "Total Cases": 1256,
+   "Cases per 100K": 5,
+   "Total Deaths": 17,
+   "Deaths per 100K": 7
+ },
+ {
+   "Country": "Saudi Arabia",
+   "Total Cases": 368074,
+   "Cases per 100K": 1057,
+   "Total Deaths": 6375,
+   "Deaths per 100K": 18
+ },
+ {
+   "Country": "Senegal",
+   "Total Cases": 26213,
+   "Cases per 100K": 156,
+   "Total Deaths": 621,
+   "Deaths per 100K": 3
+ },
+ {
+   "Country": "Serbia",
+   "Total Cases": 393897,
+   "Cases per 100K": 5656,
+   "Total Deaths": 4000,
+   "Deaths per 100K": 5
+ },
+ {
+   "Country": "Seychelles",
+   "Total Cases": 1186,
+   "Cases per 100K": 1205,
+   "Total Deaths": 3,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Sierra Leone",
+   "Total Cases": 3528,
+   "Cases per 100K": 44,
+   "Total Deaths": 79,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Singapore",
+   "Total Cases": 59536,
+   "Cases per 100K": 101,
+   "Total Deaths": 29,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Sint Eustatius",
+   "Total Cases": 20,
+   "Cases per 100K": 637,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Sint Maarten",
+   "Total Cases": 1822,
+   "Cases per 100K": 4248,
+   "Total Deaths": 27,
+   "Deaths per 100K": 62
+ },
+ {
+   "Country": "Slovakia",
+   "Total Cases": 249913,
+   "Cases per 100K": 4577,
+   "Total Deaths": 4642,
+   "Deaths per 100K": 85
+ },
+ {
+   "Country": "Slovenia",
+   "Total Cases": 166473,
+   "Cases per 100K": 8007,
+   "Total Deaths": 3752,
+   "Deaths per 100K": 180
+ },
+ {
+   "Country": "Solomon Islands",
+   "Total Cases": 17,
+   "Cases per 100K": 2,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Somalia",
+   "Total Cases": 4784,
+   "Cases per 100K": 30,
+   "Total Deaths": 130,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "South Africa",
+   "Total Cases": 1449236,
+   "Cases per 100K": 2443,
+   "Total Deaths": 43951,
+   "Deaths per 100K": 74
+ },
+ {
+   "Country": "South Sudan",
+   "Total Cases": 3961,
+   "Cases per 100K": 35,
+   "Total Deaths": 64,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Spain",
+   "Total Cases": 2705001,
+   "Cases per 100K": 5785,
+   "Total Deaths": 57806,
+   "Deaths per 100K": 123
+ },
+ {
+   "Country": "Sri Lanka",
+   "Total Cases": 64157,
+   "Cases per 100K": 299,
+   "Total Deaths": 316,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Sudan",
+   "Total Cases": 29449,
+   "Cases per 100K": 6,
+   "Total Deaths": 1807,
+   "Deaths per 100K": 4
+ },
+ {
+   "Country": "Suriname",
+   "Total Cases": 8403,
+   "Cases per 100K": 1432,
+   "Total Deaths": 154,
+   "Deaths per 100K": 26
+ },
+ {
+   "Country": "Sweden",
+   "Total Cases": 566957,
+   "Cases per 100K": 5613,
+   "Total Deaths": 11591,
+   "Deaths per 100K": 114
+ },
+ {
+   "Country": "Switzerland",
+   "Total Cases": 518759,
+   "Cases per 100K": 5994,
+   "Total Deaths": 8601,
+   "Deaths per 100K": 9
+ },
+ {
+   "Country": "Syrian Arab Republic",
+   "Total Cases": 14048,
+   "Cases per 100K": 80,
+   "Total Deaths": 921,
+   "Deaths per 100K": 5
+ },
+ {
+   "Country": "Tajikistan",
+   "Total Cases": 13714,
+   "Cases per 100K": 143,
+   "Total Deaths": 91,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Thailand",
+   "Total Cases": 19618,
+   "Cases per 100K": 28,
+   "Total Deaths": 77,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "The United Kingdom",
+   "Total Cases": 3743738,
+   "Cases per 100K": 5514,
+   "Total Deaths": 103126,
+   "Deaths per 100K": 151
+ },
+ {
+   "Country": "Timor-Leste",
+   "Total Cases": 70,
+   "Cases per 100K": 5,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Togo",
+   "Total Cases": 5041,
+   "Cases per 100K": 60,
+   "Total Deaths": 77,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Trinidad and Tobago",
+   "Total Cases": 7542,
+   "Cases per 100K": 538,
+   "Total Deaths": 134,
+   "Deaths per 100K": 9
+ },
+ {
+   "Country": "Tunisia",
+   "Total Cases": 208885,
+   "Cases per 100K": 1767,
+   "Total Deaths": 6754,
+   "Deaths per 100K": 57
+ },
+ {
+   "Country": "Turkey",
+   "Total Cases": 2470901,
+   "Cases per 100K": 2929,
+   "Total Deaths": 25865,
+   "Deaths per 100K": 30
+ },
+ {
+   "Country": "Turks and Caicos Islands",
+   "Total Cases": 1503,
+   "Cases per 100K": 3881,
+   "Total Deaths": 9,
+   "Deaths per 100K": 23
+ },
+ {
+   "Country": "Uganda",
+   "Total Cases": 39533,
+   "Cases per 100K": 86,
+   "Total Deaths": 324,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Ukraine",
+   "Total Cases": 1219455,
+   "Cases per 100K": 2788,
+   "Total Deaths": 22707,
+   "Deaths per 100K": 51
+ },
+ {
+   "Country": "United Arab Emirates",
+   "Total Cases": 303609,
+   "Cases per 100K": 3069,
+   "Total Deaths": 850,
+   "Deaths per 100K": 8
+ },
+ {
+   "Country": "United Republic of Tanzania",
+   "Total Cases": 509,
+   "Cases per 100K": 0,
+   "Total Deaths": 21,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "United States of America",
+   "Total Cases": 25817939,
+   "Cases per 100K": 7799,
+   "Total Deaths": 436051,
+   "Deaths per 100K": 131
+ },
+ {
+   "Country": "United States Virgin Islands",
+   "Total Cases": 2421,
+   "Cases per 100K": 231,
+   "Total Deaths": 24,
+   "Deaths per 100K": 22
+ },
+ {
+   "Country": "Uruguay",
+   "Total Cases": 41181,
+   "Cases per 100K": 1185,
+   "Total Deaths": 431,
+   "Deaths per 100K": 12
+ },
+ {
+   "Country": "Uzbekistan",
+   "Total Cases": 78711,
+   "Cases per 100K": 235,
+   "Total Deaths": 621,
+   "Deaths per 100K": 1
+ },
+ {
+   "Country": "Vanuatu",
+   "Total Cases": 1,
+   "Cases per 100K": 0,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Venezuela (Bolivarian Republic of)",
+   "Total Cases": 126323,
+   "Cases per 100K": 444,
+   "Total Deaths": 1183,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Viet Nam",
+   "Total Cases": 1819,
+   "Cases per 100K": 1,
+   "Total Deaths": 35,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Wallis and Futuna",
+   "Total Cases": 5,
+   "Cases per 100K": 4,
+   "Total Deaths": 0,
+   "Deaths per 100K": 0
+ },
+ {
+   "Country": "Yemen",
+   "Total Cases": 2125,
+   "Cases per 100K": 7,
+   "Total Deaths": 616,
+   "Deaths per 100K": 2
+ },
+ {
+   "Country": "Zambia",
+   "Total Cases": 53352,
+   "Cases per 100K": 29,
+   "Total Deaths": 745,
+   "Deaths per 100K": 4
+ },
+ {
+   "Country": "Zimbabwe",
+   "Total Cases": 33271,
+   "Cases per 100K": 223,
+   "Total Deaths": 1193,
+   "Deaths per 100K": 8
+ }
+]
