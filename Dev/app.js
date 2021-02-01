@@ -98,7 +98,11 @@ function setCountryDropdownElement(dropdownTag, countryName, isCurrent) {
 //Germany selected automatically when drop-down clicked (temporary)
 const currentDest = document.querySelector('#currentDestination');
 
+currentDest.addEventListener('click', ()=>{
+    currentDest.value= "Germany";
+})
 currentDest.addEventListener('change', ()=>{
+
     //enable destination dropdown only once current destination selected
     document.querySelector('#plannedDestination').toggleAttribute('disabled');
 })
