@@ -100,11 +100,8 @@ const currentDest = document.querySelector('#currentDestination');
 
 currentDest.addEventListener('click', ()=>{
     currentDest.value= "Germany";
-})
-currentDest.addEventListener('change', ()=>{
-
     //enable destination dropdown only once current destination selected
-    document.querySelector('#plannedDestination').toggleAttribute('disabled');
+    document.querySelector('#plannedDestination').disabled = false;
 })
 
 const plannedDest = document.querySelector('#plannedDestination');
@@ -181,37 +178,6 @@ function UpdatePlannedDestinationElements(countryName, countryData)
   updateElement("quarantineReturn", countryData["Quarantine"], true);
 
   updateCases(countryName, "casePer100KDestination");
-
-  //plannedDestData();
-
-  // NOT USED - Hook up rest of elements using data from countryData
-  function plannedDestData(){
-    const properties = Object.keys(countryData);
-    for (let property of properties){ //accessing each property for selected country seperately
-      if (property !== 'Name'){ //exclude first property - name
-        console.log(property)
-        console.log(countryData[property])
-
-        
-        if(countryData[property]!==undefined && countryData[property]!==null ){ //if property has a value
-            console.log(`#${property}`);
-            const x = document.querySelector(`#${property}`); //select it in the DOM
-
-            if (x === undefined || x === null)
-              continue;
-
-            if(countryData[property]){ //translate bool to 'yes' or 'no'
-              x.innerHTML='Yes'
-            }else{
-              x.innerHTML='No'
-            }
-        }else{ //else indicate empty value
-          x.innerHTML='No data';
-          x.setAttribute("class", "noData");
-        }
-      }
-    }
-  }
 }
 
 function updateElement(elementName, elementValue, isBool) {
@@ -243,35 +209,6 @@ function updateCases(countryName, elementName) {
 
   updateElement(elementName, casePer100K, false);
 }
-
-
-//   const isBorderOpen = document.querySelector('#isBorderOpen');
-//   if(countryData['entryBan']!==undefined){
-//       if(countryData['entryBan']){
-//         isBorderOpen.innerHTML='No'
-//       }else{
-//         isBorderOpen.innerHTML='Yes'
-//       }
-//   }else{
-//     isBorderOpen.innerHTML='No data';
-//     isBorderOpen.setAttribute("class", "noData");
-//   }
-  
-
-
-//   const isAccomodationOpen = document.querySelector('#isAccomodationOpen');
-//   if(countryData['isAccomodation']!==undefined){
-//       if(countryData['isAccomodation']){
-//         isAccomodationOpen.innerHTML='No'
-//       }else{
-//         isAccomodationOpen.innerHTML='Yes'
-//       }
-//   }else{
-//     isAccomodationOpen.innerHTML='No data';
-//     isAccomodationOpen.setAttribute("class", "noData");
-
-//   }
-// }
 
 
 // refresh button

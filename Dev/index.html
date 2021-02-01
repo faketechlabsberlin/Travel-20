@@ -33,6 +33,7 @@
                 <div class="input">
                       <label for='currentDestination'>Where are you?</label>
                       <select id='currentDestination' name='currentDestination'>
+                        <option disabled selected value> -- select an option -- </option>
                         <!-- Options filled dynamically from country list -->
                       </select>
                 </div>
@@ -42,15 +43,16 @@
                 <div class="input">                     
                     <label>Where do you want to go?</label>
                     <select id='plannedDestination' disabled>
- 
+                      <option disabled selected value> -- select an option -- </option>
                       <!-- Options filled dynamically from country list -->
                     </select>
                 </div>
               </div>
-              <p>Stay safe & updated...</p>
+              <div class='container'>
+                <p>Stay safe & updated...</p>
                 <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>
                   Read our Travel Information
-                </button>
+                </button></div>
             </form>
           </div>
         </div>
@@ -198,7 +200,7 @@
     <script>
 
       function onReturnButtonClicked() {
-        document.getElementById("explore").setAttribute("class", "container mainField");
+        document.getElementById("explore").setAttribute("class", "mainField");
         document.getElementById("result").setAttribute("class", "hidden");
       }
     </script>

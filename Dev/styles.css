@@ -71,6 +71,10 @@ nav{
   padding-right: 0.5%;
 }
 
+a:link{
+  color: #047469; 
+}
+
 /* discover section */
 
 #background{
@@ -93,6 +97,7 @@ form{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 .input{
@@ -200,14 +205,16 @@ hr.white {
 /* safe locations section */
 #safestLocations{
   background-color: #047469;
-  padding: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   color: #FFFFFF;
 }
 
 /* faqs section */
 #faqs{
   background-color: #F5FFFF;
-  padding: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 
