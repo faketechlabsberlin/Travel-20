@@ -56,7 +56,7 @@ const countryList = {
   "kap-verde" : "Cape Verde",
   "katar" : "Qatar",
   "kenia" : "Kenya",
-  "kolumbien" : "Columbia",
+  "kolumbien" : "Colombia",
   "kosovo" : "Kosovo",
   "kroatien" : "Croatia",
   "kuba" : "Cuba",
