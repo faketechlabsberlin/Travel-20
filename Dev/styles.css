@@ -340,3 +340,7 @@ footer{
 footer a:hover{
   color:  #FE7C6B
 }
+
+th, td {
+  font-size: 18px;
+}
