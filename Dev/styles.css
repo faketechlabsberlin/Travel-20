@@ -59,7 +59,7 @@ nav{
   color: #047469;
   font-size: 18px;
   line-height: 28px;
-  float:right;
+  margin-left: 70%;
   font-family: 'FuturaMedium';
 }
 
@@ -73,8 +73,18 @@ nav{
 
 a:link{
   color: #047469; 
+  margin-left: 4%;
+}
+a:visited{
+  color: #047469; 
 }
 
+nav a:hover{
+  color: #FE7C6B;
+}
+nav a:active{
+  color: #FE7C6B;
+}
 /* discover section */
 
 #background{
@@ -103,7 +113,9 @@ form{
 .input{
   text-align: left;
   width: 85%;
+  margin: 6% 0;
 }
+
 
 @media all and (min-width: 770px){
   .fields{
@@ -111,6 +123,7 @@ form{
   }
   .input{
     width: 42%;
+    margin:0;
   }
 }
 
@@ -202,7 +215,27 @@ hr.white {
   -webkit-transform: rotate(-45deg);
 }
 
+/* about section */
+
+#aboutContent{
+  text-align: left;
+  width: 60%;
+  margin-top: 5%;
+  margin-left: 4%;
+}
+
+#aboutBack{
+  margin-left: 0;
+}
+
 /* safe locations section */
+
+@media all and (max-width: 770px){
+  table, tr, td {
+    display:block;
+  }
+  } 
+
 #safestLocations{
   background-color: #047469;
   padding-top: 5%;
@@ -210,26 +243,29 @@ hr.white {
   color: #FFFFFF;
 }
 
+.pin{
+  width: 30px;
+}
+
+.safeList{
+  margin: 5%;
+  font-size:30px;
+}
+#safestLocations table{
+  width: 95%;
+}
+
+#safestLocations small{
+  font-size: 16px;
+  color: #C3E9E4;
+}
+
+
 /* faqs section */
 #faqs{
   background-color: #F5FFFF;
   padding-top: 5%;
   padding-bottom: 5%;
-}
-
-
-footer{
-  font-family: 'FuturaMedium';
-  font-size: 16px;
-    text-align: center;    
-    margin: 2% auto;    
-    color:#047469;
-}
-
-footer a{
-    text-decoration: none;
-    color:#047469;
-
 }
 
 
@@ -283,4 +319,24 @@ footer a{
   font-size:24px;
   line-height: 42px;
   padding:0 10%;
+  margin-bottom: 10%;
+}
+
+footer{
+  font-family: 'FuturaMedium';
+  font-size: 16px;
+  /* text-align: center;     */
+  margin: 2% 0;    
+  color:#047469;
+}
+
+#getInvolved a{
+    text-decoration: none;
+    color:#047469;
+    padding:0;
+    margin:0;
+}
+
+footer a:hover{
+  color:  #FE7C6B
 }

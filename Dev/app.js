@@ -210,8 +210,27 @@ function updateCases(countryName, elementName) {
   updateElement(elementName, casePer100K, false);
 }
 
+populateSafeLocation();
+//populate Safe Location section
+function populateSafeLocation(){
+//TODO
+}
+
+//aboutLink - open about page section
+document.querySelector('#aboutLink').addEventListener('click', ()=>{
+    // Disable explore frame and show about frame
+    document.getElementById("explore").setAttribute("class", "hidden");
+    document.getElementById("aboutPage").setAttribute("class", "container resultField");
+})
+
+//go back from about section
+function onAboutBack (){
+  document.getElementById("explore").setAttribute("class", "mainField" );
+  document.getElementById("aboutPage").setAttribute("class", "hidden");
+}
 
 // refresh button
 function onRefreshClicked (){
   window.location.reload();
 }
+
