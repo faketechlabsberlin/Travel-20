@@ -176,6 +176,10 @@ label{
   visibility: hidden;
 }
 
+.visible {
+  visibility: visible;
+}
+
 
 .row {
   display: flex;

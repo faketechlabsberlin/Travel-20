@@ -138,10 +138,7 @@ function onGoButtonClicked() {
 
   // Disable explore frame and show result frame
   document.getElementById("explore").setAttribute("class", "hidden");
-  document.getElementById("result").setAttribute("class", "container resultField");
-
-  const fromTitle = document.querySelector('#fromTitle');
-  fromTitle.innerHTML = `From: ${currentDest} to ${plannedDest}`;
+  document.getElementById("result").setAttribute("class", "visible");
 }
 
 function UpdateCurrentDestinationElements(countryName, countryData)
@@ -158,6 +155,8 @@ function UpdateCurrentDestinationElements(countryName, countryData)
   }
 
   updateCases(countryName, "casePer100KDeparture");
+  updateElement("returnTest", countryData["Test_entry"], true);
+  updateElement("returnQuarantine", countryData["Quarantine"], true);
 }
 
 function UpdatePlannedDestinationElements(countryName, countryData)
@@ -235,8 +234,6 @@ function populateSafestLocations(){
   items.sort(function(first, second) {
     return first[1]["Cases per 100K"] - second[1]["Cases per 100K"];
   });
-
-  console.log(items.slice(0, 9));
 
   var index = 0;
 
