@@ -56,7 +56,7 @@
             </form>
           </div>
         </div>
-      </div>
+      
       
         <!-- a 404 page - when promise rejected -->
         <div class='container hidden' id='page404'>
@@ -68,8 +68,12 @@
 
         <!-- result section -->
         <div class='hidden' id='result'>
+          <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
+          <div class='container'>
+            <h2 class='mainTitle'>Explore <br> a destination</h2>
           <h1>From:</h1> 
           <div class='container resultField'>
+            <image src='./assets/country-flags/png/germany.png' alt='contryFlag' class='countryFlag'/>
             <h2 id='resultDeparture'><i class="arrow right"></i><!-- dynamic, will display entered origin --> </h2> 
             <div class="row">
               <div class="col">
@@ -99,6 +103,7 @@
           </div>
           <h1>Destination:</h1> 
           <div class='container resultField'>
+            <image src='assets/globe.png' class='countryFlag' alt='countryFlag' id='destinationFlag'/>
             <h2 id="resultDestination" class="marginTop"><i class="arrow right" ></i> </h2> <!--dynamic, should display previously entered destination -->
             <div class="row">
               <div class="col">
@@ -155,9 +160,12 @@
             </div>
           </div>
           <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Return</button>
+          <!-- need to include credits for the icons -->
+          <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
         </div>
       </div>
-
+    </div>
+  </div>
 <!-- about page-->
         <div class='container hidden' id='aboutPage'>
           <h2>About <br> the project</h2>
@@ -203,7 +211,7 @@
           </div>
       </div>
     </div>
-
+<!-- get involved section -->
       <div class="bottomSection">
         <section class='container' id='getInvolved'>
           <h3>Want to get involved?</h3>

@@ -219,6 +219,17 @@ hr.white {
   -webkit-transform: rotate(-45deg);
 }
 
+.countryFlag{
+  width: 50px;}
+  /* display: inline;
+  float:left;
+}
+
+#resultDeparture{
+  display: inline;
+  float: left;
+} */
+
 /* about section */
 
 #aboutContent{

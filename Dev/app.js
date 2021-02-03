@@ -184,7 +184,37 @@ function UpdatePlannedDestinationElements(countryName, countryData)
   updateElement("quarantineReturn", countryData["Quarantine"], true);
 
   updateCases(countryName, "casePer100KDestination");
+  
+  // upload flags
+  function loadFlag() {
+    return new Promise(function(resolve, reject) {
+      let flag = document.querySelector('#destinationFlag');
+      flag.src=imgSrc;
+      flag.onload =  resolve;
+      flag.onerror =  reject;
+    });
+  }
+
+  let imgSrc;
+  let flag = document.querySelector('#destinationFlag');
+  if(countryName.indexOf(' ')!==-1){
+    let cleanName= countryName.replace(/\s/g, '-');
+    imgSrc = `./assets/country-flags/png/${cleanName.toLowerCase()}.png`;
+  }else{
+    imgSrc = `./assets/country-flags/png/${countryName.toLowerCase()}.png`;
+  }
+
+  loadFlag(imgSrc, flag)
+    .then((e)=>{
+      flag.src = imgSrc;
+    })
+    .catch((e)=>{
+      console.log(e);
+      document.querySelector('#destinationFlag').src ='assets/globe.png';
+    })
 }
+   
+
 
 function updateElement(elementName, elementValue, isBool) {
   const element = document.querySelector(`#${elementName}`);
