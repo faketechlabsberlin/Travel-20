@@ -1,5 +1,5 @@
 const countriesDataURL = 'https://adac-scraper-dev-scraperfeedbucket-16nuzvfai8pr8.s3.eu-central-1.amazonaws.com/adac/adac.json';
-const covidDataURL = 'https://api.jsonbin.io/b/60072108eb2fee239b5ee9ab'; // This is on some json hosting site
+const covidDataURL = 'https://api.jsonbin.io/b/601987375415b40ac221eebd'; // This is on some json hosting site
 
 let countriesData = {}; 
 let countriesCovidData = {}; 
@@ -9,6 +9,17 @@ request('GET', countriesDataURL, true) // this is calling the request function w
   .then(function (e) { // .then is done on resolve (successful connection)
     const json = e.target.response; // get the string from the response
     const data = JSON.parse(json); // convert it to an object
+
+    // HACK TO ADD GERMAN DATA
+    countriesData[ "Germany" ] = {
+      "Entry_form": 0,
+      "Land": "deutschland",
+      "Name": "Germany",
+      "Quarantine": 1,
+      "Reisewarnung": 1,
+      "Riskzone": 1,
+      "Test_entry": 0
+    };
 
     for (var i = 0, countryData; i < data.length; i++) {
       countryData = data[i];
@@ -24,17 +35,6 @@ request('GET', countriesDataURL, true) // this is calling the request function w
       countriesData[ engCountryName ] = countryData;
       countriesData[ engCountryName ].Name = engCountryName;
     }
-
-    // HACK TO ADD GERMAN DATA
-    countriesData[ "Germany" ] = {
-      "Entry_form": 0,
-      "Land": "deutschland",
-      "Name": "Germany",
-      "Quarantine": 1,
-      "Reisewarnung": 1,
-      "Riskzone": 1,
-      "Test_entry": 0
-    };
 
     populateCountriesList();
   })
@@ -53,8 +53,10 @@ request('GET', covidDataURL, true) // this is calling the request function which
    
       for (var i = 0, covidData; i < data.length; i++) {
         covidData = data[i];
-        countriesCovidData[ covidData.name ] = covidData;
+        countriesCovidData[ covidData.Country ] = covidData;
      }
+
+     populateSafestLocations();
   })
   .catch( function (e) { // this is called on reject when an error happens on the connection
     console.log("Failed to retreive countriesCovidData.json", e); 
@@ -116,7 +118,6 @@ plannedDest.addEventListener('change', ()=>{
 })
 
 //Go button functionality
-
 function onGoButtonClicked() {
   const currentDest = document.querySelector('#currentDestination').value;
   const plannedDest = document.querySelector('#plannedDestination').value;
@@ -137,10 +138,7 @@ function onGoButtonClicked() {
 
   // Disable explore frame and show result frame
   document.getElementById("explore").setAttribute("class", "hidden");
-  document.getElementById("result").setAttribute("class", "container resultField");
-
-  const fromTitle = document.querySelector('#fromTitle');
-  fromTitle.innerHTML = `From: ${currentDest} to ${plannedDest}`;
+  document.getElementById("result").setAttribute("class", "visible");
 }
 
 function UpdateCurrentDestinationElements(countryName, countryData)
@@ -157,6 +155,8 @@ function UpdateCurrentDestinationElements(countryName, countryData)
   }
 
   updateCases(countryName, "casePer100KDeparture");
+  updateElement("returnTest", countryData["Test_entry"], true);
+  updateElement("returnQuarantine", countryData["Quarantine"], true);
 }
 
 function UpdatePlannedDestinationElements(countryName, countryData)
@@ -168,6 +168,12 @@ function UpdatePlannedDestinationElements(countryName, countryData)
   {
       // TODO. Need to show no data for this country
       console.log("No data for " + countryName);
+
+      updateElement("riskZone", "No Data", false);
+      updateElement("travelWarning", "No Data", false);
+      updateElement("entryTest", "No Data", false);
+      updateElement("entryForm", "No Data", false);
+      updateElement("quarantineReturn", "No Data", false);
       return;
   }
 
@@ -203,17 +209,55 @@ function updateElement(elementName, elementValue, isBool) {
 }
   
 function updateCases(countryName, elementName) {
-  let cases = Math.round(countriesCovidData[countryName].cumulativeTotalPer1Million / 1000);
+  const covidData = countriesCovidData[countryName];
 
-  let casePer100K = `${cases}k cases per 100k`;
+  let casePer100K = "No Data";
+
+  if (covidData !== undefined && covidData !== null)
+  {
+    let cases = countriesCovidData[countryName]["Cases per 100K"];
+    casePer100K = `${cases} cases per 100k`;
+  }
 
   updateElement(elementName, casePer100K, false);
 }
 
-populateSafeLocation();
 //populate Safe Location section
-function populateSafeLocation(){
-//TODO
+function populateSafestLocations(){
+
+  // Create items array
+  var items = Object.keys(countriesCovidData).map(function(key) {
+    return [key, countriesCovidData[key]];
+  });
+
+  // Sort the array based on the second element
+  items.sort(function(first, second) {
+    return first[1]["Cases per 100K"] - second[1]["Cases per 100K"];
+  });
+
+  var index = 0;
+
+  var table = document.getElementById("safestLocationsTable");
+  for (var i = 0, row; row = table.rows[i]; i++) {
+    //iterate through rows
+    //rows would be accessed using the "row" variable assigned in the for loop
+    for (var j = 0, col; col = row.cells[j]; j++) {
+      //iterate through columns
+      //columns would be accessed using the "col" variable assigned in the for loop
+      let cases = `${items[index][1]["Cases per 100K"]} cases per 100k`;
+      cases = cases.small();
+
+      let countryName = items[index][1].Country;
+
+      if (countryName.length > 20)
+      {
+        countryName = countryName.substring(0, 19) + "...";
+      }
+
+      col.innerHTML = "<image class='pin' src='./assets/pin.png'/>" + `${countryName} ${cases}`;
+      index++;
+    }  
+  }
 }
 
 //aboutLink - open about page section
