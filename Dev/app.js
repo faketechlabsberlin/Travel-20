@@ -114,7 +114,6 @@ plannedDest.addEventListener('change', ()=>{
   }else{
     document.querySelector('#goButton').disabled = true;
   }
-  
 })
 
 //Go button functionality
@@ -185,18 +184,7 @@ function UpdatePlannedDestinationElements(countryName, countryData)
 
   updateCases(countryName, "casePer100KDestination");
   
-  // upload flags
-  function loadFlag() {
-    return new Promise(function(resolve, reject) {
-      let flag = document.querySelector('#destinationFlag');
-      flag.src=imgSrc;
-      flag.onload =  resolve;
-      flag.onerror =  reject;
-    });
-  }
-
   let imgSrc;
-  let flag = document.querySelector('#destinationFlag');
   if(countryName.indexOf(' ')!==-1){
     let cleanName= countryName.replace(/\s/g, '-');
     imgSrc = `./assets/country-flags/png/${cleanName.toLowerCase()}.png`;
@@ -204,17 +192,26 @@ function UpdatePlannedDestinationElements(countryName, countryData)
     imgSrc = `./assets/country-flags/png/${countryName.toLowerCase()}.png`;
   }
 
-  loadFlag(imgSrc, flag)
-    .then((e)=>{
-      flag.src = imgSrc;
-    })
-    .catch((e)=>{
-      console.log(e);
-      document.querySelector('#destinationFlag').src ='assets/globe.png';
-    })
-}
-   
+  let flag = document.querySelector('#destinationFlag');
 
+  loadImage(imgSrc)
+  .then(img => {
+    flag.src = imgSrc;
+  })
+  .catch(error => {
+    flag.src ='assets/globe.png'}
+  );
+}
+
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+
+    let img = new Image();
+    img.addEventListener('load', e => resolve(img));
+    img.addEventListener('error', () => {});
+    img.src = url;
+  });
+}
 
 function updateElement(elementName, elementValue, isBool) {
   const element = document.querySelector(`#${elementName}`);
@@ -266,6 +263,12 @@ function populateSafestLocations(){
   });
 
   var index = 0;
+
+  // Ignore countries with cases less than 10
+  while(items[index][1]["Cases per 100K"] < 10)
+  {
+    index++;
+  }
 
   var table = document.getElementById("safestLocationsTable");
   for (var i = 0, row; row = table.rows[i]; i++) {

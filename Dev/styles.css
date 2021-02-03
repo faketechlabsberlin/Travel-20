@@ -264,7 +264,6 @@ hr.white {
 
 .safeList{
   margin: 5%;
-  font-size:30px;
 }
 #safestLocations table{
   width: 95%;
@@ -357,5 +356,18 @@ footer a:hover{
 }
 
 th, td {
-  font-size: 18px;
+  font-size: 25px;
+}
+
+.serv ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 5%;
+  font-size:20px;
+}
+
+.serv ul li {
+  flex: 0 0 50%;
+  padding-bottom: 10px;
 }
