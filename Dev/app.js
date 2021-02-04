@@ -143,7 +143,7 @@ function onGoButtonClicked() {
 function UpdateCurrentDestinationElements(countryName, countryData)
 {
   const resultDeparture = document.querySelector('#resultDeparture');
-  resultDeparture.innerHTML = countryName;
+  resultDeparture.innerHTML = "From: " + countryName;
 
   // countryData not used in this function
   if ((countryData === undefined) || (countryData === null)) 
@@ -161,7 +161,7 @@ function UpdateCurrentDestinationElements(countryName, countryData)
 function UpdatePlannedDestinationElements(countryName, countryData)
 {
   const resultDest = document.querySelector('#resultDestination');
-  resultDest.innerHTML = countryName;
+  resultDest.innerHTML = "To: " + countryName;
 
   if ((countryData === undefined) || (countryData === null)) 
   {
@@ -199,7 +199,7 @@ function UpdatePlannedDestinationElements(countryName, countryData)
     flag.src = imgSrc;
   })
   .catch(error => {
-    flag.src ='assets/globe.png'}
+    flag.src ='./assets/globe.png'}
   );
 }
 
@@ -243,7 +243,7 @@ function updateCases(countryName, elementName) {
   if (covidData !== undefined && covidData !== null)
   {
     let cases = countriesCovidData[countryName]["Cases per 100K"];
-    casePer100K = `${cases} cases per 100k`;
+    casePer100K = `Active cases: ${cases} per 100k`;
   }
 
   updateElement(elementName, casePer100K, false);
@@ -311,3 +311,6 @@ function onRefreshClicked (){
   window.location.reload();
 }
 
+// latest update - date stamp
+let dateStamp = new Date().toLocaleString('en-US', {month: 'long', day: 'numeric', year:'numeric'})
+document.querySelector('#latestUpdateDeparture').innerHTML = document.querySelector('#latestUpdateDeparture').innerHTML + dateStamp;

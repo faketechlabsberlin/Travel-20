@@ -23,8 +23,9 @@
                 <div ><img src="./assets/logoEarth.png" class='logo' id='logoGlobe' ></div>  
             </div> 
         </header>
-        <div id="background">
+        
         <div class="mainField" id='explore'>
+          <div id="background">
           <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
           <div class='container'>
             <h2 class='mainTitle'>Explore <br> a destination</h2>
@@ -56,6 +57,8 @@
             </form>
           </div>
         </div>
+      </div>
+      </div>
       
       
         <!-- a 404 page - when promise rejected -->
@@ -67,31 +70,42 @@
         </div>
 
         <!-- result section -->
-        <div class='hidden' id='result'>
+      <div class='hidden' id='result'>
           <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
-          <div class='container'>
-            <h2 class='mainTitle'>Explore <br> a destination</h2>
-          <h1>From:</h1> 
-          <div class='container resultField'>
+          <div class='container '>
+            <h2 class=' mainTitle'>Explore <br> a destination</h2>
+          </div>
+          <!-- current destination -->
+            <div class="greyRight">
+                <p id='latestUpdateDeparture'><b>Latest update:</b> </p>
+              </div>
+              
+        <div id='resultsCurrent'> 
+          <div class='container'>               
+
             <image src='./assets/country-flags/png/germany.png' alt='contryFlag' class='countryFlag'/>
-            <h2 id='resultDeparture'><i class="arrow right"></i><!-- dynamic, will display entered origin --> </h2> 
+             
+             <h2 id='resultDeparture'>From:<!-- dynamic, will display entered origin --> </h2> 
             <div class="row">
               <div class="col">
+                <div class='resultIconInfo'>
+                <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
                 <p id='casePer100KDeparture'>1.6k cases per 100k</p>
               </div>
-              <div class="col greyRight">
-                <p id='latestUpdateDeparture'>Latest update:</p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <h3 class="marginTop"><u>Do I need a test upon return?</u></p>
               </div>
               <div class="col">
-                <h3 class="marginTop"><u>Do I need to quarantine upon return?</u></p>
+                <div class="resultIconInfo">
+                  <image class='resultTableIcon blackIcon' src='./assets/testPage.png' alt='Test page icon'/>
+                <h3 class="marginTop">A <b>test</b> is requested <br>upon return</p>
+                </h3>
               </div>
-            </div>
+              </div>
+              <div class="col">
+                <div class="resultIconInfo">
+                  <image class='resultTableIcon blackIcon' src='./assets/house.png' alt='House icon'/>
+                <h3 class="marginTop"><b>Quarantine</b> is <br>required upon return</p>
+              </div>
+              </div>
             <div class="row">
               <div class="col">
                 <p id='returnTest'>Yes</p>
@@ -101,22 +115,25 @@
               </div>
             </div>
           </div>
-          <h1>Destination:</h1> 
-          <div class='container resultField'>
+          </div>
+        </div>
+          <!-- planned destination -->
+          <div id='resultsPlanned'>
+          <div class='container'>
             <image src='assets/globe.png' class='countryFlag' alt='countryFlag' id='destinationFlag'/>
-            <h2 id="resultDestination" class="marginTop"><i class="arrow right" ></i> </h2> <!--dynamic, should display previously entered destination -->
+            <h2 id="resultDestination" >To: </h2> 
             <div class="row">
               <div class="col">
+                <div class='resultIconInfo'>
+                <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
                 <p id='casePer100KDestination'>4.4k cases per 100k</p>
               </div>
-              <div class="col greyRight">
-                <p id='latestUpdateDestination'>Latest update:</p>
               </div>
-            </div>
-
-            <div class="row">
               <div class="col">
-                <h3 class="marginTop"><u>Is it a risk zone?</u></p>
+                <div class='resultIconInfo'>
+                  <image class='resultTableIcon blackIcon' src='./assets/borderControl.png' alt='Cases chart'/>
+                <h3 class="marginTop">Destination classified <br> as <b>risk zone</b></p></h3>
+                  </div>
               </div>
               <div class="col">
                 <h3 class="marginTop"><u>Is there a travel warning?</u></p>
@@ -133,7 +150,10 @@
     
             <div class="row">
               <div class="col">
-                <h3 class="marginTop"><u>Do I need a test upon entry?</u></p>
+                <div class="resultIconInfo">
+                  <image class='resultTableIcon blackIcon' src='./assets/testPage.png' alt='Test page icon'/>
+                <h3 class="marginTop">A <b>test</b> is requested<br> upon entry</p>
+                </div>
               </div>
               <div class="col">
                 <h3 class="marginTop"><u>Do I need an entry form?</u></p>
@@ -148,7 +168,7 @@
               </div>
             </div>
           
-            <div class="row">
+            <!-- <div class="row">
               <div class="col">
                 <h3 class="marginTop"><u>Do I need to quarantine when I return?</u></p>
               </div>
@@ -157,15 +177,15 @@
               <div class="col">
                 <p id='quarantineReturn'></p>
               </div>
-            </div>
+            </div> -->
           </div>
-          <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Return</button>
+        </div>
+          <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Search another location</button>
           <!-- need to include credits for the icons -->
           <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
         </div>
-      </div>
-    </div>
-  </div>
+     
+  
 <!-- about page-->
         <div class='container hidden' id='aboutPage'>
           <h2>About <br> the project</h2>
@@ -234,7 +254,7 @@
            <p>2021 @ Travel 21</p>
         </footer>
       </div>
-  </div>
+ 
 
         <script type='text/javascript' src="app.js" async defer></script>
         <script type='text/javascript' src="countriesGerToEng.js" async defer></script>
