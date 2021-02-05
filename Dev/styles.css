@@ -186,14 +186,14 @@ label{
 
 .row {
   display: flex;
-  margin-bottom: -0.5em  !important;
+  align-items: flex-end;
+  margin-bottom: 1%;
+  margin-left: 7% !important;
 }
 
 .col {
-  width: 30%;
-  margin-left: 2%;
-  margin-top: 5%;
   text-align: left;
+  max-width: 35% !important;
 }
 
 .greyRight {
@@ -237,15 +237,21 @@ hr.white {
 }
 
 .resultTableIcon{
-  width: 10%;
+  width: 18%;
+  margin: 2%;
 }
 .resultIconInfo{
   display: flex;
-  align-items:center;
+  align-items:flex-start;
+  width: 60%;
 }
 
 .blackIcon{
 filter: invert(100%);
+}
+
+#resultDestination, #resultDeparture{
+  margin-bottom: 7%;
 }
 
 /* about section */
