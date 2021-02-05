@@ -325,5 +325,5 @@ let dateStamp = new Date().toLocaleString('en-US', {month: 'long', day: 'numeric
 document.querySelector('#latestUpdateDeparture').innerHTML = document.querySelector('#latestUpdateDeparture').innerHTML + dateStamp;
 
 function getCasesString(cases) {
-  return `${parseFloat(cases).toFixed(1)} cases per 100k in the last 7 days`;
+  return `${parseFloat(cases).toFixed(1)} per 100k*`;
 }
