@@ -199,6 +199,7 @@ function UpdatePlannedDestinationElements(countryName, countryData)
     flag.src = imgSrc;
   })
   .catch(error => {
+    console.log(error);
     flag.src ='./assets/globe.png'}
   );
 }
@@ -208,7 +209,7 @@ function loadImage(url) {
 
     let img = new Image();
     img.addEventListener('load', e => resolve(img));
-    img.addEventListener('error', () => {});
+    img.addEventListener('error', () => reject('Flag not found'));
     img.src = url;
   });
 }
