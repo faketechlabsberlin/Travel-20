@@ -185,7 +185,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/adac-scraper/dev/1612181469762-2021-02-01T12:11:09.762Z/adac-scraper.zip"
+          "S3Key": "serverless/adac-scraper/dev/1612463218771-2021-02-04T18:26:58.771Z/adac-scraper.zip"
         },
         "Handler": "handler.hello",
         "Runtime": "python3.8",
@@ -217,7 +217,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/adac-scraper/dev/1612181469762-2021-02-01T12:11:09.762Z/adac-scraper.zip"
+          "S3Key": "serverless/adac-scraper/dev/1612463218771-2021-02-04T18:26:58.771Z/adac-scraper.zip"
         },
         "Handler": "launcher.scrape",
         "Runtime": "python3.8",
@@ -242,24 +242,24 @@
         "LambdaScrapeLogGroup"
       ]
     },
-    "HelloLambdaVersion0ayoVv9ojeUfRDFDQ2dGeHz59xdZMejJ8R2gkzaus": {
+    "HelloLambdaVersion5ur7ZKtht8WLVcel7kDgkgG2mW7JRRoBkA8yHKLjQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "yJrqKUmpltbe2Qh4FyNNTa5CnCZx4KNPJhvRocJs/Ac="
+        "CodeSha256": "tPnDbrcaMLCGqRrcTfuyvNbJ6JZtKVMO9L0AnqnXICo="
       }
     },
-    "LambdaScrapeLambdaVersiongRlJzF5JZUM5HESHWNrDY44vnUWs2NaPmgeSNeVrN0": {
+    "LambdaScrapeLambdaVersionjMonx3xbTjNlb03zIvAOIFkW29iYjMx26ZW6Qu10b3s": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "LambdaScrapeLambdaFunction"
         },
-        "CodeSha256": "yJrqKUmpltbe2Qh4FyNNTa5CnCZx4KNPJhvRocJs/Ac="
+        "CodeSha256": "tPnDbrcaMLCGqRrcTfuyvNbJ6JZtKVMO9L0AnqnXICo="
       }
     },
     "ScraperFeedBucket": {
@@ -280,13 +280,13 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersion0ayoVv9ojeUfRDFDQ2dGeHz59xdZMejJ8R2gkzaus"
+        "Ref": "HelloLambdaVersion5ur7ZKtht8WLVcel7kDgkgG2mW7JRRoBkA8yHKLjQ"
       }
     },
     "LambdaScrapeLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "LambdaScrapeLambdaVersiongRlJzF5JZUM5HESHWNrDY44vnUWs2NaPmgeSNeVrN0"
+        "Ref": "LambdaScrapeLambdaVersionjMonx3xbTjNlb03zIvAOIFkW29iYjMx26ZW6Qu10b3s"
       }
     }
   },

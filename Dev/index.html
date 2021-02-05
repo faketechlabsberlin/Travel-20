@@ -11,180 +11,144 @@
     </head>
 
     <body>
-        <div class="page">
+      <div class="page">
         <header>
-            <nav>
-              <a href="#aboutPage" id="aboutLink">About Travel 21</a> 
-              <a href="#getInvolved">Get Involved</a> 
-              <a href="#">Contact Us</a> 
-            </nav> 
-            <div class='container'>   
-                <div ><img src="./assets/logoText.png"  class='logo'id='logoText'></div>
-                <div ><img src="./assets/logoEarth.png" class='logo' id='logoGlobe' ></div>  
-            </div> 
+          <nav>
+            <a href="#aboutPage" id="aboutLink">About Travel 21</a> 
+            <a href="#getInvolved">Get Involved</a> 
+            <a href="#">Contact Us</a> 
+          </nav> 
+          <div class='container'>   
+              <div ><img src="./assets/logoText.png"  class='logo'id='logoText'></div>
+              <div ><img src="./assets/logoEarth.png" class='logo' id='logoGlobe' ></div>  
+          </div> 
         </header>
         
         <div class="mainField" id='explore'>
           <div id="background">
-          <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
-          <div class='container'>
-            <h2 class='mainTitle'>Explore <br> a destination</h2>
-            <form>
-              <div class="fields">
-                <div class="input">
-                      <label for='currentDestination'>Where are you?</label>
-                      <select id='currentDestination' name='currentDestination'>
-                        <option disabled selected value> -- select an option -- </option>
-                        <!-- Options filled dynamically from country list -->
-                      </select>
-                </div>
-                <div>
-                  <img src='./assets/arrow.png' alt="arrowRight" id='arrowIcon'/>
-                </div>
-                <div class="input">                     
+            <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
+            <div class='container'>
+              <h2 class='mainTitle'>Explore <br> a destination</h2>
+              <form>
+                <div class="fields">
+                  <div class="input">
+                    <label for='currentDestination'>Where are you?</label>
+                    <select id='currentDestination' name='currentDestination'>
+                      <option disabled selected value> -- select an option -- </option>
+                      <!-- Options filled dynamically from country list -->
+                    </select>
+                  </div>
+                  <div>
+                    <img src='./assets/arrow.png' alt="arrowRight" id='arrowIcon'/>
+                  </div>
+                  <div class="input">                     
                     <label>Where do you want to go?</label>
                     <select id='plannedDestination' disabled>
                       <option disabled selected value> -- select an option -- </option>
                       <!-- Options filled dynamically from country list -->
                     </select>
+                  </div>
                 </div>
-              </div>
-              <div class='container'>
-                <p>Stay safe & updated...</p>
-                <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>
-                  Read our Travel Information
-                </button></div>
-            </form>
+                <div class='container'>
+                  <p>Stay safe & updated...</p>
+                  <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>
+                    Read our Travel Information
+                  </button></div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      
-      
-        <!-- a 404 page - when promise rejected -->
-        <div class='container hidden' id='page404'>
-          <h2>An error has occured while loading the data</h2>
-            <p id="error"><!-- a dynamically generated error --></p>
-            <h2>Please refresh the page!</h2>
-            <button class="submitButton" id="refresh" onclick="onRefreshClicked()">Refresh</button>
-        </div>
 
+      <!-- a 404 page - when promise rejected -->
+      <div class='container hidden' id='page404'>
+        <h2>An error has occured while loading the data</h2>
+          <p id="error"><!-- a dynamically generated error --></p>
+          <h2>Please refresh the page!</h2>
+          <button class="submitButton" id="refresh" onclick="onRefreshClicked()">Refresh</button>
+      </div>
         <!-- result section -->
       <div class='hidden' id='result'>
-          <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
-          <div class='container '>
-            <h2 class=' mainTitle'>Explore <br> a destination</h2>
-          </div>
-          <!-- current destination -->
-            <div class="greyRight">
-                <p id='latestUpdateDeparture'><b>Latest update:</b> </p>
-              </div>
+        <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
+        <div class='container '>
+          <h2 class=' mainTitle'>Explore <br> a destination</h2>
+        </div>
+        <!-- current destination -->
+        <div class="greyRight">
+          <p id='latestUpdateDeparture'><b>Latest update:</b></p>
+        </div>
               
         <div id='resultsCurrent'> 
           <div class='container'>               
-
             <image src='./assets/country-flags/png/germany.png' alt='contryFlag' class='countryFlag'/>
-             
-             <h2 id='resultDeparture'>From:<!-- dynamic, will display entered origin --> </h2> 
+            <h2 id='resultDeparture'>From:<!-- dynamic, will display entered origin --> </h2> 
             <div class="row">
               <div class="col">
                 <div class='resultIconInfo'>
-                <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
-                <p id='casePer100KDeparture'>1.6k cases per 100k</p>
-              </div>
+                  <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
+                  <p id='casePer100KDeparture'>1.6k cases per 100k</p>
+                </div>
               </div>
               <div class="col">
                 <div class="resultIconInfo">
                   <image class='resultTableIcon blackIcon' src='./assets/testPage.png' alt='Test page icon'/>
-                <h3 class="marginTop">A <b>test</b> is requested <br>upon return</p>
-                </h3>
-              </div>
+                  <h3 class="marginTop" id='returnTest'></h3>
+                </div>
               </div>
               <div class="col">
                 <div class="resultIconInfo">
                   <image class='resultTableIcon blackIcon' src='./assets/house.png' alt='House icon'/>
-                <h3 class="marginTop"><b>Quarantine</b> is <br>required upon return</p>
-              </div>
-              </div>
-            <div class="row">
-              <div class="col">
-                <p id='returnTest'>Yes</p>
-              </div>
-              <div class="col">
-                <p id='returnQuarantine'>A 7-day quarantine is mandatory</p>
+                  <h3 class="marginTop" id='returnQuarantine'></h3>
+                </div>
               </div>
             </div>
           </div>
-          </div>
         </div>
-          <!-- planned destination -->
-          <div id='resultsPlanned'>
+        <!-- planned destination -->
+        <div id='resultsPlanned'>
           <div class='container'>
             <image src='assets/globe.png' class='countryFlag' alt='countryFlag' id='destinationFlag'/>
             <h2 id="resultDestination" >To: </h2> 
             <div class="row">
               <div class="col">
                 <div class='resultIconInfo'>
-                <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
-                <p id='casePer100KDestination'>4.4k cases per 100k</p>
-              </div>
+                  <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
+                  <p id='casePer100KDestination'>4.4k cases per 100k</p>
+                </div>
               </div>
               <div class="col">
                 <div class='resultIconInfo'>
                   <image class='resultTableIcon blackIcon' src='./assets/borderControl.png' alt='Cases chart'/>
-                <h3 class="marginTop">Destination classified <br> as <b>risk zone</b></p></h3>
-                  </div>
+                  <h3 class="marginTop" id='destRisk'></h3>
+                </div>
               </div>
               <div class="col">
-                <h3 class="marginTop"><u>Is there a travel warning?</u></p>
+                <h3 class="marginTop" id='destWarning'></h3>
               </div>
             </div>
             <div class="row">
               <div class="col">
                 <p id='riskZone'><!-- dynamic --></p>
               </div>
-              <div class="col">
-                <p id='travelWarning'><!-- dynamic --></p>
-              </div>
             </div>
-    
             <div class="row">
               <div class="col">
                 <div class="resultIconInfo">
                   <image class='resultTableIcon blackIcon' src='./assets/testPage.png' alt='Test page icon'/>
-                <h3 class="marginTop">A <b>test</b> is requested<br> upon entry</p>
+                <h3 class="marginTop" id='destTest'></h3>
                 </div>
               </div>
               <div class="col">
-                <h3 class="marginTop"><u>Do I need an entry form?</u></p>
+                <h3 class="marginTop" id='destForm'></h3>
               </div>
             </div>
-            <div class="row">
-              <div class="col">
-                <p id='entryTest'></p>
-              </div>
-              <div class="col">
-                <p id='entryForm'></p>
-              </div>
-            </div>
-          
-            <!-- <div class="row">
-              <div class="col">
-                <h3 class="marginTop"><u>Do I need to quarantine when I return?</u></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p id='quarantineReturn'></p>
-              </div>
-            </div> -->
           </div>
         </div>
-          <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Search another location</button>
+        <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Search another location</button>
           <!-- need to include credits for the icons -->
           <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
-        </div>
-     
+      </div>
+          
   
 <!-- about page-->
         <div class='container hidden' id='aboutPage'>

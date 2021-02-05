@@ -26,6 +26,7 @@ provider:
   runtime: python3.8
   logRetentionInDays: 1
   region: eu-central-1
+  lambdaHashingVersion: "20201221"
   environment:
     FEED_BUCKET_NAME: !Ref ScraperFeedBucket
   iamRoleStatements:

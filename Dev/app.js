@@ -1,8 +1,10 @@
 const countriesDataURL = 'https://adac-scraper-dev-scraperfeedbucket-16nuzvfai8pr8.s3.eu-central-1.amazonaws.com/adac/adac.json';
-const covidDataURL = 'https://api.jsonbin.io/b/601987375415b40ac221eebd'; // This is on some json hosting site
+const covidDataURL = 'https://api.jsonbin.io/b/601c269c06934b65f52e7593'; // This is on some json hosting site
 
 let countriesData = {}; 
 let countriesCovidData = {}; 
+
+const casesPer7DaysKey = "New Cases in 7 Days per 100K";
 
 // Get countries data
 request('GET', countriesDataURL, true) // this is calling the request function which returns a promise of XMLHttpRequest. We use GET because we are retreiving a JSON (REST API)
@@ -53,7 +55,7 @@ request('GET', covidDataURL, true) // this is calling the request function which
    
       for (var i = 0, covidData; i < data.length; i++) {
         covidData = data[i];
-        countriesCovidData[ covidData.Country ] = covidData;
+        countriesCovidData[ covidData.Name ] = covidData;
      }
 
      populateSafestLocations();
@@ -154,8 +156,8 @@ function UpdateCurrentDestinationElements(countryName, countryData)
   }
 
   updateCases(countryName, "casePer100KDeparture");
-  updateElement("returnTest", countryData["Test_entry"], true);
-  updateElement("returnQuarantine", countryData["Quarantine"], true);
+  updateElement("returnTest", getCorrectString(countryData, "Test_entry", true));
+  updateElement("returnQuarantine", getCorrectString(countryData, "Quarantine", true));
 }
 
 function UpdatePlannedDestinationElements(countryName, countryData)
@@ -163,24 +165,10 @@ function UpdatePlannedDestinationElements(countryName, countryData)
   const resultDest = document.querySelector('#resultDestination');
   resultDest.innerHTML = "To: " + countryName;
 
-  if ((countryData === undefined) || (countryData === null)) 
-  {
-      // TODO. Need to show no data for this country
-      console.log("No data for " + countryName);
-
-      updateElement("riskZone", "No Data", false);
-      updateElement("travelWarning", "No Data", false);
-      updateElement("entryTest", "No Data", false);
-      updateElement("entryForm", "No Data", false);
-      updateElement("quarantineReturn", "No Data", false);
-      return;
-  }
-
-  updateElement("riskZone", countryData["Riskzone"], true);
-  updateElement("travelWarning", countryData["Reisewarnung"], true);
-  updateElement("entryTest", countryData["Test_entry"], true);
-  updateElement("entryForm", countryData["Entry_form"], true);
-  updateElement("quarantineReturn", countryData["Quarantine"], true);
+  updateElement("destRisk", getCorrectString(countryData, "Riskzone", false));
+  updateElement("destWarning", getCorrectString(countryData, "Reisewarnung", false));
+  updateElement("destTest", getCorrectString(countryData, "Test_entry", false));
+  updateElement("destForm", getCorrectString(countryData, "Entry_form", false));
 
   updateCases(countryName, "casePer100KDestination");
   
@@ -204,6 +192,36 @@ function UpdatePlannedDestinationElements(countryName, countryData)
   );
 }
 
+function getCorrectString(countryData, key, isReturn) {
+  let value = countryData[key];
+
+  if (value === undefined || value === null)
+  {
+    return "No Data";
+  }
+
+  let location = "return";
+
+  if (!isReturn)
+  {
+    location = "entry";
+  }
+
+  switch(key)
+  {
+    case "Riskzone":
+      return value ? "This is a risk zone" : "This is not a risk zone";
+    case "Reisewarnung":
+      return value ? "This is a travel warning area" : "This is not a travel warning area";
+    case "Test_entry":
+      return value ? `A test is requested upon ${location}` : `A test is not requested upon ${location}`;
+    case "Entry_form":
+      return value ? "You will need an entry form on arrival" : "You do not need an entry form on arrival";
+    case "Quarantine":
+      return value ? `Quarantine is requested upon ${location}` : `Quarantine is not requested upon ${location}`;
+  }
+}
+
 function loadImage(url) {
   return new Promise((resolve, reject) => {
 
@@ -214,7 +232,7 @@ function loadImage(url) {
   });
 }
 
-function updateElement(elementName, elementValue, isBool) {
+function updateElement(elementName, elementValue) {
   const element = document.querySelector(`#${elementName}`);
 
   if (element === undefined || element === null)
@@ -223,19 +241,9 @@ function updateElement(elementName, elementValue, isBool) {
     return;
   }
 
-  let value = elementValue;
-
-  if (isBool) {
-    if(value){ //translate bool to 'yes' or 'no'
-      value = 'Yes';
-    }else{
-      value = 'No';
-    }
-  }
-
-  element.innerHTML = value;
+  element.innerHTML = elementValue;
 }
-  
+
 function updateCases(countryName, elementName) {
   const covidData = countriesCovidData[countryName];
 
@@ -243,8 +251,8 @@ function updateCases(countryName, elementName) {
 
   if (covidData !== undefined && covidData !== null)
   {
-    let cases = countriesCovidData[countryName]["Cases per 100K"];
-    casePer100K = `Active cases: ${cases} per 100k`;
+    let cases = countriesCovidData[countryName][casesPer7DaysKey];
+    casePer100K = getCasesString(cases);
   }
 
   updateElement(elementName, casePer100K, false);
@@ -260,13 +268,13 @@ function populateSafestLocations(){
 
   // Sort the array based on the second element
   items.sort(function(first, second) {
-    return first[1]["Cases per 100K"] - second[1]["Cases per 100K"];
+    return first[1][casesPer7DaysKey] - second[1][casesPer7DaysKey];
   });
 
   var index = 0;
 
   // Ignore countries with cases less than 10
-  while(items[index][1]["Cases per 100K"] < 10)
+  while(items[index][1][casesPer7DaysKey] < 10)
   {
     index++;
   }
@@ -278,10 +286,10 @@ function populateSafestLocations(){
     for (var j = 0, col; col = row.cells[j]; j++) {
       //iterate through columns
       //columns would be accessed using the "col" variable assigned in the for loop
-      let cases = `${items[index][1]["Cases per 100K"]} cases per 100k`;
+      let cases = getCasesString(items[index][1][casesPer7DaysKey]);
       cases = cases.small();
 
-      let countryName = items[index][1].Country;
+      let countryName = items[index][1].Name;
 
       if (countryName.length > 20)
       {
@@ -315,3 +323,7 @@ function onRefreshClicked (){
 // latest update - date stamp
 let dateStamp = new Date().toLocaleString('en-US', {month: 'long', day: 'numeric', year:'numeric'})
 document.querySelector('#latestUpdateDeparture').innerHTML = document.querySelector('#latestUpdateDeparture').innerHTML + dateStamp;
+
+function getCasesString(cases) {
+  return `${parseFloat(cases).toFixed(1)} cases per 100k in the last 7 days`;
+}

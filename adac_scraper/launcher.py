@@ -1,11 +1,20 @@
 import sys
 import json
+import scrapy
+import lxml
 
-from adac_scraper.crawl import crawl
+
+
+from adac_scraper.crawl import crawl2
+from lxml import etree
+
+
+def handle(event, context):
+    return etree.fromstring(event)
 
 
 def scrape(event={}, context={}):
-    crawl(**event)
+    crawl2(**event)
 
 
 if __name__ == "__main__":

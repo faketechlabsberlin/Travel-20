@@ -15,5 +15,5 @@ X-Xss-Protection: 1; mode=block
 X-Xss-Protection: 1; mode=block
 Referrer-Policy: same-origin
 Referrer-Policy: same-origin
-Set-Cookie: dtCookie=A60BDEE0AEF84FAC7FDDCC1D52ABAF42|X2RlZmF1bHR8MQ; Path=/; Domain=.adac.de
-Date: Mon, 25 Jan 2021 14:17:25 GMT
+Set-Cookie: dtCookie=2B0B1D3F20C057ACA4F2970EF6DB56ED|X2RlZmF1bHR8MQ; Path=/; Domain=.adac.de
+Date: Tue, 02 Feb 2021 17:36:43 GMT
