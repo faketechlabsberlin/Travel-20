@@ -91,12 +91,14 @@
               </div>
               <div class="col">
                 <div class="resultIconInfo">
+                  <image class='tickIcon' id='returnTestTick' src='./assets/x.png' alt='check icon'/>
                   <image class='resultTableIcon blackIcon' src='./assets/testPage.png' alt='Test page icon'/>
                   <h3 class="marginTop" id='returnTest'></h3>
                 </div>
               </div>
               <div class="col">
                 <div class="resultIconInfo">
+                  <image class='tickIcon' id='returnQuarantineTick' src='./assets/x.png' alt='check icon'/>
                   <image class='resultTableIcon blackIcon' src='./assets/house.png' alt='House icon'/>
                   <h3 class="marginTop" id='returnQuarantine'></h3>
                 </div>
@@ -111,37 +113,42 @@
             <h2 id="resultDestination" >To: </h2> 
             <div class="row">
               <div class="col">
-                <div class='resultIconInfo'>
+                <div class='resultIconInfo' id='plannedNumbersChart'>
                   <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
                   <p id='casePer100KDestination'>4.4k cases per 100k</p>
                 </div>
               </div>
               <div class="col">
                 <div class='resultIconInfo'>
+                  <image class='tickIcon' id='destRiskTick' src='./assets/x.png' alt='check icon'/>
                   <image class='resultTableIcon blackIcon' src='./assets/borderControl.png' id='riskZone' alt='Cases chart'/>
                   <h3 class="marginTop" id='destRisk'></h3>
                 </div>
               </div>
               <div class="col">
+                <div class='resultIconInfo'>
+                <image class='tickIcon' id='destWarningTick' src='./assets/x.png' alt='check icon'/>
+                <image class='resultTableIcon blackIcon' src='./assets/borderControl.png' id='riskZone' alt='Cases chart'/>
                 <h3 class="marginTop" id='destWarning'></h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p id='riskZone'><!-- dynamic --></p>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col">
                 <div class="resultIconInfo">
+                  <image class='tickIcon' id='destTestTick' src='./assets/x.png' alt='check icon'/>
                   <image class='resultTableIcon blackIcon' src='./assets/testPage.png' alt='Test page icon'/>
                 <h3 class="marginTop" id='destTest'></h3>
                 </div>
               </div>
               <div class="col">
+                <div class='resultIconInfo'>
+                <image class='tickIcon' id='destFormTick' src='./assets/x.png' alt='check icon'/>
+                <image class='resultTableIcon blackIcon' src='./assets/testPage.png' alt='Test page icon'/>
                 <h3 class="marginTop" id='destForm'></h3>
+                </div>
               </div>
-            </div>
+          </div>
           </div>
         </div>
         <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Search another location</button>
@@ -195,15 +202,28 @@
               <image class='bgIcon' src='./assets/headThink.png' alt='thinkingImage'/>
               <h2>FAQs</h2>
               <div class="serv">
-                <ul>
-                  <li><a href="#">How accurate is the travel information?</a> </li>
-                  <li><a href="#">What are the data sources?</a> </li>
-                  <li><a href="#">How often is the data updated?</a> </li>
-                  <li><a href="#">Who runs this site?</a> </li>
-                  <li><a href="#">How are the "Safest Locations" selected?</a> </li>
-                  <li><a href="#">Why can't I find travel information for my destination?</a> </li>
-                  <li><a href="#">Can I share travel information about my country?</a> </li>
-                </ul> 
+                <div>
+                  <div class='FAQquestion'>
+                    <h4>Where is the information coming from?</h4>
+                    <button class='FAQbutton'>Show answer</button>
+                    <p class='FAQanswer' hidden>Ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab magni cupiditate consequatur inventore. Labore, illum? Recusandae excepturi odio, voluptatum cumque quam totam? Dolorum, cumque inventore eveniet vel sed sit animi!
+                      Ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim optio dicta aliquam fugiat dolor autem facilis nostrum, quidem odit, itaque doloribus necessitatibus nulla, corporis vel quam tenetur eum perferendis nobis?
+                    </p>
+                  </div>
+                  <div  class='FAQquestion'>
+                    <h4>How often is the information updated?</h4>
+                  <button class='FAQbutton'>Show answer</button>
+                  <p class='FAQanswer' hidden>Ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab magni cupiditate consequatur inventore. Labore, illum? Recusandae excepturi odio, voluptatum cumque quam totam? Dolorum, cumque inventore eveniet vel sed sit animi!
+                    Ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim optio dicta aliquam fugiat dolor autem facilis nostrum, quidem odit, itaque doloribus necessitatibus nulla, corporis vel quam tenetur eum perferendis nobis?
+                  </p>
+                </div>
+                <div  class='FAQquestion'>
+                   <h4>What isformation is used to select safest location?</h4>
+                  <button class='FAQbutton'>Show answer</button>
+                  <p class='FAQanswer' hidden>Ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab magni cupiditate consequatur inventore. Labore, illum? Recusandae excepturi odio, voluptatum cumque quam totam? Dolorum, cumque inventore eveniet vel sed sit animi!
+                    Ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim optio dicta aliquam fugiat dolor autem facilis nostrum, quidem odit, itaque doloribus necessitatibus nulla, corporis vel quam tenetur eum perferendis nobis?
+                  </p>
+                </div>
               </div>
           </div>
       </div>

@@ -118,7 +118,7 @@ const countryList = {
   "ukraine" : "Ukraine",
   "ungarn-" : "Hungary",
   "uruguay" : "Uruguay",
-  "usa" : "USA",
+  "usa" : "USA" || "United States of America",
   "venezuela" : "Venezuela",
   "vereinigte-arabische-emirate" : "United Arab Emirates",
   "vietnam" : "Vietnam",

@@ -191,8 +191,8 @@ label{
 
 .row {
   display: flex;
-  align-items: flex-end;
-  margin-bottom: 1%;
+  justify-content: flex-end;
+  margin-bottom: 3%;
   margin-left: 7% !important;
 }
 
@@ -251,12 +251,20 @@ hr.white {
   width: 60%;
 }
 
+.tickIcon{
+  width:10%;
+}
+
 .blackIcon{
 filter: invert(100%);
 }
 
 #resultDestination, #resultDeparture{
   margin-bottom: 7%;
+}
+
+#plannedNumbersChart{
+  justify-self:center;
 }
 
 @media all and (max-width: 770px){
@@ -390,7 +398,6 @@ filter: invert(100%);
 footer{
   font-family: 'FuturaMedium';
   font-size: 16px;
-  /* text-align: center;     */
   margin: 2% 0;    
   color:#047469;
 }
@@ -410,15 +417,33 @@ th, td {
   font-size: 25px;
 }
 
-.serv ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin: 5%;
-  font-size:20px;
+
+.FAQquestion{
+  flex-direction: column;
+  max-width: 25%;
+  align-items: baseline;
+  align-self:flex-start;
 }
 
-.serv ul li {
+.serv div{
+  display: flex;
+  justify-content: space-evenly;
+  font-size:20px;
+  text-decoration: none;
+  color: #047469;
+  margin-top: 3%;
+}
+
+.FAQbutton{
+  font-size:16px;
+  text-decoration: none;
+  color: #047469;
+  border:none;
+  opacity: 0.6;
+  background-color: #F5FFFF;
+}
+
+/* .serv ul li {
   flex: 0 0 50%;
   padding-bottom: 10px;
-}
+} */

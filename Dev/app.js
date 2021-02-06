@@ -156,8 +156,8 @@ function UpdateCurrentDestinationElements(countryName, countryData)
   }
 
   updateCases(countryName, "casePer100KDeparture");
-  updateElement("returnTest", getCorrectString(countryData, "Test_entry", true));
-  updateElement("returnQuarantine", getCorrectString(countryData, "Quarantine", true));
+  updateElement("returnTest", getCorrectString(countryData, "Test_entry", true), updateTick(countryData, "Test_entry"));
+  updateElement("returnQuarantine", getCorrectString(countryData, "Quarantine", true), updateTick(countryData, "Quarantine"));
 }
 
 function UpdatePlannedDestinationElements(countryName, countryData)
@@ -165,10 +165,10 @@ function UpdatePlannedDestinationElements(countryName, countryData)
   const resultDest = document.querySelector('#resultDestination');
   resultDest.innerHTML = "To: " + countryName;
 
-  updateElement("destRisk", getCorrectString(countryData, "Riskzone", false));
-  updateElement("destWarning", getCorrectString(countryData, "Reisewarnung", false));
-  updateElement("destTest", getCorrectString(countryData, "Test_entry", false));
-  updateElement("destForm", getCorrectString(countryData, "Entry_form", false));
+  updateElement("destRisk", getCorrectString(countryData, "Riskzone", false), updateTick(countryData, "Riskzone"));
+  updateElement("destWarning", getCorrectString(countryData, "Reisewarnung", false), updateTick(countryData, "Reisewarnung"));
+  updateElement("destTest", getCorrectString(countryData, "Test_entry", false),updateTick(countryData, "Test_entry"));
+  updateElement("destForm", getCorrectString(countryData, "Entry_form", false),updateTick(countryData, "Entry_form"));
 
   updateCases(countryName, "casePer100KDestination");
   
@@ -232,7 +232,11 @@ function loadImage(url) {
   });
 }
 
-function updateElement(elementName, elementValue) {
+function updateTick(countryData, key){
+  return countryData[key];
+}
+
+function updateElement(elementName, elementValue, isTick) {
   const element = document.querySelector(`#${elementName}`);
 
   if (element === undefined || element === null)
@@ -242,6 +246,13 @@ function updateElement(elementName, elementValue) {
   }
 
   element.innerHTML = elementValue;
+  const elementTick = document.querySelector(`#${elementName}Tick`);
+
+  if (isTick===1){
+    elementTick.src = './assets/check.png';
+  }else if (isTick===0){
+    elementTick.src = './assets/x.png';
+  }
 }
 
 function updateCases(countryName, elementName) {
@@ -252,12 +263,14 @@ function updateCases(countryName, elementName) {
   if (covidData !== undefined && covidData !== null)
   {
     let cases = countriesCovidData[countryName][casesPer7DaysKey];
-    casePer100K = getCasesString(cases);
+    casePer100K = `Active cases: ${getCasesString(cases)}`;
   }
 
   updateElement(elementName, casePer100K, false);
 }
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 //populate Safe Location section
 function populateSafestLocations(){
 
@@ -326,4 +339,20 @@ document.querySelector('#latestUpdateDeparture').innerHTML = document.querySelec
 
 function getCasesString(cases) {
   return `${parseFloat(cases).toFixed(1)} per 100k*`;
+}
+
+// // FAQ buttons
+let FAQbuttons = document.getElementsByClassName('FAQbutton');
+
+for (let i = 0; i<FAQbuttons.length; i++){
+  FAQbuttons[i].addEventListener('click', (event)=>{
+    
+  event.target.nextElementSibling.toggleAttribute("hidden");
+
+  if(FAQbuttons[i].innerHTML === "Show answer"){
+    FAQbuttons[i].innerHTML = "Hide answer";
+  }else{
+    FAQbuttons[i].innerHTML = "Show answer";
+  }
+})
 }
