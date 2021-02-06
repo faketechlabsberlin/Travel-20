@@ -268,7 +268,7 @@ function updateElement(elementName, elementValue, isTick) {
 function updateCases(countryName, elementName) {
   const covidData = countriesCovidData[countryName];
 
-  let casePer100K = "No Data";
+  let casePer100K = "Reported cases in the last 7 days:<br>No Data";
 
   if (covidData !== undefined && covidData !== null)
   {
@@ -331,7 +331,7 @@ document.querySelector('#aboutLink').addEventListener('click', ()=>{
     document.getElementById("explore").setAttribute("class", "hidden");
     document.getElementById("safestLocations").setAttribute("class", "hidden");
     document.getElementById("faqs").setAttribute("class", "hidden");
-    document.getElementById("aboutPage").setAttribute("class", "container resultField");
+    document.getElementById("aboutPage").setAttribute("class", "container mainField");
 })
 
 //go back from about section

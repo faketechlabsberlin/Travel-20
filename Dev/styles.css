@@ -279,14 +279,36 @@ filter: invert(100%);
 
 #aboutContent{
   text-align: left;
-  width: 60%;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-left: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#aboutText{
+  margin-top: 8%;
+  font-family:'FuturaMedium';
+  font-size: 17px;
 }
 
 #aboutBack{
-  margin-left: 0;
+  margin-left: 4%;
+  margin-top: 5%;
 }
+
+#aboutImage{
+  margin-left: 5%;
+  max-width: 420px;
+}
+
+#aboutNewspapers{
+  margin-left: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 /* safe locations section */
 #safestLocationsTable td{
