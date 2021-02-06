@@ -20,7 +20,9 @@ request('GET', countriesDataURL, true) // this is calling the request function w
       "Quarantine": 1,
       "Reisewarnung": 1,
       "Riskzone": 1,
-      "Test_entry": 0
+      "Test_entry": 0,
+      "Mask": 1,
+      "Accomodation": 0
     };
 
     for (var i = 0, countryData; i < data.length; i++) {
@@ -33,6 +35,10 @@ request('GET', countriesDataURL, true) // this is calling the request function w
 
       if (engCountryName === "ERROR") 
         continue;
+
+        // HACK TO ADD MISSING DATA
+      countryData.Mask = Math.random() < 0.5;
+      countryData.Accomodation = Math.random() < 0.5;
 
       countriesData[ engCountryName ] = countryData;
       countriesData[ engCountryName ].Name = engCountryName;
@@ -166,9 +172,11 @@ function UpdatePlannedDestinationElements(countryName, countryData)
   resultDest.innerHTML = "To: " + countryName;
 
   updateElement("destRisk", getCorrectString(countryData, "Riskzone", false), updateTick(countryData, "Riskzone"));
-  updateElement("destWarning", getCorrectString(countryData, "Reisewarnung", false), updateTick(countryData, "Reisewarnung"));
+  updateElement("destMask", getCorrectString(countryData, "Mask", false), updateTick(countryData, "Mask"));
   updateElement("destTest", getCorrectString(countryData, "Test_entry", false),updateTick(countryData, "Test_entry"));
   updateElement("destForm", getCorrectString(countryData, "Entry_form", false),updateTick(countryData, "Entry_form"));
+  updateElement("destQuarantine", getCorrectString(countryData, "Quarantine", false),updateTick(countryData, "Quarantine"));
+  updateElement("destAccomodation", getCorrectString(countryData, "Accomodation", false),updateTick(countryData, "Accomodation"));
 
   updateCases(countryName, "casePer100KDestination");
   
@@ -211,14 +219,16 @@ function getCorrectString(countryData, key, isReturn) {
   {
     case "Riskzone":
       return value ? "This is a risk zone" : "This is not a risk zone";
-    case "Reisewarnung":
-      return value ? "This is a travel warning area" : "This is not a travel warning area";
+    case "Mask":
+      return value ? "Wearing a mask is mandatory in public" : "It is not mandatory to wear a mask in public";
     case "Test_entry":
       return value ? `A test is requested upon ${location}` : `A test is not requested upon ${location}`;
     case "Entry_form":
       return value ? "You will need an entry form on arrival" : "You do not need an entry form on arrival";
     case "Quarantine":
       return value ? `Quarantine is requested upon ${location}` : `Quarantine is not requested upon ${location}`;
+    case "Accomodation":
+      return "Accomodation can be booked";
   }
 }
 
@@ -263,7 +273,7 @@ function updateCases(countryName, elementName) {
   if (covidData !== undefined && covidData !== null)
   {
     let cases = countriesCovidData[countryName][casesPer7DaysKey];
-    casePer100K = `Active cases: ${getCasesString(cases)}`;
+    casePer100K = `Reported cases in the last 7 days:<br><b>${parseFloat(cases).toFixed(1)}</b> per <b>100k</b>*`;
   }
 
   updateElement(elementName, casePer100K, false);
