@@ -329,12 +329,16 @@ function populateSafestLocations(){
 document.querySelector('#aboutLink').addEventListener('click', ()=>{
     // Disable explore frame and show about frame
     document.getElementById("explore").setAttribute("class", "hidden");
+    document.getElementById("safestLocations").setAttribute("class", "hidden");
+    document.getElementById("faqs").setAttribute("class", "hidden");
     document.getElementById("aboutPage").setAttribute("class", "container resultField");
 })
 
 //go back from about section
 function onAboutBack (){
   document.getElementById("explore").setAttribute("class", "mainField" );
+  document.getElementById("safestLocations").setAttribute("class", "");
+  document.getElementById("faqs").setAttribute("class", "");
   document.getElementById("aboutPage").setAttribute("class", "hidden");
 }
 
