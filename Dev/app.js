@@ -64,7 +64,7 @@ request('GET', covidDataURL, true) // this is calling the request function which
         countriesCovidData[ covidData.Name ] = covidData;
      }
 
-     populateSafestLocations();
+     populateSafestLocations(false);
   })
   .catch( function (e) { // this is called on reject when an error happens on the connection
     console.log("Failed to retreive countriesCovidData.json", e); 
@@ -282,8 +282,7 @@ function updateCases(countryName, elementName) {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 //populate Safe Location section
-function populateSafestLocations(){
-
+function populateSafestLocations(filterByEU){
   // Create items array
   var items = Object.keys(countriesCovidData).map(function(key) {
     return [key, countriesCovidData[key]];
@@ -294,12 +293,15 @@ function populateSafestLocations(){
     return first[1][casesPer7DaysKey] - second[1][casesPer7DaysKey];
   });
 
-  var index = 0;
+  var countryIndex = 0;
 
-  // Ignore countries with cases less than 10
-  while(items[index][1][casesPer7DaysKey] < 10)
-  {
-    index++;
+  var countriesFiltered = [];
+
+  // Filter based on cases and is part of EU
+  for( var i = 0; i < items.length; i++) { 
+    if (items[i][1][casesPer7DaysKey] >= 10 
+      && (!filterByEU || filterByEU && isCountryPartOfEU(items[i][1].Name)))
+      countriesFiltered.push(items[i][1]);
   }
 
   var table = document.getElementById("safestLocationsTable");
@@ -307,20 +309,20 @@ function populateSafestLocations(){
     //iterate through rows
     //rows would be accessed using the "row" variable assigned in the for loop
     for (var j = 0, col; col = row.cells[j]; j++) {
+
       //iterate through columns
       //columns would be accessed using the "col" variable assigned in the for loop
-      let cases = getCasesString(items[index][1][casesPer7DaysKey]);
+      let cases = getCasesString(countriesFiltered[countryIndex][casesPer7DaysKey]);
       cases = cases.small();
 
-      let countryName = items[index][1].Name;
+      let countryName = countriesFiltered[countryIndex].Name;
 
-      if (countryName.length > 20)
-      {
+      if (countryName.length > 20){
         countryName = countryName.substring(0, 19) + "...";
       }
 
       col.innerHTML = "<image class='pin' src='./assets/pin.png'/>" + `${countryName} ${cases}`;
-      index++;
+      countryIndex++;
     }  
   }
 }
@@ -341,6 +343,8 @@ function onAboutBack (){
   document.getElementById("safestLocations").setAttribute("class", "");
   document.getElementById("faqs").setAttribute("class", "");
   document.getElementById("aboutPage").setAttribute("class", "hidden");
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 // refresh button
@@ -361,13 +365,28 @@ let FAQbuttons = document.getElementsByClassName('FAQbutton');
 
 for (let i = 0; i<FAQbuttons.length; i++){
   FAQbuttons[i].addEventListener('click', (event)=>{
-    
-  event.target.nextElementSibling.toggleAttribute("hidden");
+    event.target.nextElementSibling.toggleAttribute("hidden");
 
-  if(FAQbuttons[i].innerHTML === "Show answer"){
-    FAQbuttons[i].innerHTML = "Hide answer";
-  }else{
-    FAQbuttons[i].innerHTML = "Show answer";
+    if(FAQbuttons[i].innerHTML === "Show answer"){
+      FAQbuttons[i].innerHTML = "Hide answer";
+    }else{
+      FAQbuttons[i].innerHTML = "Show answer";
+    }
+  })
+}
+
+// safest locations - eu filter
+function onEUFilter (){
+  var filterButton = document.getElementById("euFilter");
+
+  if (filterButton.innerHTML === "Filter By EU Countries")
+  {
+    filterButton.innerHTML = "Filter By All Countries";
+    populateSafestLocations(false);
   }
-})
+  else
+  {
+    filterButton.innerHTML = "Filter By EU Countries";
+    populateSafestLocations(true);
+  }
 }
