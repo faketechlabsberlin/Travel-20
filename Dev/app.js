@@ -331,6 +331,7 @@ document.querySelector('#aboutLink').addEventListener('click', ()=>{
     document.getElementById("explore").setAttribute("class", "hidden");
     document.getElementById("safestLocations").setAttribute("class", "hidden");
     document.getElementById("faqs").setAttribute("class", "hidden");
+    document.getElementById("result").setAttribute("class", "hidden");
     document.getElementById("aboutPage").setAttribute("class", "container mainField");
 })
 

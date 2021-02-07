@@ -286,8 +286,16 @@ filter: invert(100%);
   align-items: center;
 }
 
-#aboutText{
+#aboutTextLeft{
   margin-top: 8%;
+  margin-right: 4%;
+  font-family:'FuturaMedium';
+  font-size: 17px;
+}
+
+#aboutTextRight{
+  margin-top: 8%;
+  margin-left: 4%;
   font-family:'FuturaMedium';
   font-size: 17px;
 }
@@ -295,11 +303,22 @@ filter: invert(100%);
 #aboutBack{
   margin-left: 4%;
   margin-top: 5%;
+  align-items: right;
+}
+
+#aboutSeen{
+  margin-left: 4%;
+  margin-right: 0%;
+  margin-top: 5%;
+  align-items: right;
+  color: #047469;  
+  font-size: 20px;
 }
 
 #aboutImage{
-  margin-left: 5%;
-  max-width: 420px;
+  margin-left: 4%;
+  align-items: center;
+  max-width: 1110px;
 }
 
 #aboutNewspapers{
@@ -307,6 +326,11 @@ filter: invert(100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5%;
+}
+
+#aboutNewspaperIcons{
+  max-width: 200px;
 }
 
 
@@ -438,7 +462,6 @@ footer a:hover{
 th, td {
   font-size: 25px;
 }
-
 
 .FAQquestion{
   flex-direction: column;
