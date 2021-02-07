@@ -4,7 +4,7 @@ const covidDataURL = 'https://api.jsonbin.io/b/601c269c06934b65f52e7593'; // Thi
 let countriesData = {}; 
 let countriesCovidData = {}; 
 
-const casesPer7DaysKey = "New Cases in 7 Days per 100K";
+const casesPer7DaysKey = "Cases7D100K";
 
 // Get countries data
 request('GET', countriesDataURL, true) // this is calling the request function which returns a promise of XMLHttpRequest. We use GET because we are retreiving a JSON (REST API)
