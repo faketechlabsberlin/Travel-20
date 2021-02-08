@@ -35,7 +35,7 @@ h2.marginTop {
 }
 
 h3.marginTop {
-  font-size: 1rem;
+  font-size: 24px;
   margin-top: 1em;
 }
 
@@ -189,20 +189,20 @@ label{
 }
 
 #resultDeparture, #resultDestination{
-  font-size: 45px !important;
+  font-size: 36px !important;
+  line-height: 52px;
 }
 
 .destinationTable{
   display: flex;
   align-items: center;
-  margin-left:8%;
 }
 
 .row {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 3%;
-  margin-left: 7% !important;
+  /* margin-left: 7% !important; */
 }
 
 .col {
@@ -210,11 +210,12 @@ label{
 }
 
 .greyRight {
-  color: rgb(175, 175, 175);
+  color: #AAA;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
   text-align: right;
+  font-size: 18px;
 }
 
 hr.white {
@@ -224,21 +225,26 @@ hr.white {
 }
 
 #resultsCurrent{
-  background-color:rgb(175, 175, 175);
+  background-color:#FAFAFA;
   padding: 5% 0;
 }
 #resultsPlanned{
-  background-image: -o-linear-gradient(180deg, #E2F9F8 19.27%, #C3E9E4 100%);
-  background-image: -moz-linear-gradient(180deg, #E2F9F8 19.27%, #C3E9E4 100%);
-  background-image: -webkit-linear-gradient(180deg, #E2F9F8 19.27%, #C3E9E4 100%);
-  background-image: -ms-linear-gradient(180deg, #E2F9F8 19.27%, #C3E9E4 100%);
-  background-image: linear-gradient(180deg, #E2F9F8 19.27%, #C3E9E4 100%);
+  background-image: -o-linear-gradient(277.22deg, rgba(195, 233,
+  228, 0.5) 20.73%, rgba(226, 249, 248, 0.5) 75.98%);
+  background-image: -moz-linear-gradient(277.22deg, rgba(195, 233,
+  228, 0.5) 20.73%, rgba(226, 249, 248, 0.5) 75.98%);
+  background-image: -webkit-linear-gradient(277.22deg, rgba(195, 233,
+  228, 0.5) 20.73%, rgba(226, 249, 248, 0.5) 75.98%);
+  background-image: -ms-linear-gradient(277.22deg, rgba(195, 233,
+  228, 0.5) 20.73%, rgba(226, 249, 248, 0.5) 75.98%);
+  background-image: linear-gradient(277.22deg, rgba(195, 233,
+  228, 0.5) 20.73%, rgba(226, 249, 248, 0.5) 75.98%);
   padding: 5% 0;
   margin-bottom: 5%;
 }
 
 .countryFlag{
-  width: 50px;
+  width: 61px;
   float: left;
   margin-right: 2%;
 }
@@ -250,7 +256,7 @@ hr.white {
 }
 
 .resultTableIcon{
-  width: 20%;
+  max-height: 76px;
   margin-right: 5%;
   margin-left:1%;
   align-self:center;
@@ -258,11 +264,13 @@ hr.white {
 .resultIconInfo{
   display: flex;
   align-items:flex-start;
-  width: 60%;
+  width: 100%;
+  margin:2%;
+  padding: 0 5%;
 }
 
 .tickIcon{
-  width:10%;
+  width:39px;
 }
 
 .blackIcon{
@@ -277,25 +285,51 @@ filter: invert(100%);
   justify-self:center;
 }
 
+#resultArrow {
+  position: absolute;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  margin:auto;
+  width:94px;
+  left:46%;
+  margin-top:-3%; 
+  z-index: 300;
+}
+
+
 @media all and (max-width: 770px){
   .resultIconInfo{
-    width:120%;
     align-items: center;
   }
   .destinationTable{
     flex-direction:column;
     margin:auto;
-    max-width:80%;
     margin-bottom: 2%;
   }
   .resultsLeftCol{
     max-width:70%;
     margin-bottom: 3%;
   }
-  .row{
-    margin-left:0 !important;
-  }
 
+  .resultTableIcon{
+    width:42px;
+  }
+  .tickIcon{
+    width:30px;
+    margin:2%;
+  }
+  #resultDestination{
+    margin-top:15%;
+  }
+  #resultArrow{
+    left:40%;
+    margin-top:-8%;
+  }
+  .row{
+    flex-direction: column;
+    margin-bottom:0;
+  }
 
 }
 
