@@ -342,24 +342,27 @@ filter: invert(100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 #aboutTextLeft{
-  margin-top: 8%;
-  margin-right: 4%;
+  margin-top: 4%;
+  margin-right: 2%;
   font-family:'FuturaMedium';
-  font-size: 17px;
+  font-size: 20px;
   text-align: justify;
   text-justify: inter-word;
+  width:100%;
 }
 
 #aboutTextRight{
-  margin-top: 8%;
-  margin-left: 4%;
+  margin-top: 4%;
+  margin-left: 2%;
   font-family:'FuturaMedium';
-  font-size: 17px;
+  font-size: 20px;
   text-align: justify;
   text-justify: inter-word;
+  width:100%;
 }
 
 #aboutBack{
@@ -602,6 +605,14 @@ footer a:hover{
 
 th, td {
   font-size: 25px;
+}
+
+td.flex {
+  flex-grow: 1;
+}
+
+tr.flex {
+  display: flex;
 }
 
 .FAQquestion{
