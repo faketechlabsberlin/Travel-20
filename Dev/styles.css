@@ -192,12 +192,11 @@ label{
   font-size: 45px !important;
 }
 
-#destinationTable{
+.destinationTable{
   display: flex;
   align-items: center;
+  margin-left:8%;
 }
-
-
 
 .row {
   display: flex;
@@ -283,6 +282,20 @@ filter: invert(100%);
     width:120%;
     align-items: center;
   }
+  .destinationTable{
+    flex-direction:column;
+    margin:auto;
+    max-width:80%;
+    margin-bottom: 2%;
+  }
+  .resultsLeftCol{
+    max-width:70%;
+    margin-bottom: 3%;
+  }
+  .row{
+    margin-left:0 !important;
+  }
+
 
 }
 

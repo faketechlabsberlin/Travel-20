@@ -84,13 +84,17 @@
             <h2 id='resultDeparture'>From:<!-- dynamic, will display entered origin --> </h2> 
 
             <!-- results alignment -->
-            <div class="row">
+            <div class='destinationTable'>
+            <div class='resultsLeftCol'>
               <div class="col">
                 <div class='resultIconInfo'>
                   <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
                   <p id='casePer100KDeparture'>1.6k cases per 100k</p>
                 </div>
+                </div>
               </div>
+              <div class='resultsRightCol'>
+              <div class='row'>
               <div class="col">
                 <div class="resultIconInfo">
                   <image class='tickIcon' id='returnTestTick' src='./assets/x.png' alt='check icon'/>
@@ -107,6 +111,8 @@
               </div>
             </div>
           </div>
+          </div>
+          </div>
         </div>
         <!-- planned destination -->
         <div id='resultsPlanned'>
@@ -115,8 +121,8 @@
             <h2 id="resultDestination" >To: </h2> 
 
             <!-- results alignment -->
-     <div id='destinationTable'>
-       <div id='resultsLeftCol'>
+     <div class='destinationTable'>
+       <div class='resultsLeftCol'>
               <div class="col">
                 <div class='resultIconInfo' id='plannedNumbersChart'>
                   <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
@@ -125,7 +131,7 @@
               </div> 
             </div>      
               
-            <div id='resultsRightCol'>
+            <div class='resultsRightCol'>
               <div class="row">
               <div class="col">
                 <div class='resultIconInfo'>
