@@ -112,7 +112,13 @@ currentDest.addEventListener('click', ()=>{
     currentDest.value= "Germany";
     //enable destination dropdown only once current destination selected
     document.querySelector('#plannedDestination').disabled = false;
-})
+});
+
+currentDest.addEventListener('change', ()=>{
+  currentDest.value= "Germany";
+  //enable destination dropdown only once current destination selected
+  document.querySelector('#plannedDestination').disabled = false;
+});
 
 const plannedDest = document.querySelector('#plannedDestination');
 plannedDest.addEventListener('change', ()=>{
