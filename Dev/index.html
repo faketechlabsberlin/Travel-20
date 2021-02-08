@@ -82,6 +82,8 @@
           <div class='container'>               
             <image src='./assets/country-flags/png/germany.png' alt='contryFlag' class='countryFlag'/>
             <h2 id='resultDeparture'>From:<!-- dynamic, will display entered origin --> </h2> 
+
+            <!-- results alignment -->
             <div class="row">
               <div class="col">
                 <div class='resultIconInfo'>
@@ -111,13 +113,20 @@
           <div class='container'>
             <image src='assets/globe.png' class='countryFlag' alt='countryFlag' id='destinationFlag'/>
             <h2 id="resultDestination" >To: </h2> 
-            <div class="row">
+
+            <!-- results alignment -->
+     <div id='destinationTable'>
+       <div id='resultsLeftCol'>
               <div class="col">
                 <div class='resultIconInfo' id='plannedNumbersChart'>
                   <image class='resultTableIcon blackIcon' src='./assets/statsBoard.png' alt='Cases chart'/>
                   <p id='casePer100KDestination'>4.4k cases per 100k</p>
                 </div>
-              </div>
+              </div> 
+            </div>      
+              
+            <div id='resultsRightCol'>
+              <div class="row">
               <div class="col">
                 <div class='resultIconInfo'>
                   <image class='tickIcon' id='destRiskTick' src='./assets/x.png' alt='check icon'/>
@@ -128,7 +137,7 @@
               <div class="col">
                 <div class='resultIconInfo'>
                 <image class='tickIcon' id='destMaskTick' src='./assets/x.png' alt='check icon'/>
-                <image class='resultTableIcon blackIcon' src='./assets/borderControl.png' id='riskZone' alt='Cases chart'/>
+                <image class='resultTableIcon' src='./assets/mask.png' id='riskZone' alt='Cases chart'/>
                 <h3 class="marginTop" id='destMask'></h3>
                 </div>
               </div>
@@ -160,12 +169,14 @@
               <div class="col">
                 <div class="resultIconInfo">
                   <image class='tickIcon' id='destAccomodationTick' src='./assets/x.png' alt='check icon'/>
-                  <image class='resultTableIcon blackIcon' src='./assets/house.png' alt='House icon'/>
+                  <image class='resultTableIcon' src='./assets/bed.png' alt='House icon'/>
                   <h3 class="marginTop" id='destAccomodation'></h3>
                 </div>
               </div>
+              </div>
             </div>
           </div>
+        </div>
         </div>
         <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Search another location</button>
           <!-- need to include credits for the icons -->
