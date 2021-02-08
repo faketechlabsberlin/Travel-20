@@ -376,17 +376,8 @@ for (let i = 0; i<FAQbuttons.length; i++){
 }
 
 // safest locations - eu filter
-function onEUFilter (){
-  var filterButton = document.getElementById("euFilter");
+const countriesFilterCheckbox = document.querySelector('#countriesFilterCheckbox');
+countriesFilterCheckbox.addEventListener('change', ()=>{
+  populateSafestLocations(countriesFilterCheckbox.checked);
+});
 
-  if (filterButton.innerHTML === "Filter By EU Countries")
-  {
-    filterButton.innerHTML = "Filter By All Countries";
-    populateSafestLocations(false);
-  }
-  else
-  {
-    filterButton.innerHTML = "Filter By EU Countries";
-    populateSafestLocations(true);
-  }
-}

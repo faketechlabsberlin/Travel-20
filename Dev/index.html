@@ -226,7 +226,14 @@
           <div class='container'>
             <image class='bgIcon' src='./assets/compassPassport.png' alt='compassImage'/>
             <h2>Safest <br> locations </h2>
-            <button class="submitButton"  id="euFilter" onclick="onEUFilter()">Filter By All Countries</button>
+            <div class='switchCountriesContainer'>
+              <p>Worldwide Destinations</p>
+              <label class="switch">
+                <input type="checkbox" id="countriesFilterCheckbox">
+                <span class="slider round"></span>
+              </label>
+              <p>EU Destinations</p>
+            </div>
           <table id='safestLocationsTable' class='safeList'>
             <tr>
               <td></td>
