@@ -11,11 +11,6 @@
   font-weight: normal;  
 }
 
-.page {
-  max-width: 1800px;
-  margin: auto;
-}
-
 .container {
   position: relative;
   font-family:'FuturaMedium';
