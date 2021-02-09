@@ -230,7 +230,7 @@ function getCorrectString(countryData, key, isReturn) {
     case "Riskzone":
       return value ? "This is a <b>risk zone</b>" : "This is not a <b>risk zone</b>";
     case "Mask":
-      return value ? "Wearing a <b>mask</b> is mandatory in public" : "It is not mandatory to wear a <b>mask</b> in public";
+      return "Wearing a <b>mask</b> is mandatory in public"; //value ? "Wearing a <b>mask</b> is mandatory in public" : "It is not mandatory to wear a <b>mask</b> in public";
     case "Test_entry":
       return value ? `A <b>test</b> is requested upon ${location}` : `A <b>test</b> is not requested upon ${location}`;
     case "Entry_form":
@@ -238,7 +238,7 @@ function getCorrectString(countryData, key, isReturn) {
     case "Quarantine":
       return value ? `<b>Quarantine</b> is requested upon ${location}` : `<b>Quarantine</b> is not requested upon ${location}`;
     case "Accomodation":
-      return "<b>Accomodation</b> can be booked";
+      return countryData["Riskzone"] ? "<b>Accomodation</b> cannot be booked" : "<b>Accomodation</b> can be booked";
   }
 }
 
