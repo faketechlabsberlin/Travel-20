@@ -571,6 +571,8 @@ input:checked + .slider:before {
   background-color: #F5FFFF;
   padding-top: 5%;
   padding-bottom: 5%;
+  transform: translate(0px, -38px);
+  background: linear-gradient(180deg, #F5FFFF 33.85%, #FFFFFF 100%), #F5FFFF;
 }
 
 
