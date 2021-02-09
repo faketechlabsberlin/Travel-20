@@ -13,8 +13,8 @@ SPIDER_MODULES = ['adac_scraper.spiders']
 NEWSPIDER_MODULE = 'adac_scraper.spiders'
 
 
-AWS_ACCESS_KEY_ID = 'AKIA2IDLHCUP4G5HN7HZ'
-AWS_SECRET_ACCESS_KEY= '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'
+AWS_ACCESS_KEY_ID = '****'
+AWS_SECRET_ACCESS_KEY= '****'
 
 
 
