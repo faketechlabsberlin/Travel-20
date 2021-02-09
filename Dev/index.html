@@ -19,16 +19,16 @@
             <a href="#getInvolved">Get Involved</a>
             <a href="#">Contact Us</a>
           </nav> 
-          <div class='container'>   
-              <img src="./assets/logoText.png"  class='logo'id='logoText'>
-              <img src="./assets/logoEarth.png" class='logo' id='logoGlobe' >
-          </div> 
+          <div id="logo">
+            <div id='logoText'><img src="./assets/logoText.png"  class='logo'></div>
+            <div id='logoGlobe'><img src="./assets/logoEarth.png" class='logo' ></div>
+          </div>
         </header>
         
         <div class="mainField" id='explore'>
           <div id="background">
-            <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
             <div class='container'>
+              <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
               <h2 class='mainTitle'>Explore <br> a destination</h2>
               <form>
                 <div class="fields">
@@ -51,7 +51,7 @@
                   </div>
                 </div>
                 <div class='container'>
-                  <p>Stay safe & updated</p>
+                  <p class='notice'>Stay safe & updated</p>
                   <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>
                     Read our Travel Information
                   </button></div>
@@ -70,13 +70,13 @@
       </div>
         <!-- result section -->
       <div class='hidden' id='result'>
-        <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
-        <div class='container '>
+        <div class='container'>
+          <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
           <h2 class=' mainTitle'>Explore <br> a destination</h2>
         </div>
         <!-- current destination -->
         <div class="greyRight">
-          <p id='latestUpdateDeparture'><b>Latest update:</b></p>
+          <p id='latestUpdateDeparture'><b>Latest update: </b></p>
         </div>
               
         <div id='resultsCurrent'> 
@@ -227,8 +227,8 @@
 
 <!-- Safest location section -->
         <div id='safestLocations'>
-          <image class='icon' src="./assets/shield.png" alt='icon'/>
           <div class='container'>
+            <image class='icon' src="./assets/shield.png" alt='icon'/>
             <image class='bgIcon' src='./assets/compassPassport.png' alt='compassImage'/>
             <h2>Safest <br> locations </h2>
             <div class='switchCountriesContainer'>
@@ -263,8 +263,8 @@
         </div>
 <!-- FAQs section -->
         <div id='faqs'>
-          <image class='icon' src="./assets/questionbubbles.png" alt='icon'/>
           <div class='container sec' >
+              <image class='icon' src="./assets/questionbubbles.png" alt='icon'/>
               <image class='bgIcon' src='./assets/headThink.png' alt='thinkingImage'/>
               <h2>FAQs</h2>
               <div class="serv">
@@ -301,7 +301,7 @@
           </p>
         </section>
         <footer>
-           <a href='/'>Privacy</a>/ <a href='/'>Imprint</a>/<a href='/'>Terms&Conditions</a>
+           <a href='/'>Privacy</a> / <a href='/'>Imprint</a> / <a href='/'>Terms&Conditions</a>
            <p>2021 @ Travel 21</p>
         </footer>
       </div>
