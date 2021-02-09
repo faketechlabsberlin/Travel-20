@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel=“icon” type=“image/png” href=“./assets/favIcon.png”>
+        <link rel='icon' type='image/png' href='./assets/favIcon.png'>
       </head>
 
     <body>
@@ -44,8 +44,8 @@
                   </div>
                   <div class="input">                     
                     <label>Where do you want to go?</label>
-                    <select id='plannedDestination' disabled>
-                      <option disabled selected value> -- select an option -- </option>
+                    <select id='plannedDestination'>
+                      <option disabled selected> -- select an option -- </option>
                       <!-- Options filled dynamically from country list -->
                     </select>
                   </div>
@@ -63,9 +63,8 @@
 
       <!-- a 404 page - when promise rejected -->
       <div class='container hidden' id='page404'>
-        <h2>An error has occured while loading the data</h2>
-          <p id="error"><!-- a dynamically generated error --></p>
-          <h2>Please refresh the page!</h2>
+        <h3>Ooops, something went wrong...</h3>
+          <h4>Please refresh the page!</h4>
           <button class="submitButton" id="refresh" onclick="onRefreshClicked()">Refresh</button>
       </div>
         <!-- result section -->

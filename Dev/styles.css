@@ -58,6 +58,7 @@ h3.marginTop {
   justify-content: space-between;
   align-items: center;
   z-index: 500;
+  cursor: pointer;
 }
 
 #logoText img {
@@ -238,7 +239,6 @@ label{
   display: flex;
   justify-content: flex-end;
   margin-bottom: 3%;
-  /* margin-left: 7% !important; */
 }
 
 .col {
@@ -587,12 +587,11 @@ input:checked + .slider:before {
 
 #page404{
   font-style:italic;
+  text-align:center;
   background-color:rgb(241 198 198);
+  margin-top:10%;
 }
 
-#page404 h2{
-  text-align: center;
-}
 #page404 button{
   background-color: #e48787;
 }

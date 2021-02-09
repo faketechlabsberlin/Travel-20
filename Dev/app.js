@@ -102,23 +102,27 @@ function setCountryDropdownElement(dropdownTag, countryName, isCurrent) {
 
   if (isCurrent && countryName !== 'Germany') {
     countryElement.setAttribute('disabled', true);
+ 
+//Germany selected automatically when drop-down clicked (temporary)   
+  }else if(isCurrent && countryName === 'Germany'){
+    countryElement.setAttribute('selected', true);
   }
 }
 
-//Germany selected automatically when drop-down clicked (temporary)
-const currentDest = document.querySelector('#currentDestination');
 
-currentDest.addEventListener('click', ()=>{
-    currentDest.value= "Germany";
-    //enable destination dropdown only once current destination selected
-    document.querySelector('#plannedDestination').disabled = false;
-});
+// const currentDest = document.querySelector('#currentDestination');
+// currentDest.value= "Germany";
+// currentDest.addEventListener('click', ()=>{
+//     currentDest.value= "Germany";
+//     //enable destination dropdown only once current destination selected
+//     document.querySelector('#plannedDestination').disabled = false;
+// });
 
-currentDest.addEventListener('change', ()=>{
-  currentDest.value= "Germany";
-  //enable destination dropdown only once current destination selected
-  document.querySelector('#plannedDestination').disabled = false;
-});
+// currentDest.addEventListener('change', ()=>{
+//   currentDest.value= "Germany";
+//   //enable destination dropdown only once current destination selected
+//   document.querySelector('#plannedDestination').disabled = false;
+// });
 
 const plannedDest = document.querySelector('#plannedDestination');
 plannedDest.addEventListener('change', ()=>{
@@ -387,3 +391,14 @@ countriesFilterCheckbox.addEventListener('change', ()=>{
   populateSafestLocations(countriesFilterCheckbox.checked);
 });
 
+//logo click
+const logo = document.querySelector('#logo');
+
+logo.addEventListener('click', ()=>{
+    // Disable all frames but explore
+    document.getElementById("explore").setAttribute("class", "mainField");
+    document.getElementById("safestLocations").setAttribute("class", "");
+    document.getElementById("faqs").setAttribute("class", "");
+    document.getElementById("result").setAttribute("class", "hidden");
+    document.getElementById("aboutPage").setAttribute("class", "hidden");
+})
