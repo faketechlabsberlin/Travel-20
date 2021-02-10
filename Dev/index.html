@@ -27,35 +27,37 @@
         
         <div class="mainField" id='explore'>
           <div id="background">
-            <div class='container'>
-              <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
-              <h2 class='mainTitle'>Explore <br> a destination</h2>
-              <form>
-                <div class="fields">
-                  <div class="input">
-                    <label for='currentDestination'>Where are you?</label>
-                    <select id='currentDestination' name='currentDestination'>
-                      <option disabled selected value> -- select an option -- </option>
-                      <!-- Options filled dynamically from country list -->
-                    </select>
+            <div class='bgMap'>
+              <div class='container'>
+                <image src='./assets/globe.png' class='icon' alt='globeIcon'/>
+                <h2 class='mainTitle'>Explore <br> a destination</h2>
+                <form>
+                  <div class="fields">
+                    <div class="input">
+                      <label for='currentDestination'>Where are you?</label>
+                      <select id='currentDestination' name='currentDestination'>
+                        <option disabled selected value> -- select an option -- </option>
+                        <!-- Options filled dynamically from country list -->
+                      </select>
+                    </div>
+                    <div>
+                      <img src='./assets/arrow.png' alt="arrowRight" id='arrowIcon'/>
+                    </div>
+                    <div class="input">                     
+                      <label>Where do you want to go?</label>
+                      <select id='plannedDestination'>
+                        <option disabled selected> -- select an option -- </option>
+                        <!-- Options filled dynamically from country list -->
+                      </select>
+                    </div>
                   </div>
-                  <div>
-                    <img src='./assets/arrow.png' alt="arrowRight" id='arrowIcon'/>
-                  </div>
-                  <div class="input">                     
-                    <label>Where do you want to go?</label>
-                    <select id='plannedDestination'>
-                      <option disabled selected> -- select an option -- </option>
-                      <!-- Options filled dynamically from country list -->
-                    </select>
-                  </div>
-                </div>
-                <div class='container'>
-                  <p class='notice'>Stay safe & updated</p>
-                  <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>
-                    Read our Travel Information
-                  </button></div>
-              </form>
+                  <div class='container'>
+                    <p class='notice'>Stay safe & updated</p>
+                    <button type='button' class='submitButton' id='goButton' onclick="onGoButtonClicked()" disabled>
+                      Read our Travel Information
+                    </button></div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
