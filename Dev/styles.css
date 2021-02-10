@@ -372,6 +372,19 @@ filter: invert(100%);
     margin-bottom:0;
   }
 
+  #anotherLocation{
+    margin-bottom: 15%;;
+  }
+
+  h2{
+    font-size:40px !important;
+    margin-left:10%;
+    margin-top: 5% !important;
+  }
+  .icon{
+    margin-left:6%;
+    width:10%;
+  }
 }
 
 /* about section */
@@ -440,10 +453,7 @@ filter: invert(100%);
 }
 
 /* safe locations section */
-#safestLocationsTable td{
-  max-width: 25%;
-  padding-top:1%;
-}
+
 
 @media all and (max-width: 770px){
   table, tr, td {
@@ -453,8 +463,19 @@ filter: invert(100%);
     width: 100%;
     padding-top:1%;
   }
-  } 
 
+  #aboutPage tr{
+    display: block;
+  }
+
+  #aboutImage{
+    width:100%;
+  }
+} 
+
+#safestLocationsTable td{
+  padding-top:1%;
+}
 #safestLocations{
   position: relative;
   background-color: #047469;
@@ -686,8 +707,3 @@ tr.flex {
   opacity: 0.6;
   background-color: #F5FFFF;
 }
-
-/* .serv ul li {
-  flex: 0 0 50%;
-  padding-bottom: 10px;
-} */

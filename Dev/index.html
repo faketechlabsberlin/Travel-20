@@ -187,7 +187,7 @@
           </div>
         </div>
         </div>
-        <button type='button' class='submitButton' onclick="onReturnButtonClicked()">Search another location</button>
+        <button type='button' class='submitButton' id='anotherLocation' onclick="onReturnButtonClicked()">Search another location</button>
           <!-- need to include credits for the icons -->
           <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
       </div>
@@ -286,7 +286,7 @@
                 <div  class='FAQquestion'>
                    <h4>What information is used to select the safest locations?</h4>
                   <button class='FAQbutton'>Show answer</button>
-                  <p class='FAQanswer' hidden>The safest locations are showing the countries which have the minimum number of cases in the last 7 days. We are currently filtering out the countries which don’t have enough information or the sources are not reliable.
+                  <p class='FAQanswer' hidden>We have selected the safest location with the information from the WHO (World health Organization) regarding Covid cases https://covid19.who.int/table . From the cases per million we have calculated the populations and then used that number to obtain the “cases per 100K in the last 7 days”. The safest locations are showing the countries which have the minimum number of cases in the last 7 days.  Currently, we are filtering out the countries on which we don’t have enough information or the sources have been proven unreliable.
                   </p>
                 </div>
               </div>
