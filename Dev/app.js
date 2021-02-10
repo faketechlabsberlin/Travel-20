@@ -253,7 +253,19 @@ function loadImage(url) {
 }
 
 function updateTick(countryData, key){
-  return countryData[key];
+  console.log(key, countryData[key])
+  if ( key==="Accomodation"){
+    if(countryData[key] === true || countryData[key] === 0){
+      return 1
+    }else if (countryData[key] === false || countryData[key] === 1){
+      return 0
+    }
+  }else if (key==='Mask'){
+    return 1
+  }
+  else{
+      return countryData[key];
+  }
 }
 
 function updateElement(elementName, elementValue, isTick) {
