@@ -14,8 +14,8 @@ Travel 21 aims to simplify the research for travel restrictions and recommendati
 - browse safest locations (based on reported cases from last 7 days per 100k) - choose locations worldwide or within EU
 
 # Interface:
-![Main Page](UX\Interface\Deliverables\INTERFACE_09_Homepage_2x.png?raw=true "Main Page View")
-![Results Page](UX\Interface\Deliverables\INTERFACE_08_Results_2x.png?raw=true "Results Page View")
+![Main Page](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_09_Homepage_2x.png "Main Page View")
+![Results Page](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_08_Results_2x.png "Results Page View")
 
 # Folder structure:
 
@@ -55,6 +55,6 @@ $ git clone https://github.com/TechLabs-Berlin/Travel-20.git
 - futura font: https://fontsgeek.com/fonts/Futura-Medium
 
 # Teams and contributors:
-- UX Team:
+- UX Team: Irina Constantin & Nicolas Huart
 - Data Science Team:
 - Web Development Team: Zuzanna Tarka & Natalie Dieckmann
