@@ -7,7 +7,7 @@ Travel 21 aims to simplify the research for travel restrictions and recommendati
 # Technologies/Frameworks used:
 - Frontend: HTML5, CSS3, vanilla JavaScript, Bootstrap
 - UX:
-- Data Science:
+- Data Science: Python, Scrapy, Serverless, AWS 
 
 # Features:
 - choose your destination of travel and check which restrictions are currently in place at the given location, as well as requirements you will need to fulfil upon return to your country of departure
@@ -31,13 +31,17 @@ UX files
 Dev Folder
 - Main folder:
     - main files for the single-page application can be found at the root of the folder - index.html, styles.css and app.js
-    - other files : countriesUtilities.js which includes a function to translate data pulled in German into English and a static COVID0402-C.json file, which includes infection cases data
-- Assets folder : 
+    - other files : countriesUtilities.js which includes a function to translate data pulled in German into English and a static COVID0402-C.json file, which includes infection       cases data
+- Assets folder: 
     -  includes all the pictures and icons used in the design
     - a country-flag directory with png files for each country 
     - futura directory with futura font 
 - Archive folder:
     - JSON files with mock data used for the interface developement - all data is currently hosted on hosting service https://jsonbin.io/
+    
+Data Science
+- Adac_Scraper:
+    - Contains the Code for the Spider, the pipeline, the settings for both of them and the JSON file which gets scraped
 
 # Project status:
 - project is currently in beta/testing version
@@ -45,10 +49,42 @@ Dev Folder
 - future development will include:
 
 
-# Geting stated:
+# Geting started:
 - Clone the repo to you machine: 
 $ git clone https://github.com/TechLabs-Berlin/Travel-20.git
 - Run on your local machine using a browser of your choice (no dependencies must be installed before running the application locally)
+
+# How to scrape the ADAC data:
+# Installing Scrapy
+Install scrapy with an IDE.
+```
+pip install scrapy
+```
+# Starting the project
+Start a Porject with scrapy.
+```
+scrapy startproject adac_scraper
+```
+Go into the project folder.
+```
+cd adac_scraper
+```
+# Creating a Spider
+Create a Spider.
+```
+scrapy genspider adac adac.de/news/corona-einreiseverbote/
+```
+# Copy and paste the given code
+Copy the code from adac.py into the Spider which has been created.
+Copy the code from settings.py into the already created settings.py.
+Copy the code from pipelines.py into the already created pipelines.py.
+
+# Run the spider
+```
+scrapy crawl GlascontainerSpider
+```
+# Obtain the JSON-file
+An JSON-file should be available to you in the folder.
 
 # Credits:
 - country flags: www.freepik.com from www.flaticon.com
@@ -56,5 +92,5 @@ $ git clone https://github.com/TechLabs-Berlin/Travel-20.git
 
 # Teams and contributors:
 - UX Team: Irina Constantin & Nicolas Huart
-- Data Science Team:
+- Data Science Team: Philipp Henschke & Francisco Javier Ardila Suarez
 - Web Development Team: Zuzanna Tarka & Natalie Dieckmann
