@@ -38,8 +38,8 @@ request('GET', countriesDataURL, true) // this is calling the request function w
 
         // HACK TO ADD MISSING DATA
       countryData.Mask = Math.random() < 0.5;
-      countryData.Accomodation = Math.random() < 0.5;
-
+      countryData.Accomodation = countryData.Riskzone == 0 ? countryData.Accomodation = 1 : countryData.Accomodation = 0;
+      
       countriesData[ engCountryName ] = countryData;
       countriesData[ engCountryName ].Name = engCountryName;
     }
@@ -238,7 +238,7 @@ function getCorrectString(countryData, key, isReturn) {
     case "Quarantine":
       return value ? `<b>Quarantine</b> is requested upon ${location}` : `<b>Quarantine</b> is not requested upon ${location}`;
     case "Accomodation":
-      return countryData["Riskzone"] ? "<b>Accomodation</b> cannot be booked" : "<b>Accomodation</b> can be booked";
+      return value ? "<b>Accomodation</b> can be booked" : "<b>Accomodation</b> cannot be booked";
   }
 }
 
@@ -253,13 +253,7 @@ function loadImage(url) {
 }
 
 function updateTick(countryData, key){
-  if ( key==="Accomodation"){
-    if(countryData[key] === true || countryData[key] === 0){
-      return 1
-    }else if (countryData[key] === false || countryData[key] === 1){
-      return 0
-    }
-  }else if (key==='Mask'){
+  if (key==='Mask'){
     return 1
   }
   else{
