@@ -253,7 +253,6 @@ function loadImage(url) {
 }
 
 function updateTick(countryData, key){
-  console.log(key, countryData[key])
   if ( key==="Accomodation"){
     if(countryData[key] === true || countryData[key] === 0){
       return 1
