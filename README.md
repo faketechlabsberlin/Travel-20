@@ -47,12 +47,15 @@ Data Science
 - project is currently in beta/testing version
 - current restrictions include: currect location only available for Germany
 - future development will include:
+    - enabling all locations to be chosen as departure
+    - adding flight information for chosen locations 
+    - featuring safest locations with cheapest flights
 
 
 # Geting started:
 - Clone the repo to you machine: 
 $ git clone https://github.com/TechLabs-Berlin/Travel-20.git
-- Run on your local machine using a browser of your choice (no dependencies must be installed before running the application locally)
+- Open the Travel-20 folder, go into Dev directory and open index.html on your local machine using a browser of your choice (no dependencies must be installed before running the application locally)
 
 # How to scrape the ADAC data:
 # Installing Scrapy
