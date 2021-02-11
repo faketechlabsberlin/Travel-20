@@ -10,8 +10,8 @@ Travel 21 aims to simplify the research for travel restrictions and recommendati
 - Data Science:
 
 # Features:
-- chose your destination of travel and check which restrictions are currently in place at the given location, as well as requirements you will need to fulfil upon return to your country of departure
-- browse safest locations (based on reported cases from last 7 days per 100k) - chose locations worldwide or within EU
+- choose your destination of travel and check which restrictions are currently in place at the given location, as well as requirements you will need to fulfil upon return to your country of departure
+- browse safest locations (based on reported cases from last 7 days per 100k) - choose locations worldwide or within EU
 
 # Interface:
 ![Main Page](UX\Interface\Deliverables\INTERFACE_09_Homepage_2x.png?raw=true "Main Page View")
@@ -48,13 +48,13 @@ Dev Folder
 # Geting stated:
 - Clone the repo to you machine: 
 $ git clone https://github.com/TechLabs-Berlin/Travel-20.git
-- Run on your local machine using a browser of your choice (no dependencies must be installed before running the application localy)
+- Run on your local machine using a browser of your choice (no dependencies must be installed before running the application locally)
 
 # Credits:
-- contry flags: www.freepik.com from www.flaticon.com
+- country flags: www.freepik.com from www.flaticon.com
 - futura font: https://fontsgeek.com/fonts/Futura-Medium
 
 # Teams and contributors:
 - UX Team:
 - Data Science Team:
-- Web Development Team: Zuzanna Tarka
+- Web Development Team: Zuzanna Tarka & Natalie Dieckmann
