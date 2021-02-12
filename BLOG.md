@@ -1,99 +1,43 @@
-# Project title: 
-Travel-21
+#Travel 21 story
 
-# Motivation: 
-Travel 21 aims to simplify the research for travel restrictions and recommendations by creating a platform to more easily access the most crucial data you’ll need in order to make important travel decisions.
+#From the Problem 
+While I was doing research for travelling home for Christmas I noticed there’s no centralised platform dedicated to presenting the Covid-19 current situation globally. 
 
-# Technologies/Frameworks used:
-- Frontend: HTML5, CSS3, vanilla JavaScript, Bootstrap
-- UX: Figma, Typeform, Google Docs, Photoshop
-- Data Science: Python, Scrapy, Serverless, AWS 
+A lot of dashboards and statistics are made available, but there is no easy way to understand the numbers and often they don’t present the restrictions.
+We decided to find a solution, we set out to build a platform to acquire information about safety regulations which will allow the user to travel as safely as possible and without breaking the imposed restrictions.
+With my team we’ve identified the best sources, figured out a way to scrape data and create a automatic update of information. We wanted to design a user-friendly, simple interface that can easily answer the most important questions.
 
-# Features:
-- choose your destination of travel and check which restrictions are currently in place at the given location, as well as requirements you will need to fulfil upon return to your country of departure
-- browse safest locations (based on reported cases from last 7 days per 100k) - choose locations worldwide or within EU
+#To the Solution
+A modern and simple design that offers a brief look of what the user can expect in the country they want to visit but also the necessary information for the return journey.
 
-# Interface:
-![Main Page](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_09_Homepage_2x.png "Main Page View")
-![Results Page](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_08_Results_2x.png "Results Page View")
+#And we succeeded to build up a prototype:
+This is our landing page, it opens up with our logo created to inspire one of our missions: responsible travelling, hence the seatbelt on the world.
+Here you have the option from the system to be located- Germany, so it saves the user a click or you can choose it manually.
+After choosing your destination you click on the Read our travel information button which takes you to the second screen where you have all the results.
+The page initially shows Germany  with number of cases per last 7 days and the restrictions imposed upon return from your chosen destination when it comes to quarantine and a test. The destination for example Denmark. You can see it presents with representative icons the restrictions which would help you in a matter of minutes to find out the most important things before travelling
 
-# Folder structure:
+At the third section of the webpage you’ll get the button and option to search for another location which takes you back to the first screen-the landing page where the user can run another research.
 
-UX files
-- UX/Interface: Figma master file
-- UX/Interface/Deliverables: All reference exports for Dev + assets
-- UX/Interface/Inspiration: Various screenshots used for UI research
-- UX/Interface/Sources: Graphics, source files (Creative Commons)
-- UX/Logo: logo exports and source files
-- UX/User Research: Various user research files
-- UX/Wireframe: Wireframe files and exports
+Another cool feature that we decided to implement it’s a top of safest locations where the user has the option of filtering out through worldwide destinations and European.  The top shows the locations which have the lowest number of cases in the last 7 days. At the moment, for the worldwide destinations we cannot guaranty the accuracy of the date, especially in the cases of really small countries but we’re hoping that gradually with the help of our users we could have the data base completed. For Europe the situation is different as there is more data made available everyday.
+Another interesting feature that we wanted to implement is to crowdsource a part of our data in the most reliable way possible. At the level of our landing page there should be a pop-up which will ask the user if they would like to share some informations related to restrictions in the country that they live/come from. Which we would after control and verify.
+There’s also a section for the FAQS that inform our users about the sources of our data, how often is being updated and how we choose the safest locations.
+And the thing to mention is the about page where we’ve created a short descriptions of our mission and objective as a team which finishes the button to search for a destination 
 
-Dev Folder
-- Main folder:
-    - main files for the single-page application can be found at the root of the folder - index.html, styles.css and app.js
-    - other files : countriesUtilities.js which includes a function to translate data pulled in German into English and a static COVID0402-C.json file, which includes infection       cases data
-- Assets folder: 
-    -  includes all the pictures and icons used in the design
-    - a country-flag directory with png files for each country 
-    - futura directory with futura font 
-- Archive folder:
-    - JSON files with mock data used for the interface developement - all data is currently hosted on hosting service https://jsonbin.io/
-    
-Data Science
-- Adac_Scraper:
-    - Contains the Code for the Spider, the pipeline, the settings for both of them and the JSON file which gets scraped
+What are we were happy about: the moment when a participant in the user testing confirmed our direction of design: “My first impression is it is straightforward, inviting, and friendly. The colour palette is refreshing. The icons of results make the information simple to digest what to expect when travelling.”
 
-# Project status:
-- project is currently in beta/testing version
-- current restrictions include: currect location only available for Germany
-- future development will include:
-    - enabling all locations to be chosen as departure
-    - adding flight information for chosen locations 
-    - featuring safest locations with cheapest flights
+ADD THE OTHERS WITH QUOTES
+What are your greatest personal moments of success?
+For me it was how from a wild idea it can grow an actual functioning prototype when you have team member which believe as much as I did in the idea. What were the biggest challenges? 
+Having unrealistic expectations at the beginning and trying to lower them without feeling disappointed, while continuing to feel motivated to do the job. Downsize our idea into something worthwhile and manageable.
+Others challenge were interface Design without proper user testing, the web-scraping, working with the data and finding the best solutions.
+And as always the time constraint is almost the biggest challenge.
 
+#The future looks bright if we:
+Figure out how to make a text recognition software to properly scrape other websites and get even more valuable data. Automate to create a more interesting indicator.
 
-# Geting started:
-- Clone the repo to you machine: 
-$ git clone https://github.com/TechLabs-Berlin/Travel-20.git
-- Open the Travel-20 folder, go into Dev directory and open index.html on your local machine using a browser of your choice (no dependencies must be installed before running the application locally)
+Try to combine it with some flight-apis to give more cool functionality.
+Spend more time getting data for all the countries in the world and providing more details information on the result screen. Furthermore, have ensured responsive design and introduced more error handling. Also test our webpage.
+While in the background we run proper user testing and edit our interface based on our findings.
 
-# How to scrape the ADAC data:
-# Installing Scrapy
-Install scrapy with an IDE.
-```
-pip install scrapy
-```
-# Starting the project
-Start a Porject with scrapy.
-```
-scrapy startproject adac_scraper
-```
-Go into the project folder.
-```
-cd adac_scraper
-```
-# Creating a Spider
-Create a Spider.
-```
-scrapy genspider adac adac.de/news/corona-einreiseverbote/
-```
-# Copy and paste the given code
-Copy the code from adac.py into the Spider which has been created.
-Copy the code from settings.py into the already created settings.py.
-Copy the code from pipelines.py into the already created pipelines.py.
-
-# Run the spider
-```
-scrapy crawl GlascontainerSpider
-```
-# Obtain the JSON-file
-An JSON-file should be available to you in the folder.
-
-# Credits:
-- country flags: www.freepik.com from www.flaticon.com
-- futura font: https://fontsgeek.com/fonts/Futura-Medium
-
-# Teams and contributors:
-- UX Team: Irina Constantin & Nicolas Huart
-- Data Science Team: Philipp Henschke & Francisco Javier Ardila Suarez
-- Web Development Team: Zuzanna Tarka & Natalie Dieckmann
+As tech-stack we had: 
+For project management: Github, Trello for WebDev: HTML, Vanilla JS, CSS, Bootstrap, Magic for Data Science: Python, Serverless, AWS, Scrapy, JSON files, Jupiter Lab and finally for UX: Figma, Google docs, Photoshop, Miro board
