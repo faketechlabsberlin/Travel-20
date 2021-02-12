@@ -43,5 +43,5 @@ Try to combine it with some flight-apis to give more cool functionality.
 Spend more time getting data for all the countries in the world and providing more details information on the result screen. Furthermore, have ensured responsive design and introduced more error handling. Also test our webpage.
 While in the background we run proper user testing and edit our interface based on our findings.
 
-As tech-stack we had: 
+#As tech-stack we had: 
 For project management: Github, Trello for WebDev: HTML, Vanilla JS, CSS, Bootstrap, Magic for Data Science: Python, Serverless, AWS, Scrapy, JSON files, Jupiter Lab and finally for UX: Figma, Google docs, Photoshop, Miro board
