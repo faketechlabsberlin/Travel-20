@@ -3,6 +3,8 @@
 # From the Problem 
 While I was doing research for travelling home for Christmas I noticed there’s no centralised platform dedicated to presenting the Covid-19 current situation globally. 
 
+![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_09_Homepage_2x.png)
+
 A lot of dashboards and statistics are made available, but there is no easy way to understand the numbers and often they don’t present the restrictions.
 We decided to find a solution, we set out to build a platform to acquire information about safety regulations which will allow the user to travel as safely as possible and without breaking the imposed restrictions.
 
