@@ -27,7 +27,8 @@ What are we were happy about: the moment when a participant in the user testing 
 
 ADD THE OTHERS WITH QUOTES
 What are your greatest personal moments of success?
-For me it was how from a wild idea it can grow an actual functioning prototype when you have team member which believe as much as I did in the idea. What were the biggest challenges? 
+For me it was how from a wild idea it can grow an actual functioning prototype when you have team member which believe as much as I did in the idea. What were the biggest challenges?
+
 Having unrealistic expectations at the beginning and trying to lower them without feeling disappointed, while continuing to feel motivated to do the job. Downsize our idea into something worthwhile and manageable.
 Others challenge were interface Design without proper user testing, the web-scraping, working with the data and finding the best solutions.
 And as always the time constraint is almost the biggest challenge.
