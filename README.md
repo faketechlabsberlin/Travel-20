@@ -6,7 +6,7 @@ Travel 21 aims to simplify the research for travel restrictions and recommendati
 
 # Technologies/Frameworks used:
 - Frontend: HTML5, CSS3, vanilla JavaScript, Bootstrap
-- UX:
+- UX: Figma, Typeform, Google Docs, Photoshop
 - Data Science: Python, Scrapy, Serverless, AWS 
 
 # Features:
