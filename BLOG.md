@@ -58,4 +58,4 @@ We realised we needed to understand what were the most important data points to 
 We found inspiration in different interfaces and collected colour themes. We designed the logo, implemented the elements by adjusting colours and size. We produced the interface for the first screen and after  several iterations opted for light green having more of a safe connotation and soft orange to draw attention. 
 Produced a Design Specs document for the Dev team to use for CSS. 
 Continued with producing the second screen. A big challenge was to organise the information in a clear manner while providing enough data. Produced the About page as a standard page format for the website.
-:[Wireframe](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Wireframe/Exports/INTERFACE%2001%20Screen%201.png)
+![Wireframe](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Wireframe/Exports/INTERFACE%2001%20Screen%201.png)
