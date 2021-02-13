@@ -59,3 +59,6 @@ We found inspiration in different interfaces and collected colour themes. We d
 Produced a Design Specs document for the Dev team to use for CSS. 
 Continued with producing the second screen. A big challenge was to organise the information in a clear manner while providing enough data. Produced the About page as a standard page format for the website.
 ![Wireframe](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Wireframe/Exports/INTERFACE%2001%20Screen%201.png)
+![Wireframe](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Wireframe/Exports/INTERFACE%20Screen%202-02.png)
+![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Inspiration/Colours.png)
+
