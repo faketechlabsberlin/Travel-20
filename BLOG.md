@@ -3,8 +3,6 @@
 # From the Problem 
 While I was doing research for travelling home for Christmas I noticed there’s no centralised platform dedicated to presenting the Covid-19 current situation globally. 
 
-![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_09_Homepage_2x.png)
-
 A lot of dashboards and statistics are made available, but there is no easy way to understand the numbers and often they don’t present the restrictions.
 We decided to find a solution, we set out to build a platform to acquire information about safety regulations which will allow the user to travel as safely as possible and without breaking the imposed restrictions.
 
@@ -14,7 +12,10 @@ With my team we’ve identified the best sources, figured out a way to scrape da
 A modern and simple design that offers a brief look of what the user can expect in the country they want to visit but also the necessary information for the return journey.
 
 # And we succeeded to build up a prototype:
-This is our landing page, it opens up with our logo created to inspire one of our missions: responsible travelling, hence the seatbelt on the world.
+
+![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_09_Homepage_2x.png)
+
+# This is our landing page, it opens up with our logo created to inspire one of our missions: responsible travelling, hence the seatbelt on the world.
 Here you have the option from the system to be located- Germany, so it saves the user a click or you can choose it manually.
 After choosing your destination you click on the Read our travel information button which takes you to the second screen where you have all the results.
 The page initially shows Germany  with number of cases per last 7 days and the restrictions imposed upon return from your chosen destination when it comes to quarantine and a test. The destination for example Denmark. You can see it presents with representative icons the restrictions which would help you in a matter of minutes to find out the most important things before travelling
