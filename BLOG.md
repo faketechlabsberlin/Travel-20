@@ -15,7 +15,7 @@ We created a modern and simple design that offers a brief look of what the user 
 
 ### And we succeeded to build a prototype!
 
-![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_09_Homepage_2x.png)
+![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_09_Homepage_2x_with-button.png)
 
 This is our landing page, it opens up with our logo created to inspire one of our missions: responsible global traveling, hence the seatbelt on the world.
 
@@ -35,7 +35,7 @@ There's also a section for the FAQs that informs our users about the sources of 
 
 For the „about“ page we've created short descriptions of our mission and objective as a team. 
 
-![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE%2008%20About%20Variant%202x.png)
+![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE-08-About-Variant-2x-with-text.png)
 
 What we are happy about is the moment when a participant in the user testing confirmed our direction of design: "My first impression is it is straightforward, inviting, and friendly. The colour palette is refreshing. The icons of results make the information simple to digest what to expect when traveling."
 
