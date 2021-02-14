@@ -54,6 +54,25 @@ A journey in the magical reign of WebDev: first, we have set up a skeleton for t
 ![Blog images](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Blog%20Images/coviddatajasonfile.png)
 ![Blog images](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Blog%20Images/promiseloadaflag%20image.png)
 
+A journey in the Data Science field: first steps include searching for websites we wanted to scrape and trying out the first scraping commands. The code evolved and we proceeded to create a pipeline to clean up the CSV-file (the picture was taken in jupyter notebook). After the first attempt, we've learned how important it is to properly plan how you want to use the data to see if you can use it. The website we've initially scraped turned out to not offer the data we needed, so we changed it and repeated the whole process. After getting all the data and cleaning it, we thought the easy part started now, but I was wrong, the automation turned out to be quite tricky due to some strange errors I got. After a ton of research on stack overflow and with help of the wonderful Techlabs-Team we were able to solve the problem.
+
+![Blog images](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Blog%20Images/gettingbetter.png)
+
+![Blog images](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Blog%20Images/spider.png)
+
+
+### As tech-stack we had: 
+For project management: Github, Trello; for WebDev: HTML, Vanilla JS, CSS, Bootstrap, Magic; for Data Science: Python, Serverless, AWS, Scrapy, JSON files, Jupiter Lab and finally for UX: Figma, Google docs, Photoshop, Miro board.
+
+### The future looks bright if we:
+Figure out how to make a text recognition software to properly scrape other websites for even more valuable data. Automate this process to create a more interesting indicator.
+Try to combine the features with some flight-APIs to give more cool functionality.
+Spend more time getting data for all the countries in the world and providing more detailed information on the result screen. Furthermore, ensured responsive design and introduced more error handling. Also, test our webpage.
+While at the same time in the background we run proper user testing and edit our interface based on our findings.
+
+I conclude this article with many thanks to my team members: Nicolas Huart-UX and right hand, Philipp Henschke and Francisco Ardila- DS, Natalie Dieckmann, and Zuzanna Tarka- WD and magical creatures. 
+Special thanks to the TechLabs Berlin team and Benedikt Ulrich, my mentor. 
+
 
 
 
