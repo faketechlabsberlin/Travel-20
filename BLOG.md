@@ -13,7 +13,7 @@ With my team, we've identified the best sources, figured out a way to scrape dat
 
 We created a modern and simple design that offers a brief look of what the user can expect in the country they want to visit but also the necessary information for the return journey.
 
-### And we succeeded to build up a prototype!
+### And we succeeded to build a prototype!
 
 ![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_09_Homepage_2x.png)
 
