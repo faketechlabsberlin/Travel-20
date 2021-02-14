@@ -42,6 +42,8 @@ Dev Folder
 Data Science
 - Adac_Scraper:
     - Contains the Code for the Spider, the pipeline, the settings for both of them and the JSON file which gets scraped
+- WHO-Data:
+    -Contains the Code that collects the case data from the WHO website and calculates the risk indicator (Cases per 100K in the last 7 Days) and exports it into a            JSON file.
 
 # Project status:
 - project is currently in beta/testing version
@@ -88,6 +90,9 @@ scrapy crawl GlascontainerSpider
 ```
 # Obtain the JSON-file
 An JSON-file should be available to you in the folder.
+
+# How to scrape the WHO data:
+Run the code in COVID-Scrapper.py, a JSON file should be available in the folder after. 
 
 # Credits:
 - country flags: www.freepik.com from www.flaticon.com
