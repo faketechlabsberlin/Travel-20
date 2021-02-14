@@ -1,4 +1,6 @@
-# Travel 21 - by Irina Constantin
+# Travel 21
+
+written by Irina Constantin
 
 ### From the Problem ...
 While I was researching if it's possible to travel home for Christmas I noticed there's no centralised platform dedicated to presenting the current Covid-19 travel rules and restrictions.
