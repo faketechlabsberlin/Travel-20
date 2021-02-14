@@ -15,7 +15,7 @@ A modern and simple design that offers a brief look of what the user can expect 
 
 This is our landing page, it opens up with our logo created to inspire one of our missions: responsible traveling, hence the seatbelt on the world.
 Here you have the option from the system to be located- Germany, so it saves the user a click or you can choose it manually.
-After choosing your destination you click on the Read our travel information button which takes you to the second screen where you have all the results.
+After choosing your destination you click on the "Read our travel information", button which takes you to the second screen where you have all the results.
 The page initially shows Germany with the number of cases per last 7 days and the restrictions imposed upon return from your chosen destination when it comes to quarantine and a test. The destination for example Denmark. You can see it presents with representative icons the restrictions which would help you in a matter of minutes to find out the most important things before traveling. 
 
 ![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_08_Results_2x.png)
@@ -37,10 +37,12 @@ Seeing all members of the team learning and building something new together(Nico
 
 
 ### Biggest challenges? 
-aving unrealistic expectations at the beginning and trying to lower them without feeling disappointed, while continuing to feel motivated to do the job. Downsizing our idea into something worthwhile and manageable. Other challenges were designing an interface without proper user testing, the web-scraping process, working with the data, and finding the best solutions. The time constraint was one of the biggest challenges.
 
-### A journey in the UX processes: We’ve started with a Wireframe that was validated by the team. 
-We realised we needed to understand what were the most important data points to our target audience, so we ran a survey.
+Having unrealistic expectations at the beginning and trying to lower them without feeling disappointed, while continuing to feel motivated to do the job. Downsizing our idea into something worthwhile and manageable. Other challenges were designing an interface without proper user testing, the web-scraping process, working with the data, and finding the best solutions. The time constraint was one of the biggest challenges.
+
+### The processes:
+
+A journey in the UX land: We’ve started with a Wireframe that was validated by the team.  We realised we needed to understand what were the most important data points to our target audience, so we ran a survey.
 We found inspiration in different interfaces and collected colour themes. 
 ![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Inspiration/Colours.png)
 We designed the logo, implemented the elements by adjusting colours and size. We produced the interface for the first screen and after  several iterations opted for light green having more of a safe connotation and soft orange to draw attention. 
@@ -70,7 +72,7 @@ Try to combine the features with some flight-APIs to give more cool functionalit
 Spend more time getting data for all the countries in the world and providing more detailed information on the result screen. Furthermore, ensured responsive design and introduced more error handling. Also, test our webpage.
 While at the same time in the background we run proper user testing and edit our interface based on our findings.
 
-I conclude this article with many thanks to my team members: Nicolas Huart-UX and right hand, Philipp Henschke and Francisco Ardila- DS, Natalie Dieckmann, and Zuzanna Tarka- WD and magical creatures. 
+I conclude this article with many thanks to my team members: Nicolas Huart-UX and right hand, Philipp Henschke and Francisco Ardila- DS, Natalie Dieckmann and Zuzanna Tarka- WD and magical creatures. 
 Special thanks to the TechLabs Berlin team and Benedikt Ulrich, my mentor. 
 
 
