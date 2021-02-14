@@ -26,7 +26,6 @@ This page initially shows Germany with the number of cases per last 7 days and t
 
 ![Interface](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Interface/Deliverables/INTERFACE_08_Results_2x.png)
 
-In the third section of the webpage, you'll get the button and option to search for another location which takes you back to the first screen – the landing page – where the user can run another research.
 
 Another cool feature that we decided to implement is the „safest locations“ where the user has the option of switching between „worldwide destinations“ and „Europe“. The top shows the locations which have the lowest number of cases in the last 7 days. At the moment, we can only guarantee the accuracy of the data for Europe, because especially in the cases of really small countries often there’s no reliable data update. But we're hoping that with the help of our users we will gradually have the database completed.
 
