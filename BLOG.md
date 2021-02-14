@@ -1,9 +1,10 @@
 # Travel 21 Story Time
 
 ### From the Problem 
-While I was researching if it's possible to travel home for Christmas I noticed there's no centralised platform dedicated to presenting the Covid-19 current situation globally. 
+While I was researching if it's possible to travel home for Christmas I noticed there's no centralised platform dedicated to presenting the Covid-19 current situation globally.
+
 A lot of dashboards and statistics are made available, but there is no easy way to understand the numbers, and often they don't present the restrictions.
-We decided to find a solution, we set out to build a platform to acquire information about safety regulations that will allow the user to travel as safely as possible and without breaking the imposed restrictions.
+We set out to build a platform to acquire information about safety regulations that will allow the user to travel as safely as possible and without breaking the imposed restrictions.
 With my team, we've identified the best sources, figured out a way to scrape data, and create an automatic update of information. We wanted to design a user-friendly, simple interface that can easily answer the most important questions.
 
 ### To the Solution
