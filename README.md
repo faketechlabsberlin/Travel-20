@@ -52,7 +52,7 @@ Data Science
     - featuring safest locations with cheapest flights
 
 
-# Geting started:
+# Getting started:
 - Clone the repo to you machine: 
 $ git clone https://github.com/TechLabs-Berlin/Travel-20.git
 - Open the Travel-20 folder, go into Dev directory and open index.html on your local machine using a browser of your choice (no dependencies must be installed before running the application locally)
