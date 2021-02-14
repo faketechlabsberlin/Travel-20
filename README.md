@@ -43,7 +43,7 @@ Data Science
 - Adac_Scraper:
     - Contains the Code for the Spider, the pipeline, the settings for both of them and the JSON file which gets scraped
 - WHO-Data:
-    -Contains the Code that collects the case data from the WHO website and calculates the risk indicator (Cases per 100K in the last 7 Days) and exports it into a            JSON file.
+    - Contains the Code that collects the case data from the WHO website and calculates the risk indicator (Cases per 100K in the last 7 Days) and exports it into a            JSON file.
 
 # Project status:
 - project is currently in beta/testing version
