@@ -14,7 +14,7 @@ df1['Population'] = df1['Cases']/df1['Cases1M']
 df1['Cases7D100K'] = df1['Cases7D']/(df1['Population'] * 10)
 df1['Cases100K'] = df1['Cases']/(df1['Population'] * 10)
 df1 = df1.drop(columns=['Cases', 'Cases7D', 'Cases1M', 'Population'])
-df1['Name'] = df1['Name'].replace(['United States of America','Russian Federation','The United Kingdom','Islamic Republic of','Czechia','Bolivia (Plurinational State of','Republic of Moldova','Venezuela (Bolivarian Republic of)','Kosovo[1]'],['USA','Russia'.'Great Britain','Iran','Czech Republic','Bolivia','Moldova','Venezuela','Kosovo'])
+df1['Name'] = df1['Name'].replace(['United States of America','Russian Federation','The United Kingdom','Iran (Islamic Republic of)','Czechia','Bolivia (Plurinational State of)','Republic of Moldova','Venezuela (Bolivarian Republic of)','Kosovo[1]'],['USA','Russia'.'Great Britain','Iran','Czech Republic','Bolivia','Moldova','Venezuela','Kosovo'])
 df1 = df1.dropna(axis = 0)
 df1.to_json('COVID.json' , orient = 'records')
 
