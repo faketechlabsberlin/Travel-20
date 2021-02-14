@@ -1,10 +1,10 @@
 # Travel 21 - by Irina Constantin
 
-### From the Problem.. 
+### From the Problem ...
 While I was researching if it's possible to travel home for Christmas I noticed there's no centralised platform dedicated to presenting the current Covid-19 travel rules and restrictions.
 A lot of dashboards and statistics can be found, but there is no easy way to understand the numbers, and often they are incomplete and don't present the restrictions.
 
-### To the Solution...
+### ... to the Solution
 That’s why we set out to build a platform to acquire information about safety regulations that will allow the user to travel as safely and informed as possible and without breaking the imposed restrictions.
 
 With my team, we've identified the best sources, figured out a way to scrape data, and create an automatic update of information. We wanted to design a user-friendly, simple interface that can easily answer the most important questions.
