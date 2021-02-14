@@ -50,6 +50,10 @@ Continued with producing the second screen. A big challenge was to organise the 
 ![Wireframe](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Wireframe/Exports/INTERFACE%20Screen%202-02.png)
 
 A journey in the magical reign of WebDev: first, we have set up a skeleton for the page based on the wireframes to see how all the parts come together, only then we started to work with the mock data, to eventually be able to connect the interface with the backend. This was the part where the JavaScript knowledge became essential to work with different data structures, but also included a lot of googling and trying out many different approaches.
+
 ![Blog images](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Blog%20Images/coviddatajasonfile.png)
+![Blog images](https://github.com/TechLabs-Berlin/Travel-20/blob/main/UX/Blog%20Images/promiseloadaflag%20image.png)
+
+
 
 
