@@ -1,4 +1,7 @@
+from datetime import datetime, timezone
 import scrapy
+from s3pipeline import Page
+
 
 class AdacSpider(scrapy.Spider):
     name = 'adac'
@@ -11,10 +14,11 @@ class AdacSpider(scrapy.Spider):
         start_header= response.xpath('//main//article//div[2]//h2[position()>2]')
         start_text= response.xpath('//main//article//div[2]//ul[position()>3]')
 
+        yield Page.from_response(response)
+
         for i in range(len(start_header)-1):
             if start_header[i].xpath('./text()').get() == 'Einreisebeschränkungen wegen Covid-19 weltweit':
                 del start_header[i]
-
 
         for (head,text) in zip(start_header,start_text):
                 Lander= head.xpath('./@id').get()
@@ -34,7 +38,4 @@ class AdacSpider(scrapy.Spider):
                 }
 
                 yield test
-
-
-
 

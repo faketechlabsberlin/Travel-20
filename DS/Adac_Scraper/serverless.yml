@@ -1,0 +1,52 @@
+
+service: adac-scraper
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.6
+  logRetentionInDays: 1
+  region: eu-central-1
+  lambdaHashingVersion: "20201221"
+  environment:
+    FEED_BUCKET_NAME: !Ref ScraperFeedBucket
+    SLS_DEBUG: "*"
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:PutObject"
+      Resource: !Sub
+        - "arn:aws:s3:::#{BucketName}/*"
+        - BucketName: !Ref ScraperFeedBucket
+resources:
+  - AWSTemplateFormatVersion: "2010-09-09"
+    Transform: "AWS::Serverless-2016-10-31"
+  - ${file(./s3-template.yml)}
+
+functions:
+  hello:
+    handler: handler.hello
+  lambdaScrape:
+    handler: launcher.scrape
+
+
+package:
+  include:
+    - handler.py
+    - launcher.py
+    - adac_scraper/**
+    - scrapy.cfg
+  exclude: 
+    - "./**"
+
+plugins:
+  - serverless-python-requirements
+  - serverless-cloudformation-sub-variables
+custom: 
+  pythonRequirements:
+    slim: true
+    filename: requirements.txt
+    dockerizePip: non-linux
+    noDeploy:
+      - typing
