@@ -86,7 +86,7 @@ Copy the code from pipelines.py into the already created pipelines.py.
 
 # Run the spider
 ```
-scrapy crawl GlascontainerSpider
+scrapy crawl adac_scraper
 ```
 # Obtain the JSON-file
 An JSON-file should be available to you in the folder.
